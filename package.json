@@ -1,17 +1,20 @@
 {
-  "name": "new-website",
+  "name": "@website/root",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && pnpm --filter \"@website/ui\" build-storybook",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "pnpm --filter \"@website/ui\" storybook",
+    "serve": "pnpm dlx http-server -c-1 ./out"
   },
   "dependencies": {
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
+    "@website/ui": "workspace:*",
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
@@ -21,5 +24,8 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "prettier": "3.0.1"
   }
 }
