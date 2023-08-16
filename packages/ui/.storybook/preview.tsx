@@ -1,6 +1,7 @@
+import React from "react";
 import type { Preview, ReactRenderer } from "@storybook/react";
-
 import { withThemeByClassName } from "@storybook/addon-styling";
+import { ThemeProvider } from "../src/ThemeProvider";
 
 /* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
 import "../../../app/globals.css";
@@ -26,6 +27,11 @@ const preview: Preview = {
       },
       defaultTheme: "light",
     }),
+    (Story) => (
+      <ThemeProvider>
+        <Story />
+      </ThemeProvider>
+    ),
   ],
 };
 
