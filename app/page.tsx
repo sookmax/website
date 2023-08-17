@@ -1,11 +1,10 @@
-import { cn } from "@website/utils";
-import { DesktopNavExample, ThemeProvider, ThemeToggle } from "@website/ui";
+import { ResponsiveHeaderExample, ThemeProvider } from "@website/ui";
 
 export default function Home() {
   return (
     <ThemeProvider>
-      <div className="flex flex-col w-full items-center p-2">
-        <DesktopNavExample />
+      <div className="flex flex-col mx-auto w-full max-w-5xl pt-8 px-8">
+        <ResponsiveHeaderExample />
         <div className="mt-12">
           <a
             href="./storybook/index.html"
@@ -15,9 +14,6 @@ export default function Home() {
             Go to Storybook
           </a>
         </div>
-      </div>
-      <div className="fixed top-2 right-2">
-        <ThemeToggle />
       </div>
     </ThemeProvider>
   );

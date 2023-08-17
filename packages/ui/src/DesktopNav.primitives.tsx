@@ -2,7 +2,7 @@ import { cn, trim } from "@website/utils";
 import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 
-export const NavRoot = React.forwardRef<
+export const DesktopNavRoot = React.forwardRef<
   React.ElementRef<"nav">,
   React.ComponentPropsWithRef<"nav">
 >(function NavRoot({ children, ...rest }, ref) {
@@ -21,7 +21,7 @@ export const NavRoot = React.forwardRef<
   );
 });
 
-export const NavItem = React.forwardRef<
+export const DesktopNavItem = React.forwardRef<
   React.ElementRef<"li">,
   React.ComponentPropsWithRef<"li"> & { isActive?: boolean }
 >(function NavItem({ children, isActive, className, ...rest }, ref) {

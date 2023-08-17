@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { NavRoot, NavItem } from "./DesktopNav.primitives";
+import { DesktopNavRoot, DesktopNavItem } from "./DesktopNav.primitives";
 
-export function DesktopNavExample() {
+export function DesktopNavExample({ className }: { className?: string }) {
   const [activeItemIdx, setActiveItemIdx] = useState(-1);
 
   const createOnClick: (
@@ -14,32 +14,32 @@ export function DesktopNavExample() {
   };
 
   return (
-    <NavRoot>
-      <NavItem isActive={activeItemIdx === 0}>
+    <DesktopNavRoot className={className}>
+      <DesktopNavItem isActive={activeItemIdx === 0}>
         <a href="/about" onClick={createOnClick(0)}>
           About
         </a>
-      </NavItem>
-      <NavItem isActive={activeItemIdx === 1}>
+      </DesktopNavItem>
+      <DesktopNavItem isActive={activeItemIdx === 1}>
         <a href="/articles" onClick={createOnClick(1)}>
           Articles
         </a>
-      </NavItem>
-      <NavItem isActive={activeItemIdx === 2}>
+      </DesktopNavItem>
+      <DesktopNavItem isActive={activeItemIdx === 2}>
         <a href="/projects" onClick={createOnClick(2)}>
           Projects
         </a>
-      </NavItem>
-      <NavItem isActive={activeItemIdx === 3}>
+      </DesktopNavItem>
+      <DesktopNavItem isActive={activeItemIdx === 3}>
         <a href="/speaking" onClick={createOnClick(3)}>
           Speaking
         </a>
-      </NavItem>
-      <NavItem isActive={activeItemIdx === 4}>
+      </DesktopNavItem>
+      <DesktopNavItem isActive={activeItemIdx === 4}>
         <a href="/uses" onClick={createOnClick(4)}>
           Uses
         </a>
-      </NavItem>
-    </NavRoot>
+      </DesktopNavItem>
+    </DesktopNavRoot>
   );
 }
