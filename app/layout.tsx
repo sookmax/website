@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body className="flex h-full bg-zinc-50 dark:bg-black">{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className="flex bg-zinc-50 dark:bg-black">{children}</body>
     </html>
   );
 }
