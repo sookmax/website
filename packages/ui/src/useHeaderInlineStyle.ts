@@ -6,7 +6,7 @@ const HEADER_TRANSFORM_STYLE = `var(${HEADER_TRANSFORM_CSS_VAR})`;
 export function useHeaderInlineStyle(
   headerHeight: number
 ): Partial<React.CSSProperties> {
-  const prevScrollY = useRef(window.scrollY);
+  const prevScrollY = useRef(0);
   const currTranslateY = useRef(0);
 
   useEffect(() => {
