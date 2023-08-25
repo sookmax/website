@@ -1,0 +1,19 @@
+{
+  "name": "@sook/website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev-website": "pnpm --filter @website/app dev",
+    "build-website": "pnpm --filter @website/app build",
+    "serve-website": "pnpm --filter @website/app serve",
+    "dev": "pnpm --filter @website/components storybook",
+    "build-storybook": "pnpm --filter @website/components build-storybook",
+    "serve-storybook": "pnpm --filter @website/components serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "3.0.2"
+  }
+}
