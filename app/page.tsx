@@ -3,7 +3,7 @@ import { HeaderPositionExample, ThemeProvider } from "@website/ui";
 export default function Home() {
   return (
     <ThemeProvider>
-      <div className="mx-auto w-full max-w-5xl px-8">
+      <div className="mx-auto w-full max-w-5xl">
         <HeaderPositionExample />
       </div>
       <a

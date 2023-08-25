@@ -20,7 +20,7 @@ export function MobileNavRoot({
         className={cn(
           `
             group flex items-center justify-center rounded-full 
-            h-10 w-10 transition
+            h-10 w-10 transition outline-none
             p-2 text-sm font-medium 
             bg-white/90
             text-zinc-800 
@@ -55,7 +55,10 @@ export function MobileNavRoot({
           dark:ring-zinc-800`)}
       >
         <div className="flex flex-row-reverse items-center justify-between">
-          <DialogClose aria-label="Close menu" className="-m-1 p-1">
+          <DialogClose
+            aria-label="Close menu"
+            className="-m-1 p-1 outline-none"
+          >
             <X className="h-5 w-5 text-zinc-500 dark:text-zinc-400" />
           </DialogClose>
           <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
