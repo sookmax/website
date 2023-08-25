@@ -7,6 +7,13 @@ const meta = {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
+  decorators: [
+    (Story) => (
+      <div className="max-w-4xl mx-auto">
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof HeaderPositionExample>;
 
 export default meta;
