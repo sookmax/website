@@ -1,7 +1,7 @@
 import type { StorybookConfig } from "@storybook/react-vite";
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -17,6 +17,19 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
+  },
+  async viteFinal(config) {
+    const storybookMdxPluginIndex = config.plugins?.findIndex(
+      (plugin) =>
+        !Array.isArray(plugin) &&
+        (plugin as { name: string }).name === "storybook:mdx-plugin"
+    );
+
+    if (storybookMdxPluginIndex !== undefined) {
+      config.plugins?.splice(storybookMdxPluginIndex, 1);
+    }
+
+    return config;
   },
 };
 export default config;

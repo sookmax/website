@@ -1,0 +1,7 @@
+@import url("https://rsms.me/inter/inter.css");
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("../fonts/Mona-Sans.var.woff2");
+  font-display: swap;
+}

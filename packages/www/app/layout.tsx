@@ -1,7 +1,7 @@
 import { BaseLayout } from "@website/components";
-import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import "@website/tailwindcss-config/styles/tailwind.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

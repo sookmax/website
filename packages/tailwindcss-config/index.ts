@@ -1,4 +1,5 @@
 import { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
   content: [], // this will be provided by each consumer.
@@ -12,6 +13,7 @@ const config: Config = {
   ],
   theme: {
     fontSize: {
+      "2xs": ".6875rem",
       xs: ["0.8125rem", { lineHeight: "1.5rem" }],
       sm: ["0.875rem", { lineHeight: "1.5rem" }],
       base: ["1rem", { lineHeight: "1.75rem" }],
@@ -25,6 +27,11 @@ const config: Config = {
       "7xl": ["4.5rem", { lineHeight: "1" }],
       "8xl": ["6rem", { lineHeight: "1" }],
       "9xl": ["8rem", { lineHeight: "1" }],
+    },
+    fontFamily: {
+      ...defaultTheme.fontFamily,
+      sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      display: "Mona Sans",
     },
     typography: (theme: (path: string, defaultValue?: unknown) => any) => ({
       invert: {

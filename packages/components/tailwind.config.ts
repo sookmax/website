@@ -3,7 +3,7 @@ import defaultConfig from "@website/tailwindcss-config";
 
 const config: Config = {
   ...defaultConfig,
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,mdx}"],
 };
 
 export default config;

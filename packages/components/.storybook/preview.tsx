@@ -3,9 +3,11 @@ import type { Preview } from "@storybook/react";
 import { withThemeByClassName } from "@storybook/addon-styling";
 import { ThemeProvider } from "../src/ThemeProvider";
 import { BaseLayout } from "../src/BaseLayout";
+import { MDXProvider } from "../src/MDXProvider";
 
 /* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
-import "../src/globals.css";
+import "@website/tailwindcss-config/styles/tailwind.css";
+import "@website/tailwindcss-config/styles/fonts.css";
 
 const preview: Preview = {
   parameters: {
@@ -29,11 +31,13 @@ const preview: Preview = {
       defaultTheme: "light",
     }),
     (Story) => (
-      <ThemeProvider>
-        <BaseLayout>
-          <Story />
-        </BaseLayout>
-      </ThemeProvider>
+      <MDXProvider>
+        <ThemeProvider>
+          <BaseLayout>
+            <Story />
+          </BaseLayout>
+        </ThemeProvider>
+      </MDXProvider>
     ),
   ],
 };
