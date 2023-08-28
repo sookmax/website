@@ -8,9 +8,8 @@ const meta = {
     layout: "fullscreen",
   },
   decorators: [
-    // W500Decorator,
     (Story) => (
-      <div className="top-8 fixed w-full left-1/2 -translate-x-1/2 px-4">
+      <div className="pt-8 h-screen">
         <Story />
       </div>
     ),

@@ -5,8 +5,15 @@ const meta = {
   component: ThemeToggle,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "centered",
+    layout: "fullscreen",
   },
+  decorators: [
+    (Story) => (
+      <div className="h-screen pt-8">
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof ThemeToggle>;
 
 export default meta;

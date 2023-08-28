@@ -21,7 +21,7 @@ export function ThemeToggle() {
       className={trim(`
       group 
       rounded-full bg-white/90 p-2
-      shadow-lg shadow-zinc-800/10 
+      shadow-md shadow-zinc-800/10 
       ring-2 ring-zinc-900/10 hover:ring-zinc-900/10
       backdrop-blur transition 
       dark:bg-zinc-800/90 

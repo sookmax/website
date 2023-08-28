@@ -1,14 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeToggleDecorator } from "./ThemeToggleDecorator";
 import { AvatarExample } from "./AvatarExample";
+import { ThemeToggle } from "./ThemeToggle";
 
 const meta = {
   component: AvatarExample,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "centered",
+    layout: "fullscreen",
   },
-  decorators: [ThemeToggleDecorator],
+  decorators: [
+    (Story) => (
+      <div className="h-screen pt-8">
+        <div className="flex justify-between items-center">
+          <Story />
+          <ThemeToggle />
+        </div>
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof AvatarExample>;
 
 export default meta;

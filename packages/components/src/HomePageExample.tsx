@@ -5,6 +5,7 @@ import { AvatarExample } from "./AvatarExample";
 import { MobileNavExample } from "./MobileNavExample";
 import { DesktopNavExample } from "./DesktopNavExample";
 import { ThemeToggle } from "./ThemeToggle";
+import { FooterExample } from "./FooterExample";
 
 const HEADER_CONTAINER_HEIGHT_VAR = "--header-container-height";
 const HEADER_CONTAINER_HEIGHT_VAL = `var(${HEADER_CONTAINER_HEIGHT_VAR})`;
@@ -95,42 +96,44 @@ export function HomePageExample() {
           <div>Hi, I’m Sook.</div>
           <div>A web developer.</div>
         </h1>
-        <div className="mt-8 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+        <div className="mt-12 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
           <p>
-            I did not start out as a web developer, but rather as a data analyst
-            after graduating college back in 2015. In hindsight, I think I had
-            always been more drawn to data visualization than any other aspects
-            of data analysis, which had probably been the strongest motivator
-            that eventually led me to web development. And now, I'm happier and
-            more proud as a web developer.
+            Well actually, I did not start out as a web developer, but rather as
+            a data analyst after graduating college back in 2015. In hindsight,
+            I think I had always been more drawn to data visualization than any
+            other aspects of data analysis, which had probably been the
+            strongest motivator that eventually led me to web development. And
+            now, I'm happier and more fulfilled as a web developer.
           </p>
           <p>
-            As much as I'm fond of web development, I think it is also fairly
-            hard. A part of it might be because there are so many (often
-            completely different) ways to achieve similar results. Another part
-            of it might have to do with the difficulty supporting multiple
-            browsers and various devices. Or the fact that it's almost too easy
-            to introduce visual regressions with the slightest change in the
-            code base, whereas it's relatively harder to detect them in a timely
-            manner could also be a part of web development being fairly
-            difficult. I've observed all these challenges being amplified even
-            further when there are multiple developers involved, as opposed to
-            when I am the only developer of a particular project.
+            As much as I like web development though, I think it is also fairly
+            hard. A part of it might be because there are so many&mdash;often
+            completely different&mdash;ways to achieve similar end results (JS
+            frameworks, for example). Another part of it might have to do with
+            the difficulty supporting multiple browsers and various devices. Or
+            the fact that it's almost too easy to introduce visual regressions
+            with the slightest change in the code base, whereas it's relatively
+            harder to detect them in a timely manner could also be a part of web
+            development being quite difficult. I've observed all these
+            challenges being amplified even further when there are multiple
+            developers involved, as opposed to when I am the only developer of a
+            particular project.
           </p>
           <p>
             Despite the challenges, I understand building a great product
-            requires a <em>team</em> of great developers; I think it's the
-            culmination of great collaborative effort. My ultimate goal is to be
-            a part of such team. And I believe the best way to achieve that is
-            to become a competent dev myself.
+            requires a <em>team</em> of great engineers; I think well-made
+            software products are the culmination of immense collaborative
+            effort among great people. My ultimate goal is to be a part of such
+            team. And I believe the best way to achieve that is to become a
+            sufficiently competent dev myself.
           </p>
           <p>
-            So here I am, trying to be a better web dev than yesterday,
-            everyday.
+            So here I am, trying to be a better web dev than yesterday, everyday
+            :)
           </p>
-          <p>Thanks for visiting my website 🤗</p>
         </div>
       </main>
+      <FooterExample />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { MobileHeaderExample } from "./MobileHeaderExample";
-import { W500Decorator } from "./FixedWidthDecorator";
 
 const meta = {
   component: MobileHeaderExample,
@@ -9,9 +8,9 @@ const meta = {
     layout: "fullscreen",
   },
   decorators: [
-    W500Decorator,
+    // W500Decorator,
     (Story) => (
-      <div className="top-8 fixed left-1/2 -translate-x-1/2">
+      <div className="h-screen pt-8">
         <Story />
       </div>
     ),

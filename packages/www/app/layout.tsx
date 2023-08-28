@@ -1,3 +1,4 @@
+import { BaseLayout } from "@website/components";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -25,7 +26,9 @@ export default function RootLayout({
   return (
     // https://github.com/vercel/next.js/issues/49350 for `suppressHydrationWarning`
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <BaseLayout>{children}</BaseLayout>
+      </body>
     </html>
   );
 }

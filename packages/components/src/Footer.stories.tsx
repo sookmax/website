@@ -1,25 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { DesktopNavExample } from "./DesktopNavExample";
-import { ThemeToggle } from "./ThemeToggle";
+import { FooterExample } from "./FooterExample";
+import { ThemeToggleDecorator } from "./ThemeToggleDecorator";
 
 const meta = {
-  component: DesktopNavExample,
+  component: FooterExample,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
   decorators: [
+    ThemeToggleDecorator,
     (Story) => (
-      <div className="h-screen pt-8">
-        <div className="flex justify-between">
-          <div />
-          <Story />
-          <ThemeToggle />
-        </div>
+      <div className="h-screen flex flex-col justify-end">
+        <Story />
       </div>
     ),
   ],
-} satisfies Meta<typeof DesktopNavExample>;
+} satisfies Meta<typeof FooterExample>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

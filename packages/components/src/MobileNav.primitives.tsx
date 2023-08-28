@@ -24,7 +24,7 @@ export function MobileNavRoot({
             p-2 text-sm font-medium 
             bg-white/90
             text-zinc-800 
-            shadow-lg shadow-zinc-800/10
+            shadow-md shadow-zinc-800/10
             ring-2 ring-zinc-900/10
             backdrop-blur 
             dark:bg-zinc-800/90 

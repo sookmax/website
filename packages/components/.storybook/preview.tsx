@@ -2,6 +2,7 @@ import React from "react";
 import type { Preview } from "@storybook/react";
 import { withThemeByClassName } from "@storybook/addon-styling";
 import { ThemeProvider } from "../src/ThemeProvider";
+import { BaseLayout } from "../src/BaseLayout";
 
 /* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
 import "../src/globals.css";
@@ -29,7 +30,9 @@ const preview: Preview = {
     }),
     (Story) => (
       <ThemeProvider>
-        <Story />
+        <BaseLayout>
+          <Story />
+        </BaseLayout>
       </ThemeProvider>
     ),
   ],

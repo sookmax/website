@@ -10,9 +10,11 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div className="fixed px-4 top-8 flex justify-end w-full space-x-2">
-        <Story />
-        <ThemeToggle />
+      <div className="h-screen pt-8">
+        <div className="flex justify-end space-x-2">
+          <Story />
+          <ThemeToggle />
+        </div>
       </div>
     ),
   ],
