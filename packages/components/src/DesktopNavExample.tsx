@@ -7,7 +7,7 @@ export function DesktopNavExample({ className }: { className?: string }) {
   const [activeItemIdx, setActiveItemIdx] = useState(-1);
 
   const createOnClick: (
-    index: number
+    index: number,
   ) => React.MouseEventHandler<HTMLAnchorElement> = (index) => (e) => {
     e.preventDefault();
     setActiveItemIdx(index);

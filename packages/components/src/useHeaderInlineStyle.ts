@@ -6,7 +6,7 @@ const HEADER_TRANSFORM_CSS_VAR = "--header-transform";
 const HEADER_TRANSFORM_STYLE = `var(${HEADER_TRANSFORM_CSS_VAR})`;
 
 export function useHeaderInlineStyle(
-  headerHeight: number
+  headerHeight: number,
 ): Partial<React.CSSProperties> {
   useEffect(() => {
     let prevScrollY = 0;
@@ -18,8 +18,8 @@ export function useHeaderInlineStyle(
         0,
         Math.min(
           window.scrollY,
-          document.body.scrollHeight - window.innerHeight
-        )
+          document.body.scrollHeight - window.innerHeight,
+        ),
       );
       const scrollState: ScrollState =
         scrollY === 0
@@ -39,7 +39,7 @@ export function useHeaderInlineStyle(
 
         document.documentElement.style.setProperty(
           HEADER_TRANSFORM_CSS_VAR,
-          `translateY(${translateY}px)`
+          `translateY(${translateY}px)`,
         );
       }
 

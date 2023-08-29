@@ -37,7 +37,7 @@ export function HeaderPositionExample() {
     const scrollY = clamp(
       window.scrollY,
       0,
-      document.body.scrollHeight - window.innerHeight
+      document.body.scrollHeight - window.innerHeight,
     );
 
     if (scrollY < 0) {

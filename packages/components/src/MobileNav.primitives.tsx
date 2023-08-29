@@ -33,7 +33,7 @@ export function MobileNavRoot({
             dark:hover:ring-white/20
             dark:shadow-zinc-200/20
           `,
-          className
+          className,
         )}
       >
         <Menu

@@ -12,7 +12,7 @@ export const AvatarSlot = React.forwardRef<
       className={cn(
         className,
         "rounded-full bg-zinc-100 object-cover dark:bg-zinc-800",
-        large ? "h-16 w-16" : "h-9 w-9"
+        large ? "h-16 w-16" : "h-9 w-9",
       )}
       {...rest}
     >
@@ -38,7 +38,7 @@ export const AvatarContainer = React.forwardRef<
         dark:bg-zinc-800/90 
         dark:ring-white/30
         dark:shadow-zinc-200/20
-        `
+        `,
       )}
       {...rest}
     >

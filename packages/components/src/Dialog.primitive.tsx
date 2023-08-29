@@ -37,7 +37,7 @@ export const DialogContent = React.forwardRef<
             data-[state=closed]:animate-out
             data-[state=closed]:fade-out-0
             data-[state=closed]:zoom-out-95`,
-          className
+          className,
         )}
         {...rest}
       >

@@ -22,7 +22,7 @@ const config: StorybookConfig = {
     const storybookMdxPluginIndex = config.plugins?.findIndex(
       (plugin) =>
         !Array.isArray(plugin) &&
-        (plugin as { name: string }).name === "storybook:mdx-plugin"
+        (plugin as { name: string }).name === "storybook:mdx-plugin",
     );
 
     if (storybookMdxPluginIndex !== undefined) {

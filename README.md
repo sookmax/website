@@ -1,8 +1,11 @@
 ## Introduction
+
 This is the repository for my personal website at https://www.sook.dev/.
 
 ### Project Structure
+
 This repository is constructed with [pnpm workspace](https://pnpm.io/workspaces). It consists of the following packages:
+
 - `packages/www` (@website/app)
   - The main website (next.js app)
 - `packages/components` (@website/components)

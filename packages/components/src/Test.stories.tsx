@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React, { useCallback, useEffect, useLayoutEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 function setProperty(property: string, value: string) {
   document.documentElement.style.setProperty(property, value);
 }
 
-function removeProperty(property: string) {
-  document.documentElement.style.removeProperty(property);
-}
+// function removeProperty(property: string) {
+//   document.documentElement.style.removeProperty(property);
+// }
 
 function clamp(number: number, a: number, b: number) {
   const min = Math.min(a, b);
@@ -27,7 +27,7 @@ function TestComponent() {
     const scrollY = clamp(
       window.scrollY,
       0,
-      document.body.scrollHeight - window.innerHeight
+      document.body.scrollHeight - window.innerHeight,
     );
 
     if (scrollY < 0) {
@@ -77,41 +77,41 @@ function TestComponent() {
   );
 }
 
-function StickyTest() {
-  return (
-    <dl className="pt-10 pb-96">
-      <div className="h-[100px]">
-        <dt className="sticky top-0 h-20 bg-green-200">A</dt>
-        {/* <dd className="h-20">Andrew W.K.</dd> */}
-        {/* <dd className="h-20">Andrew W.K.</dd>
-        <dd className="h-20">Apparat</dd>
-        <dd className="h-20">Arcade Fire</dd>
-        <dd className="h-20">At The Drive-In</dd>
-        <dd className="h-20">Aziz Ansari</dd> */}
-      </div>
-      <div>
-        <dt className="sticky top-0 h-20 bg-red-200">C</dt>
-        <dd className="h-20">Chromeo</dd>
-        <dd className="h-20">Common</dd>
-        <dd className="h-20">Converge</dd>
-        <dd className="h-20">Crystal Castles</dd>
-        <dd className="h-20">Cursive</dd>
-      </div>
-      <div>
-        <dt className="sticky top-0 h-20 bg-emerald-200">E</dt>
-        <dd className="h-20">Explosions In The Sky</dd>
-      </div>
-      <div>
-        <dt className="sticky top-0 h-20 bg-purple-200">T</dt>
-        <dd className="h-20">Ted Leo &amp; The Pharmacists</dd>
-        <dd className="h-20">T-Pain</dd>
-        <dd className="h-20">Thrice</dd>
-        <dd className="h-20">TV On The Radio</dd>
-        <dd className="h-20">Two Gallants</dd>
-      </div>
-    </dl>
-  );
-}
+// function StickyTest() {
+//   return (
+//     <dl className="pt-10 pb-96">
+//       <div className="h-[100px]">
+//         <dt className="sticky top-0 h-20 bg-green-200">A</dt>
+//         {/* <dd className="h-20">Andrew W.K.</dd> */}
+//         {/* <dd className="h-20">Andrew W.K.</dd>
+//         <dd className="h-20">Apparat</dd>
+//         <dd className="h-20">Arcade Fire</dd>
+//         <dd className="h-20">At The Drive-In</dd>
+//         <dd className="h-20">Aziz Ansari</dd> */}
+//       </div>
+//       <div>
+//         <dt className="sticky top-0 h-20 bg-red-200">C</dt>
+//         <dd className="h-20">Chromeo</dd>
+//         <dd className="h-20">Common</dd>
+//         <dd className="h-20">Converge</dd>
+//         <dd className="h-20">Crystal Castles</dd>
+//         <dd className="h-20">Cursive</dd>
+//       </div>
+//       <div>
+//         <dt className="sticky top-0 h-20 bg-emerald-200">E</dt>
+//         <dd className="h-20">Explosions In The Sky</dd>
+//       </div>
+//       <div>
+//         <dt className="sticky top-0 h-20 bg-purple-200">T</dt>
+//         <dd className="h-20">Ted Leo &amp; The Pharmacists</dd>
+//         <dd className="h-20">T-Pain</dd>
+//         <dd className="h-20">Thrice</dd>
+//         <dd className="h-20">TV On The Radio</dd>
+//         <dd className="h-20">Two Gallants</dd>
+//       </div>
+//     </dl>
+//   );
+// }
 
 const meta = {
   component: TestComponent,
