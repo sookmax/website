@@ -7,16 +7,10 @@ export function MobileNavExample({ className }: { className?: string }) {
         <button>About</button>
       </MobileNavItem>
       <MobileNavItem>
-        <button>Articles</button>
+        <button>Current</button>
       </MobileNavItem>
       <MobileNavItem>
-        <button>Projects</button>
-      </MobileNavItem>
-      <MobileNavItem>
-        <button>Speaking</button>
-      </MobileNavItem>
-      <MobileNavItem>
-        <button>Uses</button>
+        <button>Experience</button>
       </MobileNavItem>
     </MobileNavRoot>
   );

@@ -22,12 +22,12 @@ export function ThemeToggle() {
       group 
       rounded-full bg-white/90 p-2
       shadow-md shadow-zinc-800/10 
-      ring-2 ring-zinc-900/10 hover:ring-zinc-900/10
+      ring-1 ring-zinc-900/10 hover:ring-zinc-900/10
       backdrop-blur transition 
       dark:bg-zinc-800/90 
-      dark:ring-white/30 
-      dark:hover:ring-white/20
-      dark:shadow-zinc-200/20
+      dark:ring-white/20 
+      dark:hover:ring-white/30
+      dark:shadow-zinc-200/10
       `)}
       onClick={() => setTheme(otherTheme)}
     >

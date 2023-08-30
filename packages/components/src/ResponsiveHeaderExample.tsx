@@ -6,7 +6,7 @@ import { AvatarExample } from "./AvatarExample";
 export function ResponsiveHeaderExample() {
   return (
     <header className="flex justify-between items-center">
-      <AvatarExample showFrame />
+      <AvatarExample />
       <div className="grow flex justify-end md:justify-center px-2">
         <MobileNavExample className="pointer-events-auto md:hidden" />
         <DesktopNavExample className="pointer-events-auto hidden md:block" />

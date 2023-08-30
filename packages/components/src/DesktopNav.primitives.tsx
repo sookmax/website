@@ -11,8 +11,8 @@ export const DesktopNavRoot = React.forwardRef<
       <ul
         className={trim(`
         flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 
-        shadow-md shadow-zinc-800/5 ring-2 ring-zinc-900/10 backdrop-blur 
-        dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/30
+        shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/10 backdrop-blur 
+        dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/20
       `)}
       >
         {children}
@@ -31,8 +31,8 @@ export const DesktopNavItem = React.forwardRef<
         className={cn(
           "block px-3 py-2 transition",
           isActive
-            ? "text-teal-500 dark:text-teal-400"
-            : "hover:text-teal-500 dark:hover:text-teal-400",
+            ? "text-primary dark:text-primary-dark"
+            : "hover:text-primary dark:hover:text-primary-dark",
         )}
       >
         {children}
@@ -41,8 +41,8 @@ export const DesktopNavItem = React.forwardRef<
         <span
           className={trim(`
             absolute inset-x-1 -bottom-px h-px 
-            bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 
-            dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0
+            bg-gradient-to-r from-primatext-primary/0 via-primatext-primary/40 to-primatext-primary/0 
+            dark:from-primartext-primary-dark/0 dark:via-primartext-primary-dark/40 dark:to-primartext-primary-dark/0
         `)}
         />
       )}

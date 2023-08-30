@@ -5,7 +5,7 @@ import { AvatarExample } from "./AvatarExample";
 export function DesktopHeaderExample() {
   return (
     <header className="flex justify-between items-center">
-      <AvatarExample showFrame />
+      <AvatarExample />
       <DesktopNavExample />
       <ThemeToggle />
     </header>

@@ -1,9 +1,9 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 export const ReactjsLogo = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
-    className="text-sm me-0 w-10 h-10 text-link dark:text-link-dark flex origin-center transition-all ease-in-out"
+    // className="text-sm me-0 w-10 h-10 text-link dark:text-link-dark flex origin-center transition-all ease-in-out"
     viewBox="-10.5 -9.45 21 18.9"
     width="100%"
     height="100%"

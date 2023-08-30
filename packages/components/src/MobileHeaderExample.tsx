@@ -5,7 +5,7 @@ import { AvatarExample } from "./AvatarExample";
 export function MobileHeaderExample() {
   return (
     <header className="flex justify-between items-center">
-      <AvatarExample showFrame />
+      <AvatarExample />
       <div className="grow flex justify-end px-2">
         <MobileNavExample />
       </div>

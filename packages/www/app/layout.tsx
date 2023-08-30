@@ -1,4 +1,9 @@
-import { BaseLayout } from "@website/components";
+import {
+  BaseLayout,
+  FooterExample,
+  HeaderExample,
+  ThemeProvider,
+} from "@website/components";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@website/tailwindcss-config/styles/tailwind.css";
@@ -27,7 +32,13 @@ export default function RootLayout({
     // https://github.com/vercel/next.js/issues/49350 for `suppressHydrationWarning`
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <BaseLayout>{children}</BaseLayout>
+        <ThemeProvider>
+          <BaseLayout>
+            <HeaderExample />
+            {children}
+            <FooterExample />
+          </BaseLayout>
+        </ThemeProvider>
       </body>
     </html>
   );

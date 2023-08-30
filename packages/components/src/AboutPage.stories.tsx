@@ -1,20 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { HeaderPositionExample } from "./HeaderPositionExample";
+import { AboutPageExample } from "./AboutPageExample";
+import { PageLayoutExample } from "./PageLayoutExample";
 
 const meta = {
-  component: HeaderPositionExample,
+  title: "Page/About",
+  component: AboutPageExample,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
   decorators: [
     (Story) => (
-      <div className="max-w-4xl mx-auto">
+      <PageLayoutExample>
         <Story />
-      </div>
+      </PageLayoutExample>
     ),
   ],
-} satisfies Meta<typeof HeaderPositionExample>;
+} satisfies Meta<typeof AboutPageExample>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

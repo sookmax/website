@@ -1,9 +1,5 @@
-import { HomePageExample, ThemeProvider } from "@website/components";
+import { AboutPageExample } from "@website/components";
 
 export default function Home() {
-  return (
-    <ThemeProvider>
-      <HomePageExample />
-    </ThemeProvider>
-  );
+  return <AboutPageExample />;
 }

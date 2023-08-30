@@ -25,13 +25,13 @@ export function MobileNavRoot({
             bg-white/90
             text-zinc-800 
             shadow-md shadow-zinc-800/10
-            ring-2 ring-zinc-900/10
+            ring-1 ring-zinc-900/10
             backdrop-blur 
             dark:bg-zinc-800/90 
             dark:text-zinc-300 
-            dark:ring-white/30 
-            dark:hover:ring-white/20
-            dark:shadow-zinc-200/20
+            dark:ring-white/20 
+            dark:hover:ring-white/30
+            dark:shadow-zinc-200/10
           `,
           className,
         )}
