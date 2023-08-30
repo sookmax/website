@@ -12,9 +12,12 @@ export function AboutPageExample() {
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 md:text-5xl">
             <div>Hi, I’m Sook.</div>
             <div className="flex items-center">
-              <span>A web developer.</span>
+              <span>A web developer</span>
               <span className="w-7 h-7 md:w-10 md:h-10 ml-2">
-                <ReactjsLogo className="text-primary dark:text-primary-dark" />
+                <ReactjsLogo
+                  className="text-primary dark:text-primary-dark"
+                  style={{ animation: "spin 6s linear infinite" }}
+                />
               </span>
             </div>
           </h1>
