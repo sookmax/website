@@ -14,10 +14,7 @@ export function AboutPageExample() {
             <div className="flex items-center">
               <span>A web developer</span>
               <span className="w-7 h-7 md:w-10 md:h-10 ml-2">
-                <ReactjsLogo
-                  className="text-primary dark:text-primary-dark"
-                  style={{ animation: "spin 6s linear infinite" }}
-                />
+                <ReactjsLogo className="text-primary dark:text-primary-dark animate-[spin_6s_linear_infinite]" />
               </span>
             </div>
           </h1>
