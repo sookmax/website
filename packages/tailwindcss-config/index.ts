@@ -1,12 +1,12 @@
-import fs from "fs";
-import path from "path";
+// import fs from "fs";
+// import path from "path";
 import { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 import pluginTypography from "@tailwindcss/typography";
 // @ts-ignore
 import pluginAnimate from "@website/tailwindcss-plugin-animate";
-import plaiceholder from "@plaiceholder/tailwindcss";
-import { cwd } from "process";
+// import plaiceholder from "@plaiceholder/tailwindcss";
+
 // const defaultTheme = require('tailwindcss/defaultTheme')
 
 const config: Config = {
@@ -18,13 +18,14 @@ const config: Config = {
   plugins: [
     pluginTypography,
     pluginAnimate,
-    plaiceholder({
-      resolver(src) {
-        console.log(src);
-        console.log(cwd());
-        return fs.readFileSync(path.join("./public", `${src}.png`));
-      },
-    }),
+    // plaiceholder({
+    //   resolver(src) {
+    //     //   console.log(src);
+    //     return fs.readFileSync(
+    //       path.join(path.resolve("./public"), `${src}.png`),
+    //     );
+    //   },
+    // }),
   ],
   theme: {
     fontSize: {
