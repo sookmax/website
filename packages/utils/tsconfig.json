@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext"]
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx"
   }
 }

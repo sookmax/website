@@ -1,0 +1,42 @@
+import { WithRuler } from "./WithRuler";
+import { Event } from "./Event";
+import * as Picture from "./Picture";
+
+export default function Layout({ children }) {
+  return (
+    <div>
+      <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 md:text-5xl">
+        <div>Current events</div>
+      </h1>
+      <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+        Things I've been doing since <em>Oct. 2022</em>, which was when I quit
+        my last job. The main reason I decided to take a break from work
+        altogether was ironically to get better at what I do, that is, web
+        development&mdash;it's ironic because I was working as a web developer
+        at my last job, but unfortunately found the time I spent at work was not
+        too terribly effective at becoming a better web dev.
+      </p>
+      <WithRuler className="mt-12">{children}</WithRuler>
+    </div>
+  );
+}
+
+<Event date="2022-10">
+
+## Started building my (now old) personal website
+
+<a href="https://website-old-sook.vercel.app/" target="_blank">
+  <Picture.Root>
+    <Picture.Figure className="plaiceholder-[website-old] mt-5 mb-10">
+      <Picture.Skeleton />
+      <Picture.Img loading="lazy" src="/website-old.png" />
+      <figcaption className="absolute top-full text-2xs w-full text-center">
+        {"https://website-old-sook.vercel.app/"}
+      </figcaption>
+    </Picture.Figure>
+  </Picture.Root>
+</a>
+
+Well, the original plan was to maintain it with discipline by writing stuff about things related to web development or software engineering at least weekly, which quickly turned out to be a lot more challenging of a task that I'd thought, so I abandoned the idea and moved on shortly after.
+
+</Event>

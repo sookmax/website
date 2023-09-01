@@ -1,17 +1,6 @@
-import { Article, Timeline } from "./mdx";
+import { Event } from "./Event";
 
-export default function Layout({ children }) {
-  return (
-    <div className="relative">
-      <Timeline />
-      <div>{children}</div>
-    </div>
-  );
-}
-
-<Article date="2023-10" />
-<Article date="2023-09" />
-<Article date={'2023-08'}>
+<Event date="2023-08">
 
 ## Commit message suggestions
 
@@ -26,9 +15,9 @@ It's also been a pretty helpful way to remind myself what the hell I was working
 - Improved active project detection to try and ignore file changes triggered by the system instead of the user
 - Fixed bug that sometimes reported the wrong number of changed files
 
-</Article>
+</Event>
 
-<Article date="2023-07">
+<Event date="2023-07">
 
 ## Project configuration files
 
@@ -40,9 +29,9 @@ I've added support for creating per-project `.commitrc` files that override your
 - Improved performance when working with projects with large binary files
 - Fixed a bug that could cause Commit to crash when autocommitting after deleting a recently active branch
 
-</Article>
+</Event>
 
-<Article date="2023-06">
+<Event date="2023-06">
 
 ## Dark mode support
 
@@ -55,9 +44,9 @@ I released this thing last week hoping a couple of people would say "awesome job
 - Made keyboard shortcut for opening the Commit window customizable
 - Deleted my Twitter account
 
-</Article>
+</Event>
 
-<Article date="2023-05">
+<Event date="2023-05">
 
 ## Commit v0.1.0
 
@@ -65,8 +54,4 @@ Commit is a command palette-style Git client you can pull up from anywhere with 
 
 I'd be lying if I really thought this was that useful but I was looking for an excuse to learn macOS development and here we are. It's open source at least so maybe you can find something interesting in the code even if the app itself is a total waste of hard drive space.
 
-</Article>
-
-<Article date="2023-04" />
-<Article date="2023-03" />
-<Article date="2023-02" />
+</Event>

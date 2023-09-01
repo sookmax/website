@@ -35,7 +35,7 @@ export default function RootLayout({
         <ThemeProvider>
           <BaseLayout>
             <HeaderExample />
-            {children}
+            <main className="py-16">{children}</main>
             <FooterExample />
           </BaseLayout>
         </ThemeProvider>

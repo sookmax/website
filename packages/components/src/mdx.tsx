@@ -22,28 +22,23 @@ function ContentWrapper({
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   return (
-    <div className="mx-auto px-6 py-4">
-      <div className="">
-        <div className={cn("mx-auto max-w-xl", className)} {...props} />
-      </div>
+    <div className="mx-auto px-6 py-12">
+      <div className={cn("mx-auto max-w-2xl sm:px-4", className)} {...props} />
     </div>
   );
 }
 
-function ArticleHeader({ id, date }: { id: string; date: string | Date }) {
+function ArticleHeader({ date }: { id: string; date: string | Date }) {
   return (
-    <header className="sticky top-0 bg-white/50 dark:bg-zinc-900/50 backdrop-blur">
+    <header className="sticky top-0">
       <div className="flex items-center space-x-1">
-        <div className="h-[1px] w-3 bg-gray-400/80 dark:bg-gray-500/80" />
-        <a
-          href={`#${id}`}
-          className="inline-flex text-gray-600 dark:text-gray-300 text-2xs"
-        >
+        <div className="h-[1px] w-3 bg-gray-400/60 dark:bg-gray-500/60" />
+        <div className="grow text-gray-600 dark:text-gray-300 text-2xs bg-white/50 dark:bg-zinc-900/50 backdrop-blur">
           <FormattedDate
             date={date}
             // className="hidden xl:pointer-events-auto xl:block xl:text-2xs/4 xl:font-medium xl:text-white/50"
           />
-        </a>
+        </div>
       </div>
     </header>
   );

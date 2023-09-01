@@ -24,5 +24,19 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
+  // https://www.npmjs.com/package/ts-node#via-tsconfigjson-recommended
+  // Most ts-node options can be specified here using their programmatic names.
+  "ts-node": {
+    // https://github.com/TypeStrong/ts-node/issues/1062
+    // https://www.npmjs.com/package/ts-node#err_unknown_file_extension
+    "esm": true,
+    // It is faster to skip typechecking.
+    // Remove if you want ts-node to do typechecking.
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext"
+    }
+  }
 }
