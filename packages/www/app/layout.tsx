@@ -2,6 +2,7 @@ import {
   BaseLayout,
   FooterExample,
   HeaderExample,
+  PageLayoutExample,
   ThemeProvider,
 } from "@website/components";
 import type { Metadata } from "next";
@@ -34,9 +35,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider>
           <BaseLayout>
-            <HeaderExample />
-            <main className="py-16">{children}</main>
-            <FooterExample />
+            <PageLayoutExample>{children}</PageLayoutExample>
           </BaseLayout>
         </ThemeProvider>
       </body>

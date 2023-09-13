@@ -7,3 +7,4 @@ export * from "./HeaderExample";
 export * from "./AboutPageExample";
 export * from "./BaseLayout";
 export * from "./FooterExample";
+export * from "./PageLayoutExample";

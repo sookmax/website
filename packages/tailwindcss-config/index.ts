@@ -59,7 +59,7 @@ const config: Config = {
           DEFAULT: "#FF4785",
         },
       },
-      typography: (theme) => ({
+      typography: (theme: any) => ({
         DEFAULT: {
           css: {
             fontSize: theme("fontSize.sm"),
