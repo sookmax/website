@@ -77,16 +77,16 @@ export function AboutPageExample() {
 function TechsIUseDesktop() {
   return (
     <>
-      <div className="flex items-center px-2">
+      <div className="flex items-center py-5">
         <NextjsLogo />
       </div>
       <div className="flex items-center">
         <TailwindcssLogo />
       </div>
-      <div className="flex items-center px-2">
+      <div className="flex items-center py-4">
         <RadixUILogo className="text-[#1C2024] dark:text-[#EDEEF0]" />
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center py-4">
         <StorybookLogo />
       </div>
     </>
@@ -105,7 +105,7 @@ function TechsIUseMobile() {
       <div className="h-6 pt-1">
         <RadixUILogo className="text-[#1C2024] dark:text-[#EDEEF0]" />
       </div>
-      <div className="h-8">
+      <div className="h-8 py-1">
         <StorybookLogo />
       </div>
     </>
