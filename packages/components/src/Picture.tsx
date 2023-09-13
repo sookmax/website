@@ -45,7 +45,7 @@ type FigureProps = Omit<React.ComponentPropsWithoutRef<"figure">, "style"> &
 
 const FigureImpl = React.memo(
   React.forwardRef<HTMLElement, FigureProps>(function FigureImpl(
-    { aspectRatio, imageStatus, showLoading, ...rest },
+    { aspectRatio, imageStatus, showLoading: _, ...rest },
     ref,
   ) {
     const dispatch = useDispatch();
@@ -114,20 +114,31 @@ export const Figure = React.forwardRef<
   HTMLElement,
   Omit<
     React.ComponentPropsWithoutRef<typeof FigureImpl>,
-    "previewUrl" | "aspectRatio"
+    keyof typeof initialState
   >
 >(function Figure(props, ref) {
   return <FigureImpl ref={ref} {...props} {...useStoreState()} />;
 });
 
-type ImgProps = Omit<JSX.IntrinsicElements["img"], "style"> & {
+type ImgProps = JSX.IntrinsicElements["img"] & {
   imageStatus: ImageStatus;
   onLoad: () => void;
+  onLoadScaleAnimation?: boolean;
 };
 
 const ImgImpl = React.memo(
   React.forwardRef<HTMLImageElement, ImgProps>(function ImgImpl(
-    { alt, src, srcSet, sizes, imageStatus, onLoad, ...rest },
+    {
+      alt,
+      src,
+      srcSet,
+      sizes,
+      imageStatus,
+      onLoad,
+      onLoadScaleAnimation = false,
+      style,
+      ...rest
+    },
     ref,
   ) {
     const [loaded, setLoaded] = useState(false);
@@ -170,13 +181,16 @@ const ImgImpl = React.memo(
           position: "absolute",
           width: "100%",
           height: "100%",
-          objectFit: "cover",
+          objectFit: "contain",
           transitionProperty: "transform, opacity",
           transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
           transitionDuration: "300ms",
-          transform: `scale(${loaded ? 1.0 : 1.2})`,
+          transform: onLoadScaleAnimation
+            ? `scale(${loaded ? 1.0 : 1.1})`
+            : undefined,
           opacity: loaded ? 1 : 0,
           visibility: loaded ? "visible" : "hidden",
+          ...style,
         }}
       />
     );
@@ -185,7 +199,10 @@ const ImgImpl = React.memo(
 
 export const Img = React.forwardRef<
   HTMLImageElement,
-  Omit<React.ComponentPropsWithRef<typeof ImgImpl>, "imageStatus" | "onLoad">
+  Omit<
+    React.ComponentPropsWithRef<typeof ImgImpl>,
+    keyof typeof initialState | "onLoad"
+  >
 >(function Img(props, ref) {
   const { imageStatus } = useStoreState();
   const dispatch = useDispatch();

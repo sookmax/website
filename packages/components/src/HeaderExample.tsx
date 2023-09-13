@@ -78,13 +78,10 @@ export function HeaderExample() {
           marginBottom: HEADER_CONTAINER_MB_VAL,
         }}
       >
-        <header
-          ref={headerRef}
-          className="sticky top-0 z-10 h-16 pt-6 px-3 flex"
-        >
+        <header ref={headerRef} className="sticky top-0 z-10 h-16 pt-6 flex">
           <AvatarExample />
-          <div className="grow flex justify-end md:justify-center px-2">
-            <MobileNavExample className="pointer-events-auto md:hidden" />
+          <div className="grow flex justify-end md:justify-center">
+            <MobileNavExample className="pointer-events-auto md:hidden mr-2" />
             <DesktopNavExample className="pointer-events-auto hidden md:block" />
           </div>
           <ThemeToggle />

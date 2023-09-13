@@ -1,42 +1,189 @@
 import { WithRuler } from "./WithRuler";
 import { Event } from "./Event";
 import * as Picture from "./Picture";
+import { ImageGalleryInline } from "./ImageGalleryInline";
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <div className="prose dark:prose-invert max-w-none">
       <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 md:text-5xl">
         <div>Current events</div>
       </h1>
       <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-        Things I've been doing since <em>Oct. 2022</em>, which was when I quit
-        my last job. The main reason I decided to take a break from work
-        altogether was ironically to get better at what I do, that is, web
-        development&mdash;it's ironic because I was working as a web developer
-        at my last job, but unfortunately found the time I spent at work was not
-        too terribly effective at becoming a better web dev.
+        Things I've been doing since <em>Oct. 2022</em>; that's when I quit my
+        latest job. The main reason I decided to take a break from work
+        altogether was ironically to get better at what I do&mdash;web
+        development. It's ironic in that even though I was working as a web
+        developer at my last job, unfortunately I felt the time I spent at work
+        was not very effective at becoming a better web dev.
       </p>
       <WithRuler className="mt-12">{children}</WithRuler>
     </div>
   );
 }
 
+<Event date="2023-04">
+
+## Teamfight Tactics stats website
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline imageUrls={["/tft-top4-1.png", "/tft-top4-2.png"]}>
+    <a
+      href="https://tft-top4-insights.vercel.app/"
+      target="_blank"
+      className="text-primary-dark"
+    >
+      {"https://tft-top4-insights.vercel.app/"}
+    </a>
+  </ImageGalleryInline>
+</div>
+
+There was an online game that I used to enjoy playing&mdash;<a href="https://teamfighttactics.leagueoflegends.com/en-us/" target="_blank">Teamfight Tactics (TFT)</a>. So naturally I had been checking out <a href="https://developer.riotgames.com/apis" target="_blank">Riot's APIs</a> to see if I could create something fun or useful with them. The thing about this particular game is that every now and then (roughly a few months), there's a new "set", and when the new set comes around, the winning strategies you used for the last set wouldn't work on the new set. So you have to sort of learn new strategies for the new set all over again everytime there's a new set. And I wanted to shorten the learning process by analyzing winners' strategies (there are 4 "winners" out of 8 in every TFT game)&mdash;this website was an attempt at that.
+
+</Event>
+
+<Event date="2023-03">
+
+## Image gallery with infinite scrolling
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/image-gallery-infinite-1.png",
+      "/image-gallery-infinite-2.png",
+      "/image-gallery-infinite-3.png",
+    ]}
+  >
+    <a
+      href="https://react-image-gallery-sook.vercel.app/"
+      target="_blank"
+      className="text-primary-dark"
+    >
+      {"https://react-image-gallery-sook.vercel.app/"}
+    </a>
+  </ImageGalleryInline>
+</div>
+
+I had fun making the image viewer component in <a href="https://image-experiment.vercel.app/" target="_blank">https://image-experiment.vercel.app/</a> so I decided to create a fancier version of it, including skeleton loading animation, transition animations on navigation, swipe gesture support on touch screen, keyboard navigation, infinite scrolling, etc.
+
+I think smooth and well-behaving animations are great to have on any website, but they are tricky to get right. The animations on this webpage are mostly taken care of by <a href="https://www.framer.com/motion/introduction/" target="_blank">Framer Motion</a>, which is a great animation library, but I had a hard time trying to orchestrate different animations to work together and ensuring there was no significant performance issue (jankiness / stuttering) on mobile device.
+
+Web animation is a subject that I want to dive deeper and learn the fundamentals in the future, so I could rely less on higher level libraries.
+
+</Event>
+
+<Event date="2023-02">
+
+## Image experiments with Sanity.io
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/image-experiment-1.png",
+      "/image-experiment-5.png",
+      "/image-experiment-2.png",
+      "/image-experiment-3.png",
+      "/image-experiment-4.png",
+    ]}
+  >
+    <a
+      href="https://image-experiment.vercel.app/"
+      target="_blank"
+      className="text-primary-dark"
+    >
+      {"https://image-experiment.vercel.app/"}
+    </a>
+  </ImageGalleryInline>
+</div>
+
+While I was working on CMS integration for my cousin's website, I learned that <a href="https://www.sanity.io/" target="_blank">Sanity</a> provides various image optimization features for the images uploaded. So I played with the features a little bit, creating a simple website above that has an image viewer.
+
+</Event>
+
+<Event date="2023-01">
+
+## Content management system for my cousin's website
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/epem-cms-1.png",
+      "/epem-cms-2.png",
+      "/epem-cms-3.png",
+      "/epem-cms-4.png",
+      "/epem-cms-5.png",
+      "/epem-cms-6.png",
+      "/epem-cms-7.png",
+    ]}
+  />
+</div>
+
+I wanted to integrate CMS to my cousin's new website so that he could edit and manage his contents intuitively. I did some research and <a href="https://www.sanity.io/" target="_blank">Sanity</a> looked like a great fit here so I created a tailored Sanity Studio with live editing and preview features for my cousin's website.
+
+(Despite the effort, my cousin doesn't seem to be using the new website and the editor at the moment, whereas it seems he continues to update and maintain his old wix-made website. I guess I lost to wix.com as a website service provider 😭)
+
+</Event>
+
+<Event date="2022-12">
+
+## Website renewal for my cousin
+
+<div className="space-y-5">
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <a href="https://epemlab.vercel.app/" target="_blank">
+    <Picture.Root aspectRatio={2.05}>
+      <Picture.Figure className="">
+        <Picture.Skeleton />
+        <Picture.Img
+          loading="lazy"
+          src="/cousin-website-renewal.png"
+          className=""
+        />
+      </Picture.Figure>
+      <figcaption className="text-2xs w-full text-center p-1 text-primary dark:text-primary-dark">
+        {"(NEW) https://epemlab.vercel.app/"}
+      </figcaption>
+    </Picture.Root>
+  </a>
+</div>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <a href="https://roybchung.wixsite.com/epemlab" target="_blank">
+    <Picture.Root aspectRatio={2.05}>
+      <Picture.Figure className="">
+        <Picture.Skeleton />
+        <Picture.Img loading="lazy" src="/epem-wix.png" className="" />
+      </Picture.Figure>
+      <figcaption className="text-2xs w-full text-center p-1 text-primary dark:text-primary-dark">
+        {"(OLD) https://roybchung.wixsite.com/epemlab"}
+      </figcaption>
+    </Picture.Root>
+  </a>
+</div>
+</div>
+
+One of my cousins wanted to renovate the website for the lab he was running (made with wix), so I made him a completely new website, using Next.js and tailwindcss.
+
+</Event>
+
 <Event date="2022-10">
 
-## Started building my (now old) personal website
+## My (now old) personal website
 
-<a href="https://website-old-sook.vercel.app/" target="_blank">
-  <Picture.Root>
-    <Picture.Figure className="plaiceholder-[website-old] mt-5 mb-10">
-      <Picture.Skeleton />
-      <Picture.Img loading="lazy" src="/website-old.png" />
-      <figcaption className="absolute top-full text-2xs w-full text-center">
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <a href="https://website-old-sook.vercel.app/" target="_blank">
+    <Picture.Root aspectRatio={2.04}>
+      <Picture.Figure className="">
+        <Picture.Skeleton />
+        <Picture.Img loading="lazy" src="/website-old.png" className="" />
+      </Picture.Figure>
+      <figcaption className="text-2xs w-full text-center p-1 text-primary dark:text-primary-dark">
         {"https://website-old-sook.vercel.app/"}
       </figcaption>
-    </Picture.Figure>
-  </Picture.Root>
-</a>
+    </Picture.Root>
+  </a>
+</div>
 
-Well, the original plan was to maintain it with discipline by writing stuff about things related to web development or software engineering at least weekly, which quickly turned out to be a lot more challenging of a task that I'd thought, so I abandoned the idea and moved on shortly after.
+Well, the original plan was to maintain the website with discipline by writing about things related to web development or software engineering on a weekly basis, but it quickly turned out to be a lot more challenging of a task than I'd originally thought, so I abandoned the idea (and the website) and moved on to other stuff shortly after.
 
 </Event>

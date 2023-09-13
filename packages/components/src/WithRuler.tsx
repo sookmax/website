@@ -21,12 +21,12 @@ export function WithRuler({
 function RulerSVG() {
   const id = useId();
   return (
-    <svg className="h-full w-1.5" aria-hidden="true">
+    <svg className="h-full w-1 sm:w-1.5" aria-hidden="true">
       <defs>
         <pattern id={id} width="6" height="8" patternUnits="userSpaceOnUse">
           <path
             d="M0 0H6M0 8H6"
-            className="stroke-gray-300 dark:stroke-white/10 xl:stroke-white/10"
+            className="stroke-gray-400/50 dark:stroke-white/20"
             fill="none"
           />
         </pattern>

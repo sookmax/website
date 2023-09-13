@@ -59,6 +59,15 @@ const config: Config = {
           DEFAULT: "#FF4785",
         },
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            fontSize: theme("fontSize.sm"),
+            "--tw-prose-links": theme("colors.primary.DEFAULT"),
+            "--tw-prose-invert-links": theme("colors.primary.dark"),
+          },
+        },
+      }),
     },
   },
 };
