@@ -10,12 +10,13 @@ import { Slot } from "@radix-ui/react-slot";
 export function MobileNavRoot({
   children,
   className,
+  ...rest
 }: {
   children?: React.ReactNode;
   className?: string;
-}) {
+} & Omit<React.ComponentPropsWithoutRef<typeof DialogRoot>, "modal">) {
   return (
-    <DialogRoot modal>
+    <DialogRoot modal {...rest}>
       <DialogTrigger
         className={cn(
           `
@@ -76,10 +77,23 @@ export function MobileNavRoot({
   );
 }
 
-export function MobileNavItem({ children }: { children?: React.ReactNode }) {
+export function MobileNavItem({
+  isActive,
+  children,
+}: {
+  isActive?: boolean;
+  children?: React.ReactNode;
+}) {
   return (
     <li>
-      <Slot className="block py-2">{children}</Slot>
+      <Slot
+        className={cn(
+          "block py-2",
+          isActive && "text-primary dark:text-primary-dark",
+        )}
+      >
+        {children}
+      </Slot>
     </li>
   );
 }

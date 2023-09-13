@@ -19,7 +19,7 @@ function ContentWrapper({
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   return (
-    <div className="mx-auto pl-4 pr-1 pb-8">
+    <div className="mx-auto pl-4 pr-1 pb-4">
       <div className={cn("mx-auto max-w-2xl sm:px-4", className)} {...props} />
     </div>
   );

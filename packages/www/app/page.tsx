@@ -1,5 +1,14 @@
-import { AboutPageExample } from "@website/components";
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
-  return <AboutPageExample />;
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace("/about");
+  }, [router]);
+
+  return null;
 }

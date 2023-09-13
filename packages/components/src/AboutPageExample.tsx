@@ -96,13 +96,13 @@ function TechsIUseDesktop() {
 function TechsIUseMobile() {
   return (
     <>
-      <div className="h-8 px-2">
+      <div className="h-6 pt-2">
         <NextjsLogo />
       </div>
       <div className="h-8">
         <TailwindcssLogo />
       </div>
-      <div className="h-8 px-2">
+      <div className="h-6 pt-1">
         <RadixUILogo className="text-[#1C2024] dark:text-[#EDEEF0]" />
       </div>
       <div className="h-8">

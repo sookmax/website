@@ -1,3 +1,4 @@
+"use client";
 import { Expand, X } from "lucide-react";
 import {
   ImageGalleryMainImage,

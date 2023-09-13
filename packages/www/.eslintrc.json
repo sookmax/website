@@ -1,4 +1,7 @@
 {
   "extends": ["next/core-web-vitals"],
-  "ignorePatterns": ["postcss.config.js"]
+  "ignorePatterns": ["postcss.config.js"],
+  "rules": {
+    "@next/next/no-img-element": "off"
+  }
 }
