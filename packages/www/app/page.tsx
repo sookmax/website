@@ -1,14 +1,5 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { AboutPageExample } from "@website/components";
 
 export default function Home() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.replace("/about");
-  }, [router]);
-
-  return null;
+  return <AboutPageExample />;
 }
