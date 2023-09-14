@@ -1,11 +1,10 @@
 import { MDXProvider as MDXProviderImpl } from "@mdx-js/react";
 import { Components } from "@mdx-js/react/lib";
 import React from "react";
-import { Article } from "./mdx";
+import { A } from "./mdx";
 
 const components: Components = {
-  //   article: props => <Article {...props} />
-  Article,
+  a: A,
 };
 
 export function MDXProvider({ children }: { children: React.ReactNode }) {

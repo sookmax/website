@@ -6,7 +6,10 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   // https://mdxjs.com/docs/getting-started/#vite
-  plugins: [{ enforce: "pre", ...mdx() }, react()],
+  plugins: [
+    { enforce: "pre", ...mdx({ providerImportSource: "@mdx-js/react" }) },
+    react(),
+  ],
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
