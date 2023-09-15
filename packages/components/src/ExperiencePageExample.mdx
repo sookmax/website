@@ -2,6 +2,7 @@ import { WithRuler } from "./WithRuler";
 import { Event } from "./Event";
 import * as Picture from "./Picture";
 import { ImageGalleryInline } from "./ImageGalleryInline";
+import { ExternalLink } from "lucide-react";
 
 export default function Layout({ children }) {
   return (
@@ -10,15 +11,153 @@ export default function Layout({ children }) {
         <div>Work Experience</div>
       </h1>
       <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-        My career path from 2015 to 2022&mdash;from when I graduated college to
-        when I quit my latest job. The actual web dev career starts around
-        2019-2020&mdash;everything before that is related to data analysis
-        career.
+        My career path from Jun. 2015 to Oct. 2022&mdash;from when I graduated
+        college to when I quit my latest job. The actual web dev career starts
+        around 2019-2020&mdash;everything before that is related to data
+        analysis career.
       </p>
       <WithRuler className="mt-12">{children}</WithRuler>
     </div>
   );
 }
+
+<Event from="2021-06" to="2022-10">
+
+<h2 className="flex flex-col">
+  <span className="flex space-x-1">
+    <span>Frontent Developer - 3i</span>
+    <a href="https://www.3i.ai/" target="_blank" className="flex items-center">
+      <ExternalLink className="w-5 h-5" />
+    </a>
+  </span>
+  <span className="font-normal text-base">Seoul, South Korea</span>
+</h2>
+
+</Event>
+
+<Event from="2020-12" to="2021-06">
+
+<h2 className="flex flex-col">
+  <span className="flex space-x-1">
+    <span>Frontent Developer - Dawinproperty</span>
+    <a href="https://dawin.xyz/" target="_blank" className="flex items-center">
+      <ExternalLink className="w-5 h-5" />
+    </a>
+  </span>
+  <span className="font-normal text-base">Seoul, South Korea</span>
+</h2>
+
+</Event>
+
+<Event from="2019-06" to="2020-12">
+
+<h2 className="flex flex-col">
+  <span className="flex space-x-1">
+    <span>Software Engineer - AgileSoDA</span>
+    <a
+      href="http://www.agilesoda.com/"
+      target="_blank"
+      className="flex items-center"
+    >
+      <ExternalLink className="w-5 h-5" />
+    </a>
+  </span>
+  <span className="font-normal text-base">Seoul, South Korea</span>
+</h2>
+
+</Event>
+
+<Event from="2017-04" to="2019-06">
+
+<h2 className="flex flex-col">
+  <span className="flex space-x-1">
+    <span>Data Analyst - AgileSoDA</span>
+    <a
+      href="http://www.agilesoda.com/"
+      target="_blank"
+      className="flex items-center"
+    >
+      <ExternalLink className="w-5 h-5" />
+    </a>
+  </span>
+  <span className="font-normal text-base">Seoul, South Korea</span>
+</h2>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/agilesoda-da-1.png",
+      "/agilesoda-da-2.png",
+      "/agilesoda-da-3.png",
+      "/agilesoda-da-4.png",
+      "/agilesoda-da-5.png",
+      "/agilesoda-da-6.png",
+      "/agilesoda-da-7.png",
+    ]}
+  />
+</div>
+
+This was the third and the last job I had as a data analyst. This particular company was where I was able to switch position to software engineer later, which evolved into an entirely frontend position at the end. Almost half of my time here as a data analyst, I was involved in the projects that attempted to predict the future stock prices (or the directions of them), which&mdash;not surprisingly&mdash;failed spectacularly, resulting in the models whose prediction accuracies were around 50% (which is equivalent of a coin toss 😂). In hindsight, we were trying too hard to find even a smallest signal in the stock market data, which I believe is inherently random with no meaningful pattern to detect and capture with a model. Related, it was this time around that I started to lose interset in data analysis as a profession. I felt especially frustrated when the data I was analyzing didn't really have any meaningful or interesting patterns&mdash;in that case, no amount of work from my end could turn the result around. It was basically garbage in, garbage out.
+
+In contrast, my interest towards computer system and software engineering were growing steadily while doing stuff like shell scripting, spawning a process, killing a malfunctioning process, cron jobs, ssh tunneling, etc. that were necessary for our data analysis team to do their job&mdash;I mostly volunteered to do these kind of peripheral works because they were more fun.
+
+One particular project I was involved was having to do with data migration&mdash;from the client's Oracle database to our data analytics cluster, which used [hdfs](https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) as its default file system. It sounds daunting, but the tool like [sqoop](https://sqoop.apache.org/) helped me move the entire Oracle database and tables to hdfs [as Hive tables](https://docs.cloudera.com/HDPDocuments/HDP2/HDP-2.4.2/bk_dataintegration/content/using_sqoop_to_move_data_into_hive.html) without too much challenges. I also needed to port the Oracle SQL queries we were using in the project to HiveQL so that our queries still work after the migration to Hive was done. This job was technically supposed to be taken care of by the engineer in the project, but his workload was too much at that time that he couldn't come to the project site (client's office where we&mdash;data analysts&mdash;were working alongside the client) as much as we wanted him to, so I ended up doing it myself. This kind of episode actually helped me later to appeal to the management that I wanted to move to an engineer position.
+
+<h3>Personal Project - Small Hadoop Cluster</h3>
+
+</Event>
+
+<Event from="2016-09" to="2017-04">
+
+<h2 className="flex flex-col">
+  <span className="flex space-x-1">
+    <span>Data Analyst - Mobigen</span>
+    <a
+      href="http://www.mobigen.com/eng/index.php"
+      target="_blank"
+      className="flex items-center"
+    >
+      <ExternalLink className="w-5 h-5" />
+    </a>
+  </span>
+  <span className="font-normal text-base">Seoul, South Korea</span>
+</h2>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/mobigen-1.png",
+      "/mobigen-2.png",
+      "/mobigen-3.png",
+      "/mobigen-4.png",
+      "/mobigen-5.png",
+      "/mobigen-6.png",
+      "/mobigen-7.png",
+      "/mobigen-8.png",
+      "/mobigen-9.png",
+      "/mobigen-10.png",
+      "/mobigen-11.png",
+      "/mobigen-12.png",
+      "/mobigen-13.png",
+      "/mobigen-14.png",
+      "/mobigen-15.png",
+      "/mobigen-16.png",
+      "/mobigen-17.png",
+      "/mobigen-18.png",
+      "/mobigen-19.png",
+      "/mobigen-20.png",
+      "/mobigen-21.png",
+      "/mobigen-22.png",
+      "/mobigen-23.png",
+    ]}
+  />
+</div>
+
+It was my second job as a data analyst. I remember this company had much bigger engineering department compared to my first company, probably because it had a B2B SaaS product or two already being sold when I joined&mdash;they were putting together a data analytics team for the first time when they hired me. I didn't know the details of the products they had, but the software engineers developing the products used [Python](https://www.python.org/) as their primary language of choice (or so they said since I never saw or touched the actual product code bases). Naturally, there were quite a lot of competent Python programmers in the company including the then CTO, who led a Python study group for new hires, which I was a part of, once a week. There were also a few data analysts that had already been working in the company by the time I joined, and they were also using mostly Python for their tasks. So it was natural for me to learn and explore data analysis tools in Python ecosystem&mdash;I remember using tools like [scikit-learn](https://scikit-learn.org/stable/), [pandas](https://pandas.pydata.org/), and [matplotlib](https://matplotlib.org/).
+
+To me, 2016 and 2017 were prime time for machine learning. Well, I think it wasn't just me, but there were a lot of excitement in general around machine learning in that time period, thanks to people like [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng), [Christopher Bishop](https://en.wikipedia.org/wiki/Christopher_Bishop), and [Yann LeCun](https://en.wikipedia.org/wiki/Yann_LeCun) giving public and accessible lectures and talks. It was _the_ period of artificial neural networks, [deep learning](https://www.deeplearningbook.org/), and [TensorFlow](https://www.tensorflow.org/) as I remember it.
+
+</Event>
 
 <Event from="2015-07" to="2016-08">
 

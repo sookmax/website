@@ -22,17 +22,18 @@ export function AboutPageExample() {
         </div>
         <div className="mt-12 space-y-7 lg:pr-8 text-base text-zinc-600 dark:text-zinc-400">
           <p>
-            Well actually, I did not start my career as a web developer, but now
-            I can hardly think of anything else I'd rather do than web
+            Well actually I think I should have stated first that I did not
+            start my career as a web developer. But now I can hardly think of
+            anything else I'd rather persue as my profession than web
             development.
           </p>
           <p>
-            I started out as a data analyst after graduating college back in
-            2015. In hindsight, I think I had always enjoyed data visualization
-            (charts and tables) more than any other aspects of data analysis,
-            which had probably been the strongest motivator that eventually led
-            me to web development. And now, I'm happier and more fulfilled as a
-            web developer.
+            In fact, I started out as a data analyst after graduating college
+            back in 2015. In hindsight, I think I had always enjoyed data
+            visualization (charts and tables) more than any other aspects of
+            data analysis, which had probably been the strongest motivator that
+            eventually led me to web development. And now, I'm happier and more
+            fulfilled as a web developer.
           </p>
           <p>
             As much as I am passionate about web dev though, I think it is also
