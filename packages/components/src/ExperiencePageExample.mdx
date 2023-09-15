@@ -1,0 +1,115 @@
+import { WithRuler } from "./WithRuler";
+import { Event } from "./Event";
+import * as Picture from "./Picture";
+import { ImageGalleryInline } from "./ImageGalleryInline";
+
+export default function Layout({ children }) {
+  return (
+    <div className="prose dark:prose-invert max-w-none">
+      <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 md:text-5xl">
+        <div>Work Experience</div>
+      </h1>
+      <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+        My career path from 2015 to 2022&mdash;from when I graduated college to
+        when I quit my latest job. The actual web dev career starts around
+        2019-2020&mdash;everything before that is related to data analysis
+        career.
+      </p>
+      <WithRuler className="mt-12">{children}</WithRuler>
+    </div>
+  );
+}
+
+<Event from="2015-07" to="2016-08">
+
+<h2 className="flex flex-col">
+  <span>Data Analyst - NowDream</span>
+  <span className="font-normal text-base">Seoul, South Korea</span>
+</h2>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/nowdream-1.png",
+      "/nowdream-2.png",
+      "/nowdream-3.png",
+      "/nowdream-4.png",
+      "/nowdream-5.png",
+      "/nowdream-6.png",
+    ]}
+  />
+</div>
+
+This was my first job as a data analyst fresh out of college. With memory still relatively fresh (which is no longer the case), I remember I tried very hard to apply what I'd learned at school to the tasks I was assigned.
+
+It was also this time around that I started developing interest towards computer system behind the scene. You see, when I was in school, my typical IDE was a desktop app called [RStudio](https://posit.co/products/open-source/rstudio/) and that was it. But now my IDE was running on [the server](https://posit.co/products/open-source/rstudio-server/), and I accessed my RStudio through the browser (as in the form of web app). At that time, this RStudio "server" and the web UI that I can connect and use through the browser felt like dark magic almost 🤯. And to control this misterious server&mdash;which was nothing but a desktop PC quietly sitting in the corner of the office&mdash;I had to connect to it through something called an SSH client (I mostly used [PuTTY](https://www.putty.org/) back then), which would instantly start a Bash session if successfully connected&mdash;it was the first time I interacted with a Linux OS. I was quite fascinated by shell environment of Linux that I would randomly connect to the server just to play around with Bash and its utilites.
+
+It was also the period where big data hype was at its peak, so I had a chance to play a little bit with [Hadoop](https://hadoop.apache.org/) and [Hive](https://hive.apache.org/)&mdash;as a matter of fact, Hive was my first experience with SQL.
+
+</Event>
+
+<Event date="2015-06">
+
+<h2 className="flex flex-col">
+  <span>Graduated UCLA with Statistics, B.S.</span>
+  <span className="font-normal text-base">Los Angeles, CA</span>
+</h2>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={["/graduation-1.jpg", "/graduation-2.jpg", "/graduation-3.jpg"]}
+  />
+</div>
+
+<h3>
+  Some group project slides I've found still sitting in my google drive 😂
+</h3>
+
+<div className="space-y-10">
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/group-project-1.png",
+      "/group-project-2.png",
+      "/group-project-3.png",
+      "/group-project-4.png",
+      "/group-project-5.png",
+      "/group-project-6.png",
+      "/group-project-7.png",
+      "/group-project-8.png",
+    ]}
+  />
+</div>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/group-project-9.png",
+      "/group-project-10.png",
+      "/group-project-11.png",
+      "/group-project-12.png",
+      "/group-project-13.png",
+      "/group-project-14.png",
+      "/group-project-15.png",
+    ]}
+  />
+</div>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/group-project-16.png",
+      "/group-project-17.png",
+      "/group-project-18.png",
+      "/group-project-19.png",
+      "/group-project-20.png",
+      "/group-project-21.png",
+      "/group-project-22.png",
+      "/group-project-23.png",
+      "/group-project-24.png",
+    ]}
+  />
+</div>
+</div>
+
+</Event>
