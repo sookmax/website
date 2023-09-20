@@ -80,12 +80,12 @@ function FullscreenToggle(props: Omit<ImageGalleryProps, "children">) {
           {aspectRatio !== null && (
             <ImageGalleryMainImage
               aspectRatio={aspectRatio}
-              showSkeleton={false}
+              showSkeleton={true}
             />
           )}
           <ImageGalleryThumbnails
             ref={(ref) => setThumbnailsElement(ref)}
-            showSkeleton={false}
+            showSkeleton={true}
           />
           <ImageGalleryNavButtons />
         </ImageGalleryRoot>
