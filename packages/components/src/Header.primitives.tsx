@@ -1,80 +1,39 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef } from "react";
-
-const HEADER_CONTAINER_HEIGHT_VAR = "--header-container-height";
-const HEADER_CONTAINER_HEIGHT_VAL = `var(${HEADER_CONTAINER_HEIGHT_VAR})`;
-const HEADER_CONTAINER_MB_VAR = "--header-container-mb";
-const HEADER_CONTAINER_MB_VAL = `var(${HEADER_CONTAINER_MB_VAR})`;
-
-function setProperty(property: string, value: string) {
-  document.documentElement.style.setProperty(property, value);
-}
-
-// function removeProperty(property: string) {
-//   document.documentElement.style.removeProperty(property);
-// }
-
-function clamp(number: number, a: number, b: number) {
-  const min = Math.min(a, b);
-  const max = Math.max(a, b);
-  return Math.min(Math.max(number, min), max);
-}
+import { cn, trim } from "@website/utils";
+import React, { useEffect, useRef, useState } from "react";
+import throttle from "lodash/throttle";
 
 export function HeaderRoot({ children }: { children?: React.ReactNode }) {
   const headerRef = useRef<HTMLElement>(null);
-
-  const updateHeaderStyles = useCallback(() => {
-    if (!headerRef.current) return;
-
-    const { top: headerTop, height: headerHeight } =
-      headerRef.current.getBoundingClientRect();
-
-    const scrollY = clamp(
-      window.scrollY,
-      0,
-      document.body.scrollHeight - window.innerHeight,
-    );
-
-    if (scrollY < 0) {
-      setProperty(HEADER_CONTAINER_HEIGHT_VAR, `${headerHeight}px`);
-      setProperty(HEADER_CONTAINER_MB_VAR, `0px`);
-    } else if (headerTop + headerHeight < -headerHeight) {
-      const offset = Math.max(headerHeight, scrollY - headerHeight);
-      setProperty(HEADER_CONTAINER_HEIGHT_VAR, `${offset}px`);
-      setProperty(HEADER_CONTAINER_MB_VAR, `${headerHeight - offset}px`);
-    } else if (headerTop === 0) {
-      setProperty(HEADER_CONTAINER_HEIGHT_VAR, `${scrollY + headerHeight}px`);
-      setProperty(HEADER_CONTAINER_MB_VAR, `${-scrollY}px`);
-    }
-  }, []);
+  const [showShadow, setShowShadow] = useState(false);
 
   useEffect(() => {
-    if (!headerRef.current) return;
-    const { height: headerHeight } = headerRef.current.getBoundingClientRect();
+    const scrollListener = throttle(() => {
+      if (window.scrollY < 20) {
+        setShowShadow(false);
+      } else {
+        setShowShadow(true);
+      }
+    }, 100);
 
-    setProperty(HEADER_CONTAINER_HEIGHT_VAR, `${headerHeight}px`);
-    setProperty(HEADER_CONTAINER_MB_VAR, `0px`);
-
-    window.addEventListener("scroll", updateHeaderStyles, { passive: true });
-    window.addEventListener("resize", updateHeaderStyles);
+    document.addEventListener("scroll", scrollListener);
 
     return () => {
-      window.removeEventListener("scroll", updateHeaderStyles);
-      window.removeEventListener("resize", updateHeaderStyles);
+      document.removeEventListener("scroll", scrollListener);
     };
-  }, [updateHeaderStyles]);
+  }, []);
 
   return (
     <>
       <div
-        className="relative z-50"
-        style={{
-          height: HEADER_CONTAINER_HEIGHT_VAL,
-          marginBottom: HEADER_CONTAINER_MB_VAL,
-        }}
+        className={cn(
+          `sticky top-0 z-50 transition-shadow bg-white dark:bg-zinc-900 -mx-4 sm:-mx-8 px-3 md:px-4 py-2`,
+          showShadow &&
+            "shadow-[0_3px_10px_-5px_rgba(0,0,0,0.25)] dark:shadow-[0_3px_10px_-4px_rgba(255,255,255,0.25)]",
+        )}
       >
-        <header ref={headerRef} className="sticky top-0 z-10 h-16 pt-6 flex">
+        <header ref={headerRef} className="flex">
           {children}
         </header>
       </div>

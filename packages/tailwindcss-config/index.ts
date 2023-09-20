@@ -65,6 +65,9 @@ const config: Config = {
             fontSize: theme("fontSize.sm"),
             "--tw-prose-links": theme("colors.primary.DEFAULT"),
             "--tw-prose-invert-links": theme("colors.primary.dark"),
+            h2: {
+              marginTop: "1em",
+            },
           },
         },
       }),

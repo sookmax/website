@@ -1,6 +1,6 @@
 "use client";
 
-import { createStore } from "@website/utils";
+import { cn, createStore } from "@website/utils";
 import React, {
   useCallback,
   useEffect,
@@ -8,6 +8,7 @@ import React, {
   useRef,
   useState,
 } from "react";
+import { LoadingSvg } from "./icons/LoadingSvg";
 
 type ImageStatus = "preload" | "loading" | "loaded" | "cancelled";
 
@@ -74,6 +75,7 @@ const FigureImpl = React.memo(
                 dispatch((state) => {
                   state.imageStatus = "loading";
                 });
+                observer.disconnect();
               }
             }
           },
@@ -99,7 +101,7 @@ const FigureImpl = React.memo(
         style={{
           position: "relative",
           paddingBottom: `${(1 / aspectRatio) * 100}%`,
-          filter: imageStatus === "loaded" ? "blur(0)" : "blur(16px)",
+          // filter: imageStatus === "loaded" ? "blur(0)" : "blur(16px)",
           // backgroundImage: `url(${previewUrl})`,
           // backgroundRepeat: "no-repeat",
           // backgroundSize: "cover",
@@ -224,22 +226,34 @@ type SkeletonProps = Omit<JSX.IntrinsicElements["div"], "style"> & {
 
 const SkeletonImpl = React.memo(
   React.forwardRef<HTMLDivElement, SkeletonProps>(function SkeletonImpl(
-    { imageStatus, ...rest },
+    { imageStatus, className, ...rest },
     ref,
   ) {
     return imageStatus === "loading" ? (
+      // <div
+      //   ref={ref}
+      //   {...rest}
+      //   style={{
+      //     position: "absolute",
+      //     inset: 0,
+      //     animation: `2.5s ease 0s infinite normal none running shimmer`,
+      //     backgroundImage:
+      //       "linear-gradient(to right, transparent, 45%, #e5e7eb, 55%, transparent)",
+      //     opacity: 0.3,
+      //   }}
+      // />
       <div
         ref={ref}
+        className={cn(
+          className,
+          "absolute inset-0 flex justify-center items-center",
+        )}
         {...rest}
-        style={{
-          position: "absolute",
-          inset: 0,
-          animation: `2.5s ease 0s infinite normal none running shimmer`,
-          backgroundImage:
-            "linear-gradient(to right, transparent, 45%, #e5e7eb, 55%, transparent)",
-          opacity: 0.3,
-        }}
-      />
+      >
+        <div className="animate-spin h-5 w-5 text-white">
+          <LoadingSvg />
+        </div>
+      </div>
     ) : null;
   }),
 );

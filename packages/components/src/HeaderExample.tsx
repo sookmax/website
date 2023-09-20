@@ -9,7 +9,7 @@ export function HeaderExample() {
     <HeaderRoot>
       <AvatarExample />
       <div className="grow flex justify-end md:justify-center">
-        <MobileNavExample className="pointer-events-auto md:hidden mr-2" />
+        <MobileNavExample className="pointer-events-auto md:hidden" />
         <DesktopNavExample className="pointer-events-auto hidden md:block" />
       </div>
       <ThemeToggle />

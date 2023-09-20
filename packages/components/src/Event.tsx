@@ -1,4 +1,4 @@
-import { cn } from "@website/utils";
+import { cn, trim } from "@website/utils";
 import { format } from "date-fns";
 
 export function Event({
@@ -34,17 +34,29 @@ function ContentWrapper({
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   return (
-    <div className="mx-auto pl-4 pr-1 pb-4">
-      <div className={cn("mx-auto max-w-2xl sm:px-4", className)} {...props} />
+    <div className="mx-auto pb-4">
+      <div
+        className={cn("mx-auto max-w-2xl px-1 sm:px-4", className)}
+        {...props}
+      />
     </div>
   );
 }
 
 function EventHeader({ children }: { children: React.ReactNode }) {
   return (
-    <header className="sticky top-0 z-40">
-      <div className="flex items-center space-x-1 ml-2">
-        <div className="pl-1 grow text-gray-600 dark:text-gray-300 text-2xs bg-white/50 dark:bg-zinc-900/50 backdrop-blur">
+    // the top value depends on the header's height.
+    <header
+      className={trim(`
+    sticky top-14 z-40 -mx-4 sm:-mx-8 px-4 sm:px-8 bg-white/70 dark:bg-zinc-900/70 backdrop-blur
+    `)}
+    >
+      <div className="flex items-center space-x-1">
+        <div
+          className={trim(`
+        py-1 grow text-sm sm:text-base font-bold
+        `)}
+        >
           {children}
         </div>
       </div>

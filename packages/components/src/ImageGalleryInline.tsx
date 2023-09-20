@@ -31,8 +31,8 @@ export function ImageGalleryInline({
       imageIndex={imageIndex}
       setImageIndex={setImageIndex}
     >
-      <ImageGalleryMainImage showSkeleton={false} />
-      <ImageGalleryThumbnails showSkeleton={false} />
+      <ImageGalleryMainImage key={imageIndex} showSkeleton={true} />
+      <ImageGalleryThumbnails showSkeleton={true} />
       <ImageGalleryNavButtons />
       <FullscreenToggle
         imageUrls={fullscreenImageUrls}
@@ -64,7 +64,7 @@ function FullscreenToggle(props: Omit<ImageGalleryProps, "children">) {
     <DialogRoot modal>
       <DialogTrigger
         className={
-          "hidden xl:flex opacity-50 absolute top-2 right-2 text-white bg-zinc-900/50 z-50 w-8 h-8 sm:w-10 sm:h-10 items-center justify-center"
+          "hidden xl:flex opacity-50 absolute top-2 right-2 text-white bg-zinc-900/50 z-30 w-8 h-8 sm:w-10 sm:h-10 items-center justify-center"
         }
       >
         <Expand />
@@ -72,7 +72,7 @@ function FullscreenToggle(props: Omit<ImageGalleryProps, "children">) {
       <DialogContent className="flex flex-col justify-center items-center">
         <DialogClose
           aria-label="Exit fullscreen view"
-          className="fixed z-50 top-2 right-2 bg-zinc-900/50 opacity-50 p-2"
+          className="fixed z-30 top-2 right-2 bg-zinc-900/50 opacity-50 p-2"
         >
           <X className="h-6 w-6 text-white/90" />
         </DialogClose>

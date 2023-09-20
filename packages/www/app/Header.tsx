@@ -8,7 +8,7 @@ export function Header() {
     <HeaderRoot>
       <Avatar />
       <div className="grow flex justify-end md:justify-center">
-        <MobileNav className="pointer-events-auto md:hidden mr-2" />
+        <MobileNav className="pointer-events-auto md:hidden" />
         <DesktopNav className="pointer-events-auto hidden md:block" />
       </div>
       <ThemeToggle />

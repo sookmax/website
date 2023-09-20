@@ -19,15 +19,7 @@ export function ThemeToggle() {
       type="button"
       aria-label={mounted ? `Switch to ${otherTheme} theme` : "Toggle theme"}
       className={trim(`
-      group 
-      rounded-full bg-white/90 p-2
-      shadow-md shadow-zinc-800/10 
-      ring-1 ring-zinc-900/10 hover:ring-zinc-900/10
-      backdrop-blur transition 
-      dark:bg-zinc-800/90 
-      dark:ring-white/20 
-      dark:hover:ring-white/30
-      dark:shadow-zinc-200/10
+      group p-2 transition
       `)}
       onClick={() => setTheme(otherTheme)}
     >

@@ -15,6 +15,9 @@ const PropsContext = React.createContext<Omit<ImageGalleryProps, "children">>({
 
 const initialState = {
   imageIndex: 0,
+  thumbnailItemScrollIntoView: (imageIndex: number) => {
+    console.error("thumbnailItemScrollIntoView() was not updated properly.");
+  },
 };
 
 export type ImageGalleryState = typeof initialState;
@@ -76,36 +79,43 @@ export function ImageGalleryMainImage({
 export function ImageGalleryNavButtons() {
   const { imageUrls, setImageIndex } = useContext(PropsContext);
   const dispatch = useDispatch();
+  const { thumbnailItemScrollIntoView } = useStoreState();
 
   const updateImageIndexByDirection = useCallback(
     (direction: -1 | 1) => {
       return () => {
         if (setImageIndex) {
           setImageIndex((index) => {
-            const nextImageIndex = index + direction;
+            let nextImageIndex = index + direction;
             if (nextImageIndex < 0) {
-              return imageUrls.length - 1;
+              nextImageIndex = imageUrls.length - 1;
             } else if (nextImageIndex > imageUrls.length - 1) {
-              return 0;
-            } else {
-              return nextImageIndex;
+              nextImageIndex = 0;
             }
+
+            // not sure if this is safe to do
+            thumbnailItemScrollIntoView(nextImageIndex);
+
+            return nextImageIndex;
           });
         } else {
           dispatch((state) => {
-            const nextImageIndex = state.imageIndex + direction;
+            let nextImageIndex = state.imageIndex + direction;
             if (nextImageIndex < 0) {
-              state.imageIndex = imageUrls.length - 1;
+              nextImageIndex = imageUrls.length - 1;
             } else if (nextImageIndex > imageUrls.length - 1) {
-              state.imageIndex = 0;
-            } else {
-              state.imageIndex = nextImageIndex;
+              nextImageIndex = 0;
             }
+
+            // not sure if this is safe to do
+            thumbnailItemScrollIntoView(nextImageIndex);
+
+            state.imageIndex = nextImageIndex;
           });
         }
       };
     },
-    [imageUrls.length, dispatch, setImageIndex],
+    [imageUrls.length, dispatch, setImageIndex, thumbnailItemScrollIntoView],
   );
 
   const goToNextImage = useMemo(
@@ -120,13 +130,13 @@ export function ImageGalleryNavButtons() {
   return (
     <>
       <button
-        className="opacity-50 absolute top-1/2 -translate-y-1/2 right-2 text-white bg-zinc-900/50 z-50 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"
+        className="opacity-50 absolute top-1/2 -translate-y-1/2 right-2 text-white bg-zinc-900/50 z-30 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"
         onClick={goToNextImage}
       >
         <ChevronRight />
       </button>
       <button
-        className="opacity-50 absolute top-1/2 -translate-y-1/2 left-2 text-white bg-zinc-900/50 z-50 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"
+        className="opacity-50 absolute top-1/2 -translate-y-1/2 left-2 text-white bg-zinc-900/50 z-30 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"
         onClick={goToPrevImage}
       >
         <ChevronLeft />
@@ -152,6 +162,16 @@ export const ImageGalleryThumbnails = React.forwardRef<
 
   const imageIndex = imageIndexProps ?? imageIndexState;
 
+  const thumbnailItemScrollIntoView = useCallback((imageIndex: number) => {
+    if (
+      thumbnailsElementRef.current &&
+      thumbnailsElementRef.current.children.item(imageIndex)
+    ) {
+      const item = thumbnailsElementRef.current.children.item(imageIndex);
+      item?.scrollIntoView({ inline: "center", block: "nearest" });
+    }
+  }, []);
+
   const goToImage = useCallback(
     (index: number) => {
       return () => {
@@ -166,20 +186,27 @@ export const ImageGalleryThumbnails = React.forwardRef<
             }
           });
         }
+        thumbnailItemScrollIntoView(index);
       };
     },
-    [dispatch, setImageIndex],
+    [dispatch, setImageIndex, thumbnailItemScrollIntoView],
   );
 
   useEffect(() => {
-    if (
-      thumbnailsElementRef.current &&
-      thumbnailsElementRef.current.children.item(imageIndex)
-    ) {
-      const item = thumbnailsElementRef.current.children.item(imageIndex);
-      item?.scrollIntoView({ inline: "center", block: "nearest" });
-    }
-  }, [imageIndex]);
+    dispatch((state) => {
+      state.thumbnailItemScrollIntoView = thumbnailItemScrollIntoView;
+    });
+  }, [dispatch, thumbnailItemScrollIntoView]);
+
+  // useEffect(() => {
+  //   if (
+  //     thumbnailsElementRef.current &&
+  //     thumbnailsElementRef.current.children.item(imageIndex)
+  //   ) {
+  //     const item = thumbnailsElementRef.current.children.item(imageIndex);
+  //     item?.scrollIntoView({ inline: "center", block: "nearest" });
+  //   }
+  // }, [imageIndex]);
 
   return (
     <div className="flex border-t border-zinc-700" ref={ref}>

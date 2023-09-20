@@ -5,7 +5,7 @@ const nextConfig = {
   // https://nextjs.org/docs/app/api-reference/next-config-js/transpilePackages
   transpilePackages: ["@website/components", "@website/tailwindcss-config"],
   experimental: {
-    mdxRs: true,
+    // mdxRs: true,
   },
 };
 

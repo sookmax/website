@@ -10,7 +10,7 @@ export function WithRuler({
 }) {
   return (
     <div className={cn(className, "relative")}>
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none absolute inset-0 hidden md:block">
         <RulerSVG />
       </div>
       {children}

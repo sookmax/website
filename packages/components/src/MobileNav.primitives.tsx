@@ -20,26 +20,16 @@ export function MobileNavRoot({
       <DialogTrigger
         className={cn(
           `
-            group flex items-center justify-center rounded-full 
+            group flex items-center justify-center
             h-10 w-10 transition outline-none
-            p-2 text-sm font-medium 
-            bg-white/90
-            text-zinc-800 
-            shadow-md shadow-zinc-800/10
-            ring-1 ring-zinc-900/10
-            backdrop-blur 
-            dark:bg-zinc-800/90 
-            dark:text-zinc-300 
-            dark:ring-white/20 
-            dark:hover:ring-white/30
-            dark:shadow-zinc-200/10
+            p-2 text-sm font-medium
           `,
           className,
         )}
       >
         <Menu
           className={trim(`
-                w-5 h-5
+                w-6 h-6
                 transition
                 stroke-zinc-500
                 group-hover:stroke-zinc-700 
