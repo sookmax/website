@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@website/tailwindcss-config/styles/tailwind.css";
 import { PageLayout } from "./PageLayout";
-import { ScrollTop } from "./ScrollTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +28,6 @@ export default function RootLayout({
     // https://github.com/vercel/next.js/issues/49350 for `suppressHydrationWarning`
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ScrollTop />
         <ThemeProvider>
           <BaseLayout>
             <PageLayout>{children}</PageLayout>

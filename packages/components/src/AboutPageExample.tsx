@@ -3,6 +3,7 @@ import { ReactjsLogo } from "./icons/ReactjsLogo";
 import { TailwindcssLogo } from "./icons/TailwindcssLogo";
 import { RadixUILogo } from "./icons/RadixUILogo";
 import { StorybookLogo } from "./icons/StorybookLogo";
+import { SocialLinks } from "./SocialLinks";
 
 export function AboutPageExample() {
   return (
@@ -12,44 +13,41 @@ export function AboutPageExample() {
           <div>Hi, I’m Sook.</div>
           <div className="flex items-center">
             <span>A web developer</span>
-            <span className="w-7 h-7 md:w-10 md:h-10 ml-2">
+            <span className="w-7 h-7 md:w-9 md:h-9 ml-2">
               <ReactjsLogo className="text-primary dark:text-primary-dark" />
             </span>
+          </div>
+          <div className="hidden md:block mt-4 opacity-70">
+            <SocialLinks />
           </div>
         </h1>
         <div className="md:hidden grid grid-cols-3 gap-4 mt-8 px-2 pt-4">
           <TechsIUseMobile />
         </div>
-        <div className="mt-12 space-y-7 lg:pr-8 text-base text-zinc-600 dark:text-zinc-400">
+        <div className="mt-8 space-y-7 lg:pr-8 text-base text-zinc-600 dark:text-zinc-400">
           <p>
-            Well actually I think I should have stated first that I did not
-            start my career as a web developer. But now I can hardly think of
-            anything else I'd rather persue as my profession than web
-            development.
-          </p>
-          <p>
-            In fact, I started out as a data analyst after graduating college
-            back in 2015. In hindsight, I think I had always enjoyed data
+            Well in fact, I started out not as a web developer but as a data
+            analyst after finishing college back in 2015; I worked as a data
+            analyst until 2019. In hindsight, I think I had always enjoyed data
             visualization (charts and tables) more than any other aspects of
             data analysis, which had probably been the strongest motivator that
-            eventually led me to web development. And now, I'm happier and more
-            fulfilled as a web developer.
+            eventually led me to web development.
           </p>
           <p>
-            As much as I am passionate about web dev though, I think it is also
-            fairly hard. A part of it might be because there are so
-            many&mdash;often completely different&mdash;ways to achieve similar
-            end results (JS frameworks, for example). Another part of it might
-            have to do with the difficulty supporting multiple browsers (and
-            their versions) and various devices (and their sizes).
+            As much as I love web development though, I think it can also be
+            fairly hard and frustrating. A part of it might be because there are
+            so many&mdash;often completely different&mdash;ways to achieve
+            similar end results (JS frameworks, for example). Another part of it
+            might have to do with the difficulty supporting multiple browsers
+            (and their versions) and various devices (and their sizes).
           </p>
           <p>
             Or the fact that it's almost too easy to introduce visual
             regressions and break things with the slightest change in the code
             base could also be part of web development being quite difficult.
-            I've observed all these challenges being amplified even more when
-            there are multiple developers involved, as opposed to when I am the
-            only developer of a particular project.
+            I've observed all these challenges being amplified even further when
+            there are more than one developers involved, working on the same
+            codebase.
           </p>
           <p>
             Despite the challenges, I understand building a great product
@@ -57,17 +55,17 @@ export function AboutPageExample() {
             software products are the culmination of immense{" "}
             <em>collaborative effort</em> among great people. My ultimate goal
             is to be a part of such team. And I believe the best way to achieve
-            that&mdash;from my end&mdash;is to become a sufficiently competent
-            dev myself.
+            that&mdash;from my end, at least&mdash;is to become a sufficiently
+            competent engineer myself.
           </p>
           <p>
             So here I am, trying to be a better web dev than yesterday, everyday
-            :)
+            😄
           </p>
         </div>
       </div>
-      <div className="hidden md:block mt-12">
-        <ul className="grid grid-rows-5 gap-5 max-h-96 mt-6">
+      <div className="hidden md:block">
+        <ul className="grid grid-rows-4 gap-5 max-h-80">
           <TechsIUseDesktop />
         </ul>
       </div>

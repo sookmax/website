@@ -53,7 +53,7 @@ export function MobileNavRoot({
           >
             <X className="h-5 w-5 text-zinc-500 dark:text-zinc-400" />
           </DialogClose>
-          <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+          <h2 className="text-base font-medium text-zinc-600 dark:text-zinc-400">
             sook.dev
           </h2>
         </div>

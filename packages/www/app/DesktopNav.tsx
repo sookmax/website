@@ -3,7 +3,6 @@
 import { DesktopNavRoot, DesktopNavItem } from "@website/components";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { requestTopO } from "./ScrollTop";
 
 export function DesktopNav({ className }: { className?: string }) {
   const pathname = usePathname();
@@ -11,19 +10,13 @@ export function DesktopNav({ className }: { className?: string }) {
   return (
     <DesktopNavRoot className={className}>
       <DesktopNavItem isActive={pathname === "/"}>
-        <Link href="/" onClick={requestTopO}>
-          About
-        </Link>
+        <Link href="/">About</Link>
       </DesktopNavItem>
       <DesktopNavItem isActive={pathname === "/current"}>
-        <Link href="/current" onClick={requestTopO}>
-          Current
-        </Link>
+        <Link href="/current">Current</Link>
       </DesktopNavItem>
       <DesktopNavItem isActive={pathname === "/experience"}>
-        <Link href="/experience" onClick={requestTopO}>
-          Experience
-        </Link>
+        <Link href="/experience">Experience</Link>
       </DesktopNavItem>
     </DesktopNavRoot>
   );

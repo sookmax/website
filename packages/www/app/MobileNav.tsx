@@ -1,10 +1,9 @@
 "use client";
 
-import { MobileNavItem, MobileNavRoot } from "@website/components";
+import { MobileNavItem, MobileNavRoot, SocialLinks } from "@website/components";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { requestTopO } from "./ScrollTop";
 
 export function MobileNav({ className }: { className?: string }) {
   const [open, setOpen] = useState(false);
@@ -17,19 +16,18 @@ export function MobileNav({ className }: { className?: string }) {
   return (
     <MobileNavRoot className={className} open={open} onOpenChange={setOpen}>
       <MobileNavItem isActive={pathname === "/"}>
-        <Link href="/" onClick={requestTopO}>
-          About
-        </Link>
+        <Link href="/">About</Link>
       </MobileNavItem>
       <MobileNavItem isActive={pathname === "/current"}>
-        <Link href="/current" onClick={requestTopO}>
-          Current
-        </Link>
+        <Link href="/current">Current</Link>
       </MobileNavItem>
       <MobileNavItem isActive={pathname === "/experience"}>
-        <Link href="/experience" onClick={requestTopO}>
-          Experience
-        </Link>
+        <Link href="/experience">Experience</Link>
+      </MobileNavItem>
+      <MobileNavItem>
+        <div className="mt-4 opacity-70">
+          <SocialLinks />
+        </div>
       </MobileNavItem>
     </MobileNavRoot>
   );
