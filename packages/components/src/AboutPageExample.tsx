@@ -17,7 +17,7 @@ export function AboutPageExample() {
               <ReactjsLogo className="text-primary dark:text-primary-dark" />
             </span>
           </div>
-          <div className="hidden md:block mt-4 opacity-70">
+          <div className="hidden md:flex mt-4 opacity-70">
             <SocialLinks />
           </div>
         </h1>
@@ -39,15 +39,15 @@ export function AboutPageExample() {
             so many&mdash;often completely different&mdash;ways to achieve
             similar end results (JS frameworks, for example). Another part of it
             might have to do with the difficulty supporting multiple browsers
-            (and their versions) and various devices (and their sizes).
+            and various devices with different screen sizes and input methods.
           </p>
           <p>
-            Or the fact that it's almost too easy to introduce visual
-            regressions and break things with the slightest change in the code
-            base could also be part of web development being quite difficult.
-            I've observed all these challenges being amplified even further when
+            Or, the fact that it's almost too easy to introduce visual
+            regressions and break things with the slightest change in codebase
+            could also be part of web development being quite tricky. I've
+            observed all these challenges being amplified even further when
             there are more than one developers involved, working on the same
-            codebase.
+            project.
           </p>
           <p>
             Despite the challenges, I understand building a great product
@@ -60,7 +60,7 @@ export function AboutPageExample() {
           </p>
           <p>
             So here I am, trying to be a better web dev than yesterday, everyday
-            😄
+            😄.
           </p>
         </div>
       </div>

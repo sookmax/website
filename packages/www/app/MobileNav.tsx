@@ -25,7 +25,7 @@ export function MobileNav({ className }: { className?: string }) {
         <Link href="/experience">Experience</Link>
       </MobileNavItem>
       <MobileNavItem>
-        <div className="mt-4 opacity-70">
+        <div className="mt-4 opacity-70 flex justify-end">
           <SocialLinks />
         </div>
       </MobileNavItem>

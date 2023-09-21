@@ -31,8 +31,41 @@ export default function Layout({ children }) {
       <ExternalLink className="w-5 h-5" />
     </a>
   </span>
-  <span className="font-normal text-base text-zinc-600 dark:text-zinc-400">{"Seoul, South Korea"}</span>
+  <span className="font-normal text-base text-zinc-600 dark:text-zinc-400">
+    {"Seoul, South Korea"}
+  </span>
 </h2>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/3i-1.png",
+      "/3i-2.png",
+      "/3i-3.png",
+      "/3i-4.png",
+      "/3i-5.png",
+      "/3i-6.png",
+      "/3i-7.png",
+      "/3i-8.png",
+      "/3i-9.png",
+      "/3i-10.png",
+      "/3i-11.png",
+    ]}
+  />
+</div>
+
+Now that I think about it, the main reason I joined this company was probably because I wanted to experience something new&mdash;I knew they were using Vue (no experience) instead of React (what I was most familiar with), and I knew that my job was going to have something to do with WebGL technology, which I had zero idea of what to expect. Well, I've also got to admit that this company&mdash;at least from what I'd gathered on their website and the products they're selling&mdash;gave a different (in a positive way) vibe, compared to all the Korean companies I had experience with. I was actually going to take the offer I got from other company, but after the final interview with 3i, I changed my mind almost on a whim.
+
+I guess challenging oneself with new adventures from time to time can be refreshing and rewarding, but this time there was just too much to take on that I was pretty much burned out at the end 😅. The biggest challenge I had was the fact that there was practically no one in the company I could ask for help whenever I got stuck in the code level&mdash;all the major devs who built these Vue.js and three.js apps were long gone already by the time I got there. Nor were there any sort of written documentation/wiki about the codebases preserved within the company (I really should've run away at this point, but well I didn't..)
+
+At least I learned a lot about 3D graphics in this period, while working on the complete rewrite of the company's JavaScript 3D engine&mdash;something very similar to Google Street View. It was a daunting task that felt impossible at first, but I managed to come up with two(!) versions of the rewrite, each accompanied with a fairly thorough documentation at the end&mdash;[three.js manual](https://threejs.org/manual/#en/fundamentals) and books like [Introduction to Computer Graphics](https://math.hws.edu/graphicsbook/index.html) helped me grasp the core ideas of computer graphics immensely, and I should also mention that [Three.js journey](https://threejs-journey.com/) helped me organize the structure of the codebase a lot.
+
+Speaking of code structure, it was this time around that I first got interested in [design patterns](https://en.wikipedia.org/wiki/Software_design_pattern) to find the best proven pattern that fit my codebase. For example, I had a bunch of [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) that were oblivious to each other's existence, but nevertheless needed to exchange information. So basically I wanted a mechanism to deliver a state change to the target class (from some random classes the target class doesn't know exist) and to subsequently propagate the change in state to those classes that are interested&mdash;I think in the end I resorted to copying [mrdoob's eventdispatcher.js](https://github.com/mrdoob/eventdispatcher.js/) for the job. What I also learned while dealing with several classes was how tricky it could be to come up with the right level of [abstractions](<https://en.wikipedia.org/wiki/Abstraction_(computer_science)>)&mdash;sometimes I exposed too little public APIs for a class to be flexible, and other times I exposed too much such APIs that the consumers of the class took almost complete control over the internals of the class, which inevitably resulted in tight [coupling](<https://en.wikipedia.org/wiki/Coupling_(computer_programming)>) between them. This whole journey of seeking good design patterns and abstractions actually left me wanting to study college level CS education even more than usual&mdash;in fact, this was one of the trigger points that made me leave the company and decide to take a break from work altogether for a while.
+
+Apart from 3D graphics and three.js, I also got to experience some web technologies that were new to me. Most notably, it was my first time using Vue (both [2](https://v2.vuejs.org/) & [3](https://vuejs.org/)), first time using [TypeScript](https://www.typescriptlang.org/), first time with [rollup](https://rollupjs.org/), and [vite](https://vitejs.dev/). For the docs, I used [VitePress](https://vitepress.dev/) and [Docusaurus](https://docusaurus.io/).
+
+It's weird because I can't really articulate why, but while using Vue&mdash;even though I didn't have major issues using them&mdash;I found myself craving for React more. I still remember the impression I got while reading (old) React docs. It felt like the documentation was written by very mature and smart computer scientists. For example, when I was reading [this section](https://legacy.reactjs.org/docs/reconciliation.html#motivation) of the docs, I was convinced that whoever wrote this must have known what they were doing; it conveyed such a powerful authority. Well as much as I respect [Evan You](https://github.com/yyx990803), I didn't really feel such impression while reading Vue's docs. And I guess it's also the people around React such as [Dan Abramov](https://github.com/gaearon) who I respect a lot as an engineer that made me want to come back to using React. All in all, my career at this company had nothing to do with React, but it ended up making me more loyal to it in the end 😄.
+
 </Event>
 
 <Event from="2020-12" to="2021-06">
@@ -149,7 +182,7 @@ Back to the frontend app, I want to mention that this React app was also sufferi
   />
 </div>
 
-Having shown my interest and aptitude towards computer systems and software development many times, I was finally granted a transfer to the engineering team of the company as I wished. We had a B2B SaaS product whose target users were themselves data analysts at our client companies, and I was excited to bring my perspective as a former data analyst&mdash;more of the actual user's perspective I'd say&mdash;to the product. Old me back then was fairly confident that he could learn new things relatively quickly and get himself up to speed fast enough to handle the tasks thrown at him in the near future, but little did he knew what kind of challenges were waiting for him&mdash;as the old saying goes, ignorance is bliss 😂.
+By constantly showing my interest and aptitude towards computer systems and software development many times, I was finally granted a transfer to the engineering team of the company as I wished. We had a B2B SaaS product whose target users were themselves data analysts at our client companies, and I was excited to bring my perspective as a former data analyst&mdash;more of the actual user's perspective I'd say&mdash;to the product. Old me back then was fairly confident that he could learn new things relatively quickly and get himself up to speed fast enough to handle the tasks thrown at him in the near future, but little did he knew what kind of challenges were waiting for him&mdash;as the old saying goes, ignorance is bliss 😂.
 
 I mean, I had my fair share of coding in R and Python (albeit not software production code) and some sys admin / IT infra stuff on Linux, but now we were talking about a full-fledged backend application written in Java, a frontend written in React (class components), a MariaDB for database, and underneath all that, a big (frankly unnecessary) infrastructure to serve and manage all these services, namely, Docker and Kubernetes. I remember putting in around 3-4 extra hours after work for months digging through the codebases and various docs websites&mdash;[Kubernetes](https://kubernetes.io/docs/home/), [Eclipse Vert.x](https://vertx.io/docs/), [React](https://legacy.reactjs.org/docs/getting-started.html), [MariaDB](https://mariadb.com/kb/en/), [Dockerfile](https://docs.docker.com/engine/reference/builder/), etc.&mdash;to make myself useful faster.
 
