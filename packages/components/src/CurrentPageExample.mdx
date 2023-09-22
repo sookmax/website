@@ -17,7 +17,7 @@ export default function Layout({ children }) {
         The main reason I decided to take a break from work altogether was
         ironically to get better at what I do, that is, web development. It's
         ironic in that even though I was working as a web developer at my last
-        job, unfortunately I felt the time I spent at work was not very
+        job, unfortunately I felt the time I spent at work was not necessarily
         effective at becoming a better web dev.
       </p>
       <WithRuler className="mt-12">{children}</WithRuler>
@@ -35,13 +35,13 @@ export default function Layout({ children }) {
   />
 </div>
 
-As a non CS major person, I've always wondered what subjects CS students learn in college, and I've been looking up online a way to teach myself college-level computer scienece. Luckily, there's this wonderful website called [Teach Yourself Computer Science](https://teachyourselfcs.com/) where the authors have put together a well-curated list of subjects and recommended study materials for computer science. I've visited this website so many times, promising to myself that one day i'd start working on the subjects in the list&mdash;the promise that had never been realized.
+As a non CS major, I've always wondered what subjects CS students learn in college, and I've been looking up online a way to teach myself college-level computer scienece. Luckily, there's this wonderful website called [Teach Yourself Computer Science](https://teachyourselfcs.com/) where the authors have put together a well-curated list of subjects and recommended study materials for computer science. I've visited this website so many times, promising to myself that one day i'd start working on the subjects in the list&mdash;the promise that had never been realized.
 
-I finally decided to take the first step by working through the book called, Structure and Interpretation of Computer Programs (SICP). It was a very hard book to read&mdash;I actually only read up to 4.4.3 since [CS 61A](https://archive.org/details/ucberkeley-webcast-PL3E89002AA9B9879E?sort=title) (the video lectures I was watching as a complementary material) didn't cover beyond that and I lost all the motivation to read the book through the end when CS 61A ended 😂. Actually, the general/important ideas presented in each chapter wasn't too hard to understand per se, but the examples and exercises were&mdash;mostly because they expect you to have some math and electrical engineering knowledge. And most of the exercises in the book&mdash;on top of needing to know some math context to solve them&mdash;weren't something that you could solve right away in a few minutes after reading the relevant chapter. They were rather something that required you to sit down and think hard and carefully for hours or even days to solve them&mdash;I decided not to invest a lot of time on these exercises but rather look up other people's solutions most of the time; [sicp-solutions](http://community.schemewiki.org/?sicp-solutions) and [SICP Solutions](https://sicp-solutions.net/). While I'm not particularly proud of not working through most of the exercises myself, truth be told, I wasn't particularly motivated to do them, and I rather spent those extra hours on learning web development related stuff instead.
+I finally decided to take the first step by working through the book called, Structure and Interpretation of Computer Programs (SICP). It was a very hard book to read&mdash;I actually only read up to 4.4.3 since [CS 61A](https://archive.org/details/ucberkeley-webcast-PL3E89002AA9B9879E?sort=title) (the video lectures I was watching as a complementary material) didn't cover beyond that, and I lost all the motivation to finish the book to the end when CS 61A ended 😂. Actually, the general/important ideas presented in each chapter wasn't too hard to understand per se, but the examples and exercises were&mdash;mostly because they expect you to have some math and electrical engineering knowledge as a background. And most of the exercises in the book&mdash;on top of needing to know some math context to solve them&mdash;weren't something that you could solve right away in a few minutes after reading the relevant chapter. They were rather something that required you to sit down and think hard and carefully for hours or even days to solve them&mdash;I decided not to invest a lot of time on these exercises but rather look up other people's solutions most of the time; [sicp-solutions](http://community.schemewiki.org/?sicp-solutions) and [SICP Solutions](https://sicp-solutions.net/). While I'm not proud of not working through most of the exercises myself, truth be told, I wasn't particularly motivated to do them, and I rather spent those extra hours on learning things related to web development instead.
 
-Despite the frustrating experience with the exercises, I've found surprising amount of ideas and concepts in the book that are very relevant to JavaScript and React.js&mdash;things like the simplicity of functional programming (as in given the same input, a function produces the same output everytime), the challenges introduced by assignment and mutation especially in concurrent execution, terms like delayed evaluation, memoization, thunks, etc.
+Despite the frustrating experience with the exercises, I've found surprising amount of ideas and concepts in the book that are very relevant to JavaScript and React.js&mdash;things like the simplicity of functional programming (as in given the same input, a function produces the same output everytime), the challenges introduced by assignment and mutation especially in concurrent execution, and ideas like delayed evaluation, memoization, thunks, etc.
 
-At some point in the future, I should give this book another try (and that time, I should do the exercises for real).
+At some point in the future, I should give this book another try, and that time I should do the exercises for real, maybe?
 
 </Event>
 
@@ -82,11 +82,11 @@ namely [tailwindcss](https://tailwindcss.com/) and [radix-ui](https://www.radix-
   />
 </div>
 
-In the beginning of May. 2023, I finally decided to take a look at [Storybook](https://storybook.js.org/docs/react/get-started/why-storybook). I'd seen it being mentioned by web devs on the internet many times (mostly positive), and some even argued Storybook was an indispensable tool when it comes to UI component development.
+In the beginning of May. 2023, I finally decided to take a look at [Storybook](https://storybook.js.org/docs/react/get-started/why-storybook). I'd seen it being mentioned by many web devs on the internet quite frequently (mostly positive), and some even argued Storybook was an indispensable tool when it comes to UI component development.
 
 Well, they were certainly not wrong.
 
-I still remember how mind-blown I was, when I first grasp the concept of Storybook&mdash;in a nutshell, it provides you an isolated environment to develop a single UI component at a time without affecting other parts of UI or logics in your website. It felt like I found the final missing piece in my web development process when I discovered Storybook. Actually, it felt like Storybook was the most important piece of all because it is where all the UI components are going to be created, assembled/incorporated into bigger components, and tested thoroughly.
+I still remember how mind-blown I was, when I first grasped the concept of Storybook&mdash;in a nutshell, it provides you an isolated environment to develop a single UI component at a time without affecting other parts of UI or logics in your website. It felt like I found the final missing piece in my web development process when I discovered Storybook. In fact, it felt like Storybook was the most important piece of all because it is where all the UI components are going to be created, assembled/incorporated into bigger components, and tested thoroughly.
 
 What's nice about developing a UI component in isolation is that you only need to worry about UI logics (as in how the component will behave) at the moment without having to think about stuff that needs to be handled by a framework or how to process data for this UI component, right away&mdash;you can think about them later when you finish developing the component. This sort of separation of concerns, I believe, encourages your code base to have a better structure&mdash;I find it almost always much harder to read the body of a React component in which all sorts of logics are intermingled together.
 
@@ -112,7 +112,7 @@ Anyways, the discovery of Storybook was so sensational to me that I felt a stron
 
 There was an online game that I used to enjoy playing&mdash;[Teamfight Tactics (TFT)](https://teamfighttactics.leagueoflegends.com/en-us/). So naturally I had been checking out [Riot's APIs](https://developer.riotgames.com/apis) to see if I could create something fun or useful with them.
 
-The thing about this particular game is that every now and then (roughly a few months), there's a new "set", and when the new set comes around, the winning strategies you used for the last set wouldn't work on the new set. So you have to sort of learn new strategies for the new set all over again everytime there's a new set. And I wanted to shorten the learning process by analyzing winners' strategies (there are 4 "winners" out of 8 in every TFT game)&mdash;this website was an attempt at that.
+The thing about this particular game is that every now and then (roughly a few months), there's a new "set", and when the new set comes around, the winning strategies you used for the last set wouldn't work on the new set. So you have to sort of learn new strategies for the new set all over again everytime there's a new set. And I wanted to shorten that learning process by analyzing winners' strategies (there are 4 "winners" out of 8 in every TFT game)&mdash;this website was an attempt at that.
 
 </Event>
 
@@ -138,7 +138,7 @@ The thing about this particular game is that every now and then (roughly a few m
   </ImageGalleryInline>
 </div>
 
-I had fun making the image viewer component in [https://image-experiment.vercel.app/](https://image-experiment.vercel.app/) so I decided to create a fancier version of it, including skeleton loading animation, transition animations on navigation, swipe gesture support on touch screen, keyboard navigation, infinite scrolling, etc.
+I had fun making the image viewer component in [https://image-experiment.vercel.app/](https://image-experiment.vercel.app/) below, so I decided to create a fancier version of it, including skeleton loading animation, transition animations on navigation, swipe gesture support on touch screen, keyboard navigation, infinite scrolling, etc.
 
 I think smooth and well-behaving animations are great to have on any website&mdash;but they are tricky to get right. The animations in this project are mostly taken care of by [Framer Motion](https://www.framer.com/motion/introduction/), which is a great animation library, though I had struggled quite a bit trying to orchestrate different animations to work together and ensuring there was no significant performance issue (jankiness / stuttering) on mobile device.
 
@@ -205,8 +205,9 @@ I wanted to integrate CMS to my cousin's new website so that he could edit and m
 <div className="space-y-5">
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <a href="https://epemlab.vercel.app/" target="_blank">
-    <Picture.Root aspectRatio={2.05}>
-      <Picture.Figure className="">
+    <div className="bg-zinc-800">
+    <Picture.Root>
+      <Picture.Figure>
         <Picture.Skeleton />
         <Picture.Img
           loading="lazy"
@@ -214,24 +215,27 @@ I wanted to integrate CMS to my cousin's new website so that he could edit and m
           className=""
         />
       </Picture.Figure>
-      <figcaption className="text-2xs w-full text-center p-1 text-primary dark:text-primary-dark">
+      <figcaption className="text-2xs w-full text-center p-1 text-primary-dark border-t border-zinc-700">
         {"(NEW) https://epemlab.vercel.app/"}
       </figcaption>
     </Picture.Root>
+    </div>
   </a>
 </div>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <a href="https://roybchung.wixsite.com/epemlab" target="_blank">
-    <Picture.Root aspectRatio={2.05}>
-      <Picture.Figure className="">
+  <div className="bg-zinc-800">
+    <Picture.Root>
+      <Picture.Figure>
         <Picture.Skeleton />
         <Picture.Img loading="lazy" src="/epem-wix.png" className="" />
       </Picture.Figure>
-      <figcaption className="text-2xs w-full text-center p-1 text-primary dark:text-primary-dark">
+      <figcaption className="text-2xs w-full text-center p-1 text-primary-dark border-t border-zinc-700">
         {"(OLD) https://roybchung.wixsite.com/epemlab"}
       </figcaption>
     </Picture.Root>
+  </div>
   </a>
 </div>
 </div>
@@ -246,18 +250,20 @@ One of my cousins wanted to renovate the website for the lab he was running (mad
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <a href="https://website-old-sook.vercel.app/" target="_blank">
-    <Picture.Root aspectRatio={2.04}>
-      <Picture.Figure className="">
-        <Picture.Skeleton />
-        <Picture.Img loading="lazy" src="/website-old.png" className="" />
-      </Picture.Figure>
-      <figcaption className="text-2xs w-full text-center p-1 text-primary dark:text-primary-dark">
-        {"https://website-old-sook.vercel.app/"}
-      </figcaption>
-    </Picture.Root>
+    <div className="bg-zinc-800">
+      <Picture.Root>
+        <Picture.Figure className="bg-zinc-800">
+          <Picture.Skeleton />
+          <Picture.Img loading="lazy" src="/website-old.png" className="" />
+        </Picture.Figure>
+        <figcaption className="text-2xs w-full text-center p-1 text-primary-dark border-t border-zinc-700">
+          {"https://website-old-sook.vercel.app/"}
+        </figcaption>
+      </Picture.Root>
+    </div>
   </a>
 </div>
 
-Well, the original plan was to maintain the website with discipline by writing about things related to web development or software engineering on a weekly basis, but it quickly turned out to be a lot more challenging of a task than I'd originally thought, so I abandoned the idea (and the website) and moved on to other stuff shortly after.
+Well, the original plan was to maintain the website with discipline by writing about things related to web development and software engineering on a weekly basis, but it quickly turned out to be a lot more challenging than I'd originally thought, so I abandoned the idea (and the website) and moved on to other stuff shortly after.
 
 </Event>

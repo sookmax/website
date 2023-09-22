@@ -28,18 +28,20 @@ export function AboutPageExample() {
           <p>
             Well in fact, I started out not as a web developer but as a data
             analyst after finishing college back in 2015; I worked as a data
-            analyst until 2019. In hindsight, I think I had always enjoyed data
-            visualization (charts and tables) more than any other aspects of
-            data analysis, which had probably been the strongest motivator that
-            eventually led me to web development.
+            analyst until early 2019. In hindsight, I think I had always enjoyed
+            data visualization (charts and tables) more than any other aspects
+            of data analysis, which had probably been the strongest motivator
+            for me to want to become a web dev.
           </p>
           <p>
-            As much as I love web development though, I think it can also be
-            fairly hard and frustrating. A part of it might be because there are
-            so many&mdash;often completely different&mdash;ways to achieve
-            similar end results (JS frameworks, for example). Another part of it
-            might have to do with the difficulty supporting multiple browsers
-            and various devices with different screen sizes and input methods.
+            As much as web technology is becoming more and more capable,
+            allowing us to build amazing stuff on the web, I think web
+            development can also be fairly hard and frustrating. A part of it
+            might be because there are so many&mdash;often completely
+            different&mdash;ways to achieve similar end results (JS frameworks,
+            for example). Another part of it might have to do with the
+            difficulty supporting multiple browsers and various devices with
+            different screen sizes and input methods.
           </p>
           <p>
             Or, the fact that it's almost too easy to introduce visual
