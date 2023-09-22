@@ -53,9 +53,11 @@ export function ImageGalleryRoot({
 export function ImageGalleryMainImage({
   aspectRatio = 1.6,
   showSkeleton = true,
+  loading = "lazy",
 }: {
   aspectRatio?: number;
   showSkeleton?: boolean;
+  loading?: React.ComponentProps<"img">["loading"];
 }) {
   const { imageIndex: imageIndexState } = useStoreState();
   const { imageUrls, imageIndex: imageIndexProps } = useContext(PropsContext);
@@ -67,7 +69,7 @@ export function ImageGalleryMainImage({
       <Picture.Figure>
         {showSkeleton && <Picture.Skeleton />}
         <Picture.Img
-          loading="lazy"
+          loading={loading}
           onLoadScaleAnimation={false}
           src={imageUrls[imageIndex]}
         />
@@ -149,8 +151,12 @@ export const ImageGalleryThumbnails = React.forwardRef<
   HTMLDivElement,
   {
     showSkeleton?: boolean;
+    loading?: React.ComponentProps<"img">["loading"];
   }
->(function ImageGalleryThumbnails({ showSkeleton = true }, ref) {
+>(function ImageGalleryThumbnails(
+  { showSkeleton = true, loading = "lazy" },
+  ref,
+) {
   const { imageIndex: imageIndexState } = useStoreState();
   const {
     imageUrls,
@@ -227,7 +233,7 @@ export const ImageGalleryThumbnails = React.forwardRef<
                 <Picture.Figure className={cn("w-20 sm:w-32")}>
                   {showSkeleton && <Picture.Skeleton />}
                   <Picture.Img
-                    loading="lazy"
+                    loading={loading}
                     onLoadScaleAnimation={false}
                     src={imageUrl}
                     style={{ objectFit: "cover" }}

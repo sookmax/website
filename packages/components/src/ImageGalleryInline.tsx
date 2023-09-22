@@ -19,9 +19,11 @@ export function ImageGalleryInline({
   imageUrls,
   fullscreenImageUrls = imageUrls,
   children,
+  loading = "lazy",
 }: Pick<ImageGalleryProps, "imageUrls"> & {
   fullscreenImageUrls?: string[];
   children?: React.ReactNode;
+  loading?: React.ComponentProps<"img">["loading"];
 }) {
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -31,8 +33,12 @@ export function ImageGalleryInline({
       imageIndex={imageIndex}
       setImageIndex={setImageIndex}
     >
-      <ImageGalleryMainImage key={imageIndex} showSkeleton={true} />
-      <ImageGalleryThumbnails showSkeleton={true} />
+      <ImageGalleryMainImage
+        key={imageIndex}
+        showSkeleton={true}
+        loading={loading}
+      />
+      <ImageGalleryThumbnails showSkeleton={true} loading={loading} />
       <ImageGalleryNavButtons />
       <FullscreenToggle
         imageUrls={fullscreenImageUrls}
