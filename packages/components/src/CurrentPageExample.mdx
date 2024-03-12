@@ -25,6 +25,62 @@ export default function Layout({ children }) {
   );
 }
 
+<Event from="2023-10" to="2024-03">
+<h2 id="first-time-reading-sicp" className="scroll-mt-24">
+  <span className="not-prose">
+    <a
+      href="#first-time-reading-sicp"
+      className="relative before:content-['#'] before:invisible before:hover:visible before:absolute before:right-full before:mr-1 before:opacity-50"
+    >
+      {"Learning algorithms and data structures for the first time"}
+    </a>
+  </span>
+</h2>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={[
+      "/algorithms-1.png",
+      "/algorithms-2.png",
+      "/algorithms-3.png",
+      "/algorithms-4.png",
+      "/algorithms-5.png",
+    ]}
+    loading="eager"
+  />
+</div>
+
+At first, I was very hesitant to learn algorithms and data structures the proper way as elaborated in [Teach Yourself Computer Science](https://teachyourselfcs.com/#algorithms), mainly because of the significant time commitment implied by the learning materials.
+
+I don't really recall how I convinced myself to do it, but I eventually decided to bite the bullet and learn data structures and algorithms for the first time in my life&mdash;well after all, I was planning to do some [LeetCode](https://leetcode.com/) grinding as a part of job search preparation in the future, so why not learning the underlying concepts and ideas first along the way, I probably thought 🤔.
+
+I first grabbed [Skiena's book](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/) and the accompanying [online lectures](https://www3.cs.stonybrook.edu/~skiena/373/videos/) as my main learning resources, but I abandoned them right before the graph algorithms in favor of other materials I'd found that I liked more: [Sedgewick's book](https://algs4.cs.princeton.edu/home/) and his coursera courses ([part 1](https://www.coursera.org/learn/algorithms-part1?utm_source=mobile&utm_source=link&utm_medium=page_share&utm_content=lih&utm_campaign=card_button) and [part 2](https://www.coursera.org/learn/algorithms-part2?utm_source=mobile&utm_source=link&utm_medium=page_share&utm_content=lih&utm_campaign=card_button)).
+
+The thing I like the most about Sedgewick's book and the courses was the fact that they provide concrete implementations (Java) of every algorithms that they discuss in the book and the lectures. I found it much more helpful to understand algorithms when learning the concepts and implementations together, side by side. I also liked the fact that they took time to explain Java fundamentals in the beginning of the book. It was immensely helpful for someone like me who's not very familiar with Java language to better understand the implementations (and be able to turn in their homework assignments 😂).
+
+By far the most challenging aspect of learning algorithms was understanding the performance analyses, involving order of growth and mathematical proofs (and some graph and string related algorithms such as maxflow algorithm and MSD string sort 😭).
+
+I cannot say that I understood everything covered in the book and the courses very well (in fact, far from it. It feels like I'm already forgetting half of what I learned), but at the end of the day, I'm glad that I took time to learn the subject at least this once.
+
+<h2 id="first-time-reading-sicp" className="scroll-mt-24">
+  <span className="not-prose">
+    <a
+      href="#first-time-reading-sicp"
+      className="relative before:content-['#'] before:invisible before:hover:visible before:absolute before:right-full before:mr-1 before:opacity-50"
+    >
+      {"Contributing to React Aria"}
+    </a>
+  </span>
+</h2>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline imageUrls={["/react-aria-1.png", "/react-aria-2.png"]} />
+</div>
+
+I always appreciate a well-crafted UI component library because it's definitely not trivial to make one that handles a lot of browser inconsistencies, different inputs from various devices, and web accessibility. So I was instantly hooked when I found [React Aria](https://react-spectrum.adobe.com/react-aria/index.html) and wanted to learn how it works underneath, which led me to contribute a little to this amazing project.
+
+</Event>
+
 <Event date="2023-09">
 
 <h2 id="first-time-reading-sicp" className="scroll-mt-24">
@@ -33,7 +89,7 @@ export default function Layout({ children }) {
       href="#first-time-reading-sicp"
       className="relative before:content-['#'] before:invisible before:hover:visible before:absolute before:right-full before:mr-1 before:opacity-50"
     >
-      {"First time reading SICP"}
+      {"Reading SICP for the first time"}
     </a>
   </span>
 </h2>
@@ -41,7 +97,6 @@ export default function Layout({ children }) {
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
     imageUrls={["/sicp-1.png", "/sicp-2.png", "/sicp-3.png"]}
-    loading="eager"
   />
 </div>
 
