@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       </h1>
       <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
         Things I've been doing since <em>Oct. 2022</em>, which was when I quit
-        my latest job.
+        my most recent job.
       </p>
       <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
         The main reason I decided to take a break from work altogether was
@@ -25,11 +25,40 @@ export default function Layout({ children }) {
   );
 }
 
-<Event from="2023-10" to="2024-03">
-<h2 id="first-time-reading-sicp" className="scroll-mt-24">
+<Event from="2024-03" to="2024-05">
+<h2 id="leetcode-grind" className="scroll-mt-24">
   <span className="not-prose">
     <a
-      href="#first-time-reading-sicp"
+      href="#leetcode-grind"
+      className="relative before:content-['#'] before:invisible before:hover:visible before:absolute before:right-full before:mr-1 before:opacity-50"
+    >
+      {"LeetCode grind (NeetCode 150)"}
+    </a>
+  </span>
+</h2>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={["/leetcode-1.png", "/leetcode-2.png", "/leetcode-3.png"]}
+    loading="eager"
+  />
+</div>
+
+Finally, it was time that I confronted [LeetCode](https://leetcode.com/) again, but this time I was better prepared, having just finished extensive data structures and algorithms (DSA) study for the first time in my life 💪. In particular, I followed this wonderful curated list of 150 LeetCode problems, called [NeetCode 150](https://neetcode.io/practice).
+
+I would not dare to say I _enjoyed_ solving LeetCode problems even after learning DSA, but it was overall a good experience for me to review various algorithms and data structures I had just learned and to practice on actual implementations of said algorithms.
+
+While working my way through NeetCode 150, I realized there were a couple of concepts I missed in my first DSA study&mdash;most notably, backtracking and dynamic programming. So I had to go back and read relevant chapters in the books&mdash;[Skiena's book](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/) for backtracking and dynamic programming and [CLRS](https://www.amazon.com/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X) for dynamic programming and greedy algorithms. Somehow [Sedgewick's book](https://algs4.cs.princeton.edu/home/) and his lectures&mdash;which were my primary resources learning DSA&mdash;do not seem to include those subjects 🤷‍♂️.
+
+I'm planing to go back and solve NeetCode 150 again at some point in the future to solidify (or to memorize?) my understanding on important data structures and algorithms.
+
+</Event>
+
+<Event from="2023-10" to="2024-03">
+<h2 id="first-time-learning-dsa" className="scroll-mt-24">
+  <span className="not-prose">
+    <a
+      href="#first-time-learning-dsa"
       className="relative before:content-['#'] before:invisible before:hover:visible before:absolute before:right-full before:mr-1 before:opacity-50"
     >
       {"Learning algorithms and data structures for the first time"}
@@ -46,7 +75,6 @@ export default function Layout({ children }) {
       "/algorithms-4.png",
       "/algorithms-5.png",
     ]}
-    loading="eager"
   />
 </div>
 
