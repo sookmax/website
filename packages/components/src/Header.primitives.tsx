@@ -1,6 +1,6 @@
 "use client";
 
-import { cn, trim } from "@website/utils";
+import { cn } from "@website/utils";
 import React, { useEffect, useRef, useState } from "react";
 import throttle from "lodash/throttle";
 

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { PageLayout } from "./PageLayout";
 import "@website/tailwindcss-config/styles/tailwind.css";
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -1,5 +1,6 @@
 import { cn, trim } from "@website/utils";
 import { format } from "date-fns";
+import React from "react";
 
 export function Event({
   date,
