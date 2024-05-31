@@ -48,7 +48,7 @@ export function AboutPageExample() {
             regressions and break things with the slightest change in codebase
             could also be part of web development being quite tricky. I've
             observed all these challenges being amplified even further when
-            there are more than one developers involved, working on the same
+            there are more than one developer involved, working on the same
             project.
           </p>
           <p>
