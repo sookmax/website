@@ -40,16 +40,16 @@ export function AboutPageExample() {
             be fairly hard and frustrating. A part of it might be because there
             are so many&mdash;often completely different&mdash;ways to achieve
             similar end results (JS frameworks, for example). Another part of it
-            might have to do with the difficulty supporting multiple browsers
-            and various devices with different screen sizes and input methods.
+            might have to do with the difficulty supporting different browsers
+            and devices with varying screen sizes and input methods.
           </p>
           <p>
             Or, the fact that it's almost too easy to introduce visual
             regressions and break things with the slightest change in codebase
             could also be part of web development being quite tricky. I've
             observed all these challenges being amplified even further when
-            there are more than one developer involved, working on the same
-            project.
+            there are more than one developer involved, working on a project at
+            the same time.
           </p>
           <p>
             Despite the challenges, I understand building a great product
@@ -61,8 +61,8 @@ export function AboutPageExample() {
             competent engineer myself.
           </p>
           <p>
-            So here I am, trying to be a better web dev than yesterday, everyday
-            😄.
+            So here I am, trying to be a better web dev than yesterday,
+            everyday. 🫡
           </p>
         </div>
       </div>
