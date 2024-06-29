@@ -10,10 +10,10 @@ export const AvatarSlot = React.forwardRef<
     <Slot
       ref={ref}
       className={cn(
-        className,
         "rounded-full bg-zinc-100 object-cover dark:bg-zinc-800",
         // "shadow-md shadow-zinc-800/10 dark:shadow-zinc-200/10",
         large ? "h-16 w-16" : "h-10 w-10",
+        className,
       )}
       {...rest}
     >

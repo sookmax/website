@@ -14,3 +14,4 @@ export * from "./AvatarExample";
 export * from "./Avatar.primitives";
 export * from "./mdx";
 export * from "./SocialLinks";
+export * from "./ResumeEn";

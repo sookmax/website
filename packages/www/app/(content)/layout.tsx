@@ -1,6 +1,7 @@
-import { Analytics } from "@vercel/analytics/react";
+import { BaseLayout, ThemeProvider } from "@website/components";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { PageLayout } from "./PageLayout";
 import "@website/tailwindcss-config/styles/tailwind.css";
 import React from "react";
 
@@ -19,18 +20,12 @@ export const metadata: Metadata = {
   // },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    // https://github.com/vercel/next.js/issues/49350 for `suppressHydrationWarning`
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        {children}
-        <Analytics />
-      </body>
-    </html>
+    <ThemeProvider>
+      <BaseLayout>
+        <PageLayout>{children}</PageLayout>
+      </BaseLayout>
+    </ThemeProvider>
   );
 }
