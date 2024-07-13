@@ -3,6 +3,7 @@ import { Event } from "./Event";
 import * as Picture from "./Picture";
 import { ImageGalleryInline } from "./ImageGalleryInline";
 import { ExternalLink } from "lucide-react";
+import { generateImageUrls } from "./generateImageUrls";
 
 export default function Layout({ children }) {
   return (
@@ -44,7 +45,7 @@ export default function Layout({ children }) {
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/3i-1.png",
       "/3i-2.png",
       "/3i-3.png",
@@ -56,7 +57,7 @@ export default function Layout({ children }) {
       "/3i-9.png",
       "/3i-10.png",
       "/3i-11.png",
-    ]}
+    ])}
     loading="eager"
   />
 </div>
@@ -99,14 +100,14 @@ It's weird because I can't really articulate why, but while using Vue&mdash;even
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/dawin-1.png",
       "/dawin-2.png",
       "/dawin-3.png",
       "/dawin-4.png",
       "/dawin-5.png",
       "/dawin-6.png",
-    ]}
+    ])}
   >
     <a href="https://dawin.xyz/" target="_blank" className="text-primary-dark">
       {"https://dawin.xyz/"}
@@ -154,7 +155,7 @@ Back to the frontend app, I want to mention that this React app was also sufferi
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/agilesoda-swe-1.png",
       "/agilesoda-swe-2.png",
       "/agilesoda-swe-3.png",
@@ -199,7 +200,7 @@ Back to the frontend app, I want to mention that this React app was also sufferi
       "/agilesoda-swe-42.png",
       "/agilesoda-swe-43.png",
       "/agilesoda-swe-44.png",
-    ]}
+    ])}
   />
 </div>
 
@@ -245,7 +246,7 @@ Despite my initial excitement for React hooks however, I noticed some of my [use
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/agilesoda-da-1.png",
       "/agilesoda-da-2.png",
       "/agilesoda-da-3.png",
@@ -253,7 +254,7 @@ Despite my initial excitement for React hooks however, I noticed some of my [use
       "/agilesoda-da-5.png",
       "/agilesoda-da-6.png",
       "/agilesoda-da-7.png",
-    ]}
+    ])}
   />
 </div>
 
@@ -277,7 +278,7 @@ One particular project I was involved in had something to do with data migration
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/hadoop-1.png",
       "/hadoop-2.png",
       "/hadoop-3.png",
@@ -301,7 +302,7 @@ One particular project I was involved in had something to do with data migration
       "/hadoop-21.png",
       "/hadoop-22.png",
       "/hadoop-23.png",
-    ]}
+    ])}
   />
 </div>
 
@@ -339,7 +340,7 @@ I could've just spun up multiple virtual machines on my laptop to provision and 
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/mobigen-1.png",
       "/mobigen-2.png",
       "/mobigen-3.png",
@@ -363,7 +364,7 @@ I could've just spun up multiple virtual machines on my laptop to provision and 
       "/mobigen-21.png",
       "/mobigen-22.png",
       "/mobigen-23.png",
-    ]}
+    ])}
   />
 </div>
 
@@ -397,14 +398,14 @@ To me, 2016 and 2017 were when my interest towards machine learning had peaked. 
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/nowdream-1.png",
       "/nowdream-2.png",
       "/nowdream-3.png",
       "/nowdream-4.png",
       "/nowdream-5.png",
       "/nowdream-6.png",
-    ]}
+    ])}
   />
 </div>
 
@@ -435,7 +436,11 @@ It was also the period where big data hype was at its peak, and I had a chance t
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={["/graduation-1.jpg", "/graduation-2.jpg", "/graduation-3.jpg"]}
+    imageUrls={generateImageUrls([
+      "/graduation-1.jpg",
+      "/graduation-2.jpg",
+      "/graduation-3.jpg",
+    ])}
   />
 </div>
 
@@ -446,7 +451,7 @@ It was also the period where big data hype was at its peak, and I had a chance t
 <div className="space-y-10">
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/group-project-1.png",
       "/group-project-2.png",
       "/group-project-3.png",
@@ -455,13 +460,13 @@ It was also the period where big data hype was at its peak, and I had a chance t
       "/group-project-6.png",
       "/group-project-7.png",
       "/group-project-8.png",
-    ]}
+    ])}
   />
 </div>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/group-project-9.png",
       "/group-project-10.png",
       "/group-project-11.png",
@@ -469,13 +474,13 @@ It was also the period where big data hype was at its peak, and I had a chance t
       "/group-project-13.png",
       "/group-project-14.png",
       "/group-project-15.png",
-    ]}
+    ])}
   />
 </div>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/group-project-16.png",
       "/group-project-17.png",
       "/group-project-18.png",
@@ -485,7 +490,7 @@ It was also the period where big data hype was at its peak, and I had a chance t
       "/group-project-22.png",
       "/group-project-23.png",
       "/group-project-24.png",
-    ]}
+    ])}
   />
 </div>
 </div>

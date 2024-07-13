@@ -63,6 +63,7 @@ export function ImageGalleryMainImage({
   const { imageUrls, imageIndex: imageIndexProps } = useContext(PropsContext);
 
   const imageIndex = imageIndexProps ?? imageIndexState;
+  const isSrcSet = imageUrls[imageIndex].includes(",");
 
   return (
     <Picture.Root aspectRatio={aspectRatio}>
@@ -71,7 +72,9 @@ export function ImageGalleryMainImage({
         <Picture.Img
           loading={loading}
           onLoadScaleAnimation={false}
-          src={imageUrls[imageIndex]}
+          src={!isSrcSet ? imageUrls[imageIndex] : undefined}
+          srcSet={isSrcSet ? imageUrls[imageIndex] : undefined}
+          sizes={isSrcSet ? "100vw" : undefined}
         />
       </Picture.Figure>
     </Picture.Root>

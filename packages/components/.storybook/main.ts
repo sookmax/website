@@ -18,7 +18,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  staticDirs: ["../public"],
+  // staticDirs: ["../public"],
   async viteFinal(config) {
     const storybookMdxPluginIndex = config.plugins?.findIndex(
       (plugin) =>

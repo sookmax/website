@@ -2,6 +2,7 @@ import { WithRuler } from "./WithRuler";
 import { Event } from "./Event";
 import * as Picture from "./Picture";
 import { ImageGalleryInline } from "./ImageGalleryInline";
+import { generateImageUrls, generateImageUrl } from "./generateImageUrls";
 
 export default function Layout({ children }) {
   return (
@@ -39,7 +40,11 @@ export default function Layout({ children }) {
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={["/leetcode-1.png", "/leetcode-2.png", "/leetcode-3.png"]}
+    imageUrls={generateImageUrls([
+      "/leetcode-1.png",
+      "/leetcode-2.png",
+      "/leetcode-3.png",
+    ])}
     loading="eager"
   />
 </div>
@@ -68,13 +73,13 @@ I'm planing to go back and solve NeetCode 150 again at some point in the future 
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/algorithms-1.png",
       "/algorithms-2.png",
       "/algorithms-3.png",
       "/algorithms-4.png",
       "/algorithms-5.png",
-    ]}
+    ])}
   />
 </div>
 
@@ -102,7 +107,9 @@ I cannot say that I understood everything covered in the book and the courses ve
 </h2>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
-  <ImageGalleryInline imageUrls={["/react-aria-1.png", "/react-aria-2.png"]} />
+  <ImageGalleryInline
+    imageUrls={generateImageUrls(["/react-aria-1.png", "/react-aria-2.png"])}
+  />
 </div>
 
 I always appreciate a well-crafted UI component library because it's definitely not trivial to make one that handles a lot of browser inconsistencies, different inputs from various devices, and web accessibility. So I was instantly hooked when I found [React Aria](https://react-spectrum.adobe.com/react-aria/index.html) and wanted to learn how it works underneath, which led me to contribute a little to this amazing project.
@@ -124,7 +131,7 @@ I always appreciate a well-crafted UI component library because it's definitely 
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={["/sicp-1.png", "/sicp-2.png", "/sicp-3.png"]}
+    imageUrls={generateImageUrls(["/sicp-1.png", "/sicp-2.png", "/sicp-3.png"])}
   />
 </div>
 
@@ -153,13 +160,13 @@ At some point in the future when I'm a little wiser (hopefully), I should give t
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/storybook-1.png",
       "/storybook-2.png",
       "/storybook-3.png",
       "/storybook-5.png",
       "/storybook-4.png",
-    ]}
+    ])}
   />
 </div>
 
@@ -185,7 +192,9 @@ Anyways, the discovery of Storybook was so sensational to me that I felt a stron
 </h2>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
-  <ImageGalleryInline imageUrls={["/shadcn-1.png", "/shadcn-2.png"]}>
+  <ImageGalleryInline
+    imageUrls={generateImageUrls(["/shadcn-1.png", "/shadcn-2.png"])}
+  >
     <a
       href="https://ui-component-workshop.vercel.app/"
       target="_blank"
@@ -215,7 +224,9 @@ namely [tailwindcss](https://tailwindcss.com/) and [radix-ui](https://www.radix-
 </h2>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
-  <ImageGalleryInline imageUrls={["/tft-top4-1.png", "/tft-top4-2.png"]}>
+  <ImageGalleryInline
+    imageUrls={generateImageUrls(["/tft-top4-1.png", "/tft-top4-2.png"])}
+  >
     <a
       href="https://tft-top4-insights.vercel.app/"
       target="_blank"
@@ -247,11 +258,11 @@ The thing about this particular game is that every now and then (roughly a few m
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/image-gallery-infinite-1.png",
       "/image-gallery-infinite-2.png",
       "/image-gallery-infinite-3.png",
-    ]}
+    ])}
   >
     <a
       href="https://react-image-gallery-sook.vercel.app/"
@@ -286,13 +297,13 @@ Web animation is a subject that I want to dive deeper and really grasp the funda
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/image-experiment-1.png",
       "/image-experiment-5.png",
       "/image-experiment-2.png",
       "/image-experiment-3.png",
       "/image-experiment-4.png",
-    ]}
+    ])}
   >
     <a
       href="https://image-experiment.vercel.app/"
@@ -323,7 +334,7 @@ While I was working on CMS integration for my cousin's website, I learned that [
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
-    imageUrls={[
+    imageUrls={generateImageUrls([
       "/epem-cms-1.png",
       "/epem-cms-2.png",
       "/epem-cms-3.png",
@@ -331,7 +342,7 @@ While I was working on CMS integration for my cousin's website, I learned that [
       "/epem-cms-5.png",
       "/epem-cms-6.png",
       "/epem-cms-7.png",
-    ]}
+    ])}
   />
 </div>
 
@@ -363,7 +374,7 @@ I wanted to integrate CMS to my cousin's new website so that he could edit and m
         <Picture.Skeleton />
         <Picture.Img
           loading="lazy"
-          src="/cousin-website-renewal.png"
+          src={generateImageUrl("/cousin-website-renewal.png")}
           className=""
         />
       </Picture.Figure>
@@ -381,7 +392,7 @@ I wanted to integrate CMS to my cousin's new website so that he could edit and m
     <Picture.Root>
       <Picture.Figure>
         <Picture.Skeleton />
-        <Picture.Img loading="lazy" src="/epem-wix.png" className="" />
+        <Picture.Img loading="lazy" src={generateImageUrl("/epem-wix.png")} className="" />
       </Picture.Figure>
       <figcaption className="text-2xs w-full text-center p-1 text-primary-dark border-t border-zinc-700">
         {"(OLD) https://roybchung.wixsite.com/epemlab"}
@@ -415,7 +426,11 @@ One of my cousins wanted to renovate the website for the lab he was running (mad
       <Picture.Root>
         <Picture.Figure className="bg-zinc-800">
           <Picture.Skeleton />
-          <Picture.Img loading="lazy" src="/website-old.png" className="" />
+          <Picture.Img
+            loading="lazy"
+            src={generateImageUrl("/website-old.png")}
+            className=""
+          />
         </Picture.Figure>
         <figcaption className="text-2xs w-full text-center p-1 text-primary-dark border-t border-zinc-700">
           {"https://website-old-sook.vercel.app/"}
