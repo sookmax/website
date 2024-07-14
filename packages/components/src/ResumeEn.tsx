@@ -188,17 +188,32 @@ export function ResumeEn() {
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Rewrote the entire legacy 3D JavaScript library with
-                      TypeScript, three.js, and gsap; 3D panoramic view,
-                      navigation, and measurement system similar to Google
-                      Street View.
+                      Rewrote the entire legacy 3D JavaScript library with{" "}
+                      <span className="font-medium text-zinc-700">
+                        TypeScript
+                      </span>
+                      ,{" "}
+                      <span className="font-medium text-zinc-700">
+                        three.js
+                      </span>
+                      , and{" "}
+                      <span className="font-medium text-zinc-700">gsap</span>;
+                      3D panoramic view, navigation, and measurement system
+                      similar to Google Street View.
                     </p>
                   </li>
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Created thorough documentations for said library using
-                      VitePress and Docusaurus:
+                      Created thorough documentations for said library using{" "}
+                      <span className="font-medium text-zinc-700">
+                        VitePress
+                      </span>{" "}
+                      and{" "}
+                      <span className="font-medium text-zinc-700">
+                        Docusaurus
+                      </span>
+                      :
                       <a
                         href="https://tour3d-v1.vercel.app/"
                         target="_blank"
@@ -219,8 +234,11 @@ export function ResumeEn() {
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
                       Updated and migrated UIs that sit on top of said 3D app
-                      using Vue2 and Vue3 based on Figma designs from design
-                      team.
+                      using{" "}
+                      <span className="font-medium text-zinc-700">Vue2</span>{" "}
+                      and{" "}
+                      <span className="font-medium text-zinc-700">Vue3</span>{" "}
+                      based on Figma designs from design team.
                     </p>
                   </li>
                 </ul>
@@ -261,25 +279,33 @@ export function ResumeEn() {
                     <p>
                       Added additional map layers and tools such as satellite
                       view, terrain view, and distant measurement using APIs
-                      provided by a 3rd-party map provider in a React app;
-                      similar to Google Maps.
+                      provided by a 3rd-party map provider in a{" "}
+                      <span className="font-medium text-zinc-700">React</span>{" "}
+                      app; similar to Google Maps.
                     </p>
                   </li>
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Rewrote 'post home for sale' multi-step form in a React
-                      app to have a draft state in DB (MySQL) before the final
-                      submission so that users wouldn't lose their progress by
-                      accident.
+                      Rewrote 'post home for sale' multi-step form in a{" "}
+                      <span className="font-medium text-zinc-700">React</span>{" "}
+                      app to have a draft state in DB (
+                      <span className="font-medium text-zinc-700">MySQL</span>)
+                      before the final submission so that users wouldn't lose
+                      their progress by accident.
                     </p>
                   </li>
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Created a separate node.js web scraper (Express.js) to
-                      collect and aggregate home prices from a 3rd-party website
-                      by apartment and size dynamically on request.
+                      Created a separate{" "}
+                      <span className="font-medium text-zinc-700">Node.js</span>{" "}
+                      web scraper (
+                      <span className="font-medium text-zinc-700">
+                        Express.js
+                      </span>
+                      ) to collect and aggregate home prices from a 3rd-party
+                      website by apartment and size dynamically on request.
                     </p>
                   </li>
                 </ul>
@@ -319,23 +345,42 @@ export function ResumeEn() {
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
                       Fixed bugs, renew designs, and added new features to the
-                      existing React app (Class Components, Redux, Webpack,
-                      Blueprint.js, Sass)
+                      existing{" "}
+                      <span className="font-medium text-zinc-700">React</span>{" "}
+                      app (
+                      <span className="font-medium text-zinc-700">
+                        Class Components, Redux, Webpack, Blueprint.js, Sass
+                      </span>
+                      )
                     </p>
                   </li>
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Wrote a new React app for a new product we were preparing
-                      to launch (React hooks, React Router, Blueprint.js,
-                      TanStack Table, Apache ECharts)
+                      Wrote a new{" "}
+                      <span className="font-medium text-zinc-700">React</span>{" "}
+                      app for a new product we were preparing to launch (
+                      <span className="font-medium text-zinc-700">
+                        React hooks, React Router, Blueprint.js, React Table,
+                        Apache ECharts
+                      </span>
+                      )
                     </p>
                   </li>
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Added new REST API endpoints to our Java backend (Eclipse
-                      Vert.x)
+                      Added new{" "}
+                      <span className="font-medium text-zinc-700">
+                        REST API
+                      </span>{" "}
+                      endpoints to our{" "}
+                      <span className="font-medium text-zinc-700">Java</span>{" "}
+                      backend (
+                      <span className="font-medium text-zinc-700">
+                        Eclipse Vert.x
+                      </span>
+                      )
                     </p>
                   </li>
                 </ul>
