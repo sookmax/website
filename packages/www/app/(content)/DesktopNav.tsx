@@ -18,6 +18,9 @@ export function DesktopNav({ className }: { className?: string }) {
       <DesktopNavItem isActive={pathname === "/experience"}>
         <Link href="/experience">Experience</Link>
       </DesktopNavItem>
+      <DesktopNavItem isActive={pathname === "/resume-en"}>
+        <Link href="/resume-en">Resume</Link>
+      </DesktopNavItem>
     </DesktopNavRoot>
   );
 }

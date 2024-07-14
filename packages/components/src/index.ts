@@ -15,3 +15,4 @@ export * from "./Avatar.primitives";
 export * from "./mdx";
 export * from "./SocialLinks";
 export * from "./ResumeEn";
+export * from "./generateImageUrls";

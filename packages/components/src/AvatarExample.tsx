@@ -1,4 +1,5 @@
 import { AvatarContainer, AvatarSlot } from "./Avatar.primitives";
+import { generateImageUrl } from "./generateImageUrls";
 
 export function AvatarExample({
   showFrame = false,
@@ -9,7 +10,7 @@ export function AvatarExample({
 }) {
   const avatarSlot = (
     <AvatarSlot large={large}>
-      <img src="https://github.com/sookmax.png" alt="profile-picture" />
+      <img src={generateImageUrl("/profile-pic.jpeg")} alt="profile-picture" />
     </AvatarSlot>
   );
 

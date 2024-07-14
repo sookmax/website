@@ -6,9 +6,10 @@ import {
   Link,
   Dot,
   ExternalLink,
-  Hash,
+  Download,
 } from "lucide-react";
 import { AvatarSlot } from "./Avatar.primitives";
+import { generateImageUrl } from "./generateImageUrls";
 
 export function ResumeEn() {
   return (
@@ -16,13 +17,24 @@ export function ResumeEn() {
       <header className="bg-zinc-800 text-zinc-100 p-6 grid grid-cols-3">
         <div className="w-full h-full flex justify-center items-center">
           <AvatarSlot className="w-24 h-24 border border-zinc-100">
-            <img src="/profile-pic.jpeg" alt="profile-picture" />
+            <img
+              src={generateImageUrl("/profile-pic.jpeg")}
+              alt="profile-picture"
+            />
           </AvatarSlot>
         </div>
-        <h1 className="col-span-2 flex flex-col justify-center gap-2">
+        <h1 className="flex flex-col justify-center gap-2">
           <div className="text-4xl">Sukkyu Chung</div>
           <div>Web Frontend Developer</div>
         </h1>
+        <div className="flex justify-center items-center print:hidden">
+          <a
+            href={generateImageUrl("/resume_en.pdf")}
+            download="sukkyu_chung_resume.pdf"
+          >
+            <Download />
+          </a>
+        </div>
       </header>
       <div className="flex-grow flex">
         <article className="bg-zinc-200 p-6 space-y-8 w-[275px] flex-shrink-0">
