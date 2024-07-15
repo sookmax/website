@@ -28,11 +28,7 @@ export function ResumeEn() {
           <div>Web Frontend Developer</div>
         </h1>
         <div className="flex justify-center items-center print:hidden">
-          <a
-            href={generateImageUrl("/resume_en.pdf")}
-            download="sukkyu_chung_resume.pdf"
-            target="_blank"
-          >
+          <a href={generateImageUrl("/resume_en.pdf")} target="_blank">
             <Download />
           </a>
         </div>

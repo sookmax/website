@@ -30,11 +30,7 @@ export function MobileNav({ className }: { className?: string }) {
         <Link href="/experience">Experience</Link>
       </MobileNavItem>
       <MobileNavItem>
-        <a
-          href={generateImageUrl("/resume_en.pdf")}
-          download="sukkyu_chung_resume.pdf"
-          target="_blank"
-        >
+        <a href={generateImageUrl("/resume_en.pdf")} target="_blank">
           Resume
         </a>
       </MobileNavItem>
