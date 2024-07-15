@@ -33,6 +33,7 @@ export function MobileNav({ className }: { className?: string }) {
         <a
           href={generateImageUrl("/resume_en.pdf")}
           download="sukkyu_chung_resume.pdf"
+          target="_blank"
         >
           Resume
         </a>
