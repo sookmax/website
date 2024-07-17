@@ -78,7 +78,12 @@ export function ResumeEn() {
               <div>University of California, Los Angeles</div>
               <div className="text-2xs flex justify-between">
                 <div>2013 - 2015</div>
-                <div>GPA 3.9</div>
+                <div>
+                  <span className="mr-1.5">GPA</span>
+                  <span>
+                    3.9<span className="text-zinc-500">/</span>4.0
+                  </span>
+                </div>
               </div>
             </div>
           </section>
