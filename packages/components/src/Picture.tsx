@@ -148,10 +148,19 @@ const ImgImpl = React.memo(
     useEffect(() => {
       if (imageStatus === "loading") {
         const img = new Image();
+        // the official documentation for `load` event is very hard to find.
+        // so instead, decided to go with `HTMLImageElement.decode()`
+        // https://html.spec.whatwg.org/multipage/indices.html#event-load
+        // https://html.spec.whatwg.org/multipage/images.html#updating-the-image-data
+        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decode
+        //
+        // BUT weirdly, it turns out `.decode()` throws an error on some thumbnail images in full screen mode,
+        // so using `.onload()` for now..
         img.onload = () => {
           setLoaded(true);
           onLoad();
         };
+
         if (sizes) {
           img.sizes = sizes;
         }
@@ -161,6 +170,13 @@ const ImgImpl = React.memo(
         if (srcSet) {
           img.srcset = srcSet;
         }
+
+        // .decode() must be placed after the source assignments above.
+        // else you'd get 'DOMException: The source image cannot be decoded.'
+        // img.decode().then(() => {
+        //   setLoaded(true);
+        //   onLoad();
+        // });
 
         return () => {
           // console.log("canceled");

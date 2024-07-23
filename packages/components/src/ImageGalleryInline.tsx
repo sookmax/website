@@ -34,7 +34,7 @@ export function ImageGalleryInline({
       setImageIndex={setImageIndex}
     >
       <ImageGalleryMainImage
-        key={imageIndex}
+        // key={imageIndex}
         showSkeleton={true}
         loading={loading}
       />
