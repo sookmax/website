@@ -26,6 +26,33 @@ export default function Layout({ children }) {
   );
 }
 
+<Event date="2024-06">
+<h2 id="reading-ddia" className="scroll-mt-24">
+  <span className="not-prose">
+    <a
+      href="#reading-ddia"
+      className="relative before:content-['#'] before:invisible before:hover:visible before:absolute before:right-full before:mr-1 before:opacity-50"
+    >
+      {"Reading DDIA"}
+    </a>
+  </span>
+</h2>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={generateImageUrls(["/ddia-1.png", "/ddia-2.png"])}
+    loading="eager"
+  />
+</div>
+
+As I was planning to wrap up the current sabbatical and start preparing for a job search soon, I wanted to go over one more subject presented in [Teach Yourself Computer Science](https://teachyourselfcs.com/). And [Designing Data-Intensive Applications (DDIA)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) is the book I picked to read. Distributed systems like Hadoop and Spark were something that was very fascinating to me when I was a data analyst early in my career. In fact, they were so interesting that I went out of my way and built a mini hadoop cluster as [a side project](https://sook.dev/experience#project-hadoop) around 2018. So yeah I was definitely excited to read DDIA.
+
+Overall, I'd say the author did a really good job elaborating on various distributed strategies such as replication and partitioning, and things that could go wrong in a distributed system. I also learned a lot about traditional databases such as database indexes, database transactions, and how they actually store data on file systems from this book. While reading, it definitely felt like this was something I should've read when I was a data analyst 😅. It even explains terms like _OLAP_ and _data warehouses_ that I frequently heard but only vaguely understood in my data analyst days.
+
+I'm not sure if I ever get a chance to work with distributed systems of a massive scale as a frontend developer, but I believe it still is beneficial for me to learn and be aware about these "under the hood" backend/infrastructure computing systems that power modern IT services that we enjoy using.
+
+</Event>
+
 <Event from="2024-03" to="2024-05">
 <h2 id="leetcode-grind" className="scroll-mt-24">
   <span className="not-prose">
@@ -45,7 +72,6 @@ export default function Layout({ children }) {
       "/leetcode-2.png",
       "/leetcode-3.png",
     ])}
-    loading="eager"
   />
 </div>
 
