@@ -235,8 +235,11 @@ export function ResumeEn() {
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Updated and migrated UIs that sit on top of said 3D app
-                      using{" "}
+                      Updated and migrated UIs that wrap around the{" "}
+                      <span className="font-medium text-zinc-700">
+                        three.js
+                      </span>{" "}
+                      app using{" "}
                       <span className="font-medium text-zinc-700">Vue2</span>{" "}
                       and{" "}
                       <span className="font-medium text-zinc-700">Vue3</span>{" "}
@@ -280,8 +283,8 @@ export function ResumeEn() {
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
                       Added additional map layers and tools such as satellite
-                      view, terrain view, and distant measurement using APIs
-                      provided by a 3rd-party map provider in a{" "}
+                      view, terrain view, and distant measurement using
+                      3rd-party APIs in a{" "}
                       <span className="font-medium text-zinc-700">React</span>{" "}
                       app; similar to Google Maps.
                     </p>
@@ -289,7 +292,11 @@ export function ResumeEn() {
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Rewrote 'post home for sale' multi-step form in a{" "}
+                      Rewrote 'post home for sale' multi-step{" "}
+                      <span className="font-medium text-zinc-700">
+                        web form
+                      </span>{" "}
+                      in a{" "}
                       <span className="font-medium text-zinc-700">React</span>{" "}
                       app to have a draft state in DB (
                       <span className="font-medium text-zinc-700">MySQL</span>)
@@ -307,7 +314,7 @@ export function ResumeEn() {
                         Express.js
                       </span>
                       ) to collect and aggregate home prices from a 3rd-party
-                      website by apartment and size dynamically on request.
+                      website by apartment and its size on request.
                     </p>
                   </li>
                 </ul>
@@ -346,12 +353,12 @@ export function ResumeEn() {
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Fixed bugs, renew designs, and added new features to the
-                      existing{" "}
+                      Fixed bugs, implemented new UI designs, and added new
+                      features to the existing{" "}
                       <span className="font-medium text-zinc-700">React</span>{" "}
                       app (
                       <span className="font-medium text-zinc-700">
-                        Class Components, Redux, Webpack, Blueprint.js, Sass
+                        Class Components, Redux, Webpack, Sass
                       </span>
                       )
                     </p>
@@ -363,8 +370,7 @@ export function ResumeEn() {
                       <span className="font-medium text-zinc-700">React</span>{" "}
                       app for a new product we were preparing to launch (
                       <span className="font-medium text-zinc-700">
-                        React hooks, React Router, Blueprint.js, React Table,
-                        Apache ECharts
+                        React hooks, React Router, React Table, Apache ECharts
                       </span>
                       )
                     </p>
