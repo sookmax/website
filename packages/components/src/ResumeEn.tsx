@@ -5,7 +5,6 @@ import {
   Linkedin,
   Link,
   Dot,
-  ExternalLink,
   Download,
 } from "lucide-react";
 import { AvatarSlot } from "./Avatar.primitives";
@@ -94,6 +93,7 @@ export function ResumeEn() {
                 <a
                   href="https://github.com/adobe/react-spectrum/pulls?page=1&q=is%3Apr+is%3Aclosed+author%3Asookmax"
                   target="_blank"
+                  className="underline"
                 >
                   adobe/react-spectrum (27 merged)
                 </a>
@@ -102,6 +102,7 @@ export function ResumeEn() {
                 <a
                   href="https://github.com/storybookjs/storybook/pulls?q=is%3Apr+is%3Aclosed+author%3Asookmax"
                   target="_blank"
+                  className="underline"
                 >
                   storybookjs/storybook (6 merged)
                 </a>
@@ -110,6 +111,7 @@ export function ResumeEn() {
                 <a
                   href="https://github.com/nkzw-tech/athena-crisis/pulls?q=is%3Apr+is%3Aclosed+author%3Asookmax"
                   target="_blank"
+                  className="underline"
                 >
                   nkzw-tech/athena-crisis (4 merged)
                 </a>
@@ -161,24 +163,26 @@ export function ResumeEn() {
                   <div className="font-normal flex justify-between">
                     <div className="flex items-center gap-1">
                       <div>Frontend Developer</div>
-                      <a
-                        href="https://www.sook.dev/experience#fe-3i"
-                        target="_blank"
-                      >
-                        <ExternalLink className="w-3 h-3" />
-                      </a>
+                      <div className="font-light text-2xs text-zinc-500">
+                        (
+                        <a
+                          href="https://www.sook.dev/experience#fe-3i"
+                          target="_blank"
+                          // className="underline"
+                        >
+                          more info
+                        </a>
+                        )
+                      </div>
                     </div>
                     <div className="text-xs">
-                      <div className="flex items-center gap-1">
-                        <span>3i Inc.</span>
-                        <a
-                          href="https://www.3i.ai/"
-                          target="_blank"
-                          className="flex items-center"
-                        >
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      </div>
+                      <a
+                        href="https://www.3i.ai/"
+                        target="_blank"
+                        className="flex items-center"
+                      >
+                        3i Inc.
+                      </a>
                     </div>
                   </div>
                   <div className="text-2xs flex justify-between">
@@ -207,7 +211,11 @@ export function ResumeEn() {
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Created thorough documentations for said library using{" "}
+                      Created thorough{" "}
+                      <span className="font-medium text-zinc-700">
+                        documentations
+                      </span>{" "}
+                      for the above library using{" "}
                       <span className="font-medium text-zinc-700">
                         VitePress
                       </span>{" "}
@@ -235,15 +243,14 @@ export function ResumeEn() {
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Updated and migrated UIs that wrap around the{" "}
+                      Updated and migrated UIs (from{" "}
+                      <span className="font-medium text-zinc-700">Vue2</span> to{" "}
+                      <span className="font-medium text-zinc-700">Vue3</span>)
+                      that wrap around the{" "}
                       <span className="font-medium text-zinc-700">
                         three.js
                       </span>{" "}
-                      app using{" "}
-                      <span className="font-medium text-zinc-700">Vue2</span>{" "}
-                      and{" "}
-                      <span className="font-medium text-zinc-700">Vue3</span>{" "}
-                      based on Figma designs from design team.
+                      app based on Figma designs from design team.
                     </p>
                   </li>
                 </ul>
@@ -253,24 +260,26 @@ export function ResumeEn() {
                   <div className="font-normal flex justify-between">
                     <div className="flex items-center gap-1">
                       <div>Frontend Developer</div>
-                      <a
-                        href="https://www.sook.dev/experience#fe-dawin"
-                        target="_blank"
-                      >
-                        <ExternalLink className="w-3 h-3" />
-                      </a>
+                      <div className="font-light text-2xs text-zinc-500">
+                        (
+                        <a
+                          href="https://www.sook.dev/experience#fe-dawin"
+                          target="_blank"
+                          // className="underline"
+                        >
+                          more info
+                        </a>
+                        )
+                      </div>
                     </div>
                     <div className="text-xs">
-                      <div className="flex items-center gap-1">
-                        <span>Dawinproperty</span>
-                        <a
-                          href="https://dawin.xyz/"
-                          target="_blank"
-                          className="flex items-center"
-                        >
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      </div>
+                      <a
+                        href="https://dawin.xyz/"
+                        target="_blank"
+                        className="flex items-center"
+                      >
+                        Dawinproperty
+                      </a>
                     </div>
                   </div>
                   <div className="text-2xs flex justify-between">
@@ -282,9 +291,8 @@ export function ResumeEn() {
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Added additional map layers and tools such as satellite
-                      view, terrain view, and distant measurement using
-                      3rd-party APIs in a{" "}
+                      Added new map features such as satellite view, terrain
+                      view, and distant measurement to the existing{" "}
                       <span className="font-medium text-zinc-700">React</span>{" "}
                       app; similar to Google Maps.
                     </p>
@@ -296,25 +304,55 @@ export function ResumeEn() {
                       <span className="font-medium text-zinc-700">
                         web form
                       </span>{" "}
-                      in a{" "}
+                      in the{" "}
                       <span className="font-medium text-zinc-700">React</span>{" "}
-                      app to have a draft state in DB (
+                      app to have a persistent draft state in DB (
                       <span className="font-medium text-zinc-700">MySQL</span>)
-                      before the final submission so that users wouldn't lose
-                      their progress by accident.
+                      before the submission is completed.
                     </p>
                   </li>
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      Created a separate{" "}
+                      Created a{" "}
                       <span className="font-medium text-zinc-700">Node.js</span>{" "}
                       web scraper (
                       <span className="font-medium text-zinc-700">
                         Express.js
                       </span>
                       ) to collect and aggregate home prices from a 3rd-party
-                      website by apartment and its size on request.
+                      website.
+                    </p>
+                  </li>
+                  <li className="flex">
+                    <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
+                    <p>
+                      Added an{" "}
+                      <span className="font-medium text-zinc-700">
+                        API endpoint
+                      </span>{" "}
+                      to our{" "}
+                      <span className="font-medium text-zinc-700">
+                        Express.js
+                      </span>{" "}
+                      backend to serve (and cache) data collected by the above
+                      web scraper.
+                    </p>
+                  </li>
+                  <li className="flex">
+                    <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
+                    <p>
+                      Added{" "}
+                      <span className="font-medium text-zinc-700">
+                        UI components
+                      </span>{" "}
+                      to the{" "}
+                      <span className="font-medium text-zinc-700">React</span>{" "}
+                      app that request (
+                      <span className="font-medium text-zinc-700">
+                        Redux-Saga
+                      </span>
+                      ) and show the data from the above API endpoint.
                     </p>
                   </li>
                 </ul>
@@ -324,24 +362,26 @@ export function ResumeEn() {
                   <div className="font-normal flex justify-between">
                     <div className="flex items-center gap-1">
                       <div>Software Engineer</div>
-                      <a
-                        href="https://www.sook.dev/experience#swe-agilesoda"
-                        target="_blank"
-                      >
-                        <ExternalLink className="w-3 h-3" />
-                      </a>
+                      <div className="font-light text-2xs text-zinc-500">
+                        (
+                        <a
+                          href="https://www.sook.dev/experience#swe-agilesoda"
+                          target="_blank"
+                          // className="underline"
+                        >
+                          more info
+                        </a>
+                        )
+                      </div>
                     </div>
                     <div className="text-xs">
-                      <div className="flex items-center gap-1">
-                        <span>AgileSoDA</span>
-                        <a
-                          href="http://www.agilesoda.com/"
-                          target="_blank"
-                          className="flex items-center"
-                        >
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      </div>
+                      <a
+                        href="http://www.agilesoda.com/"
+                        target="_blank"
+                        className="flex items-center"
+                      >
+                        AgileSoDA
+                      </a>
                     </div>
                   </div>
                   <div className="text-2xs flex justify-between">
@@ -360,7 +400,7 @@ export function ResumeEn() {
                       <span className="font-medium text-zinc-700">
                         Class Components, Redux, Webpack, Sass
                       </span>
-                      )
+                      ).
                     </p>
                   </li>
                   <li className="flex">
@@ -368,11 +408,13 @@ export function ResumeEn() {
                     <p>
                       Wrote a new{" "}
                       <span className="font-medium text-zinc-700">React</span>{" "}
-                      app for a new product we were preparing to launch (
+                      app containing interactive UI elements such as sortable
+                      tables, modals, settings page, and charts using{" "}
                       <span className="font-medium text-zinc-700">
-                        React hooks, React Router, React Table, Apache ECharts
+                        React hooks, React Router, React Table, Apache ECharts,
+                        Blueprint JS
                       </span>
-                      )
+                      .
                     </p>
                   </li>
                   <li className="flex">
@@ -387,97 +429,85 @@ export function ResumeEn() {
                       backend (
                       <span className="font-medium text-zinc-700">
                         Eclipse Vert.x
-                      </span>
-                      )
+                      </span>{" "}
+                      and{" "}
+                      <span className="font-medium text-zinc-700">MariaDB</span>
+                      ) for the new features.
                     </p>
                   </li>
                 </ul>
               </li>
               <li>
-                <h3>
-                  <div className="font-normal flex justify-between">
-                    <div className="flex items-center gap-1">
-                      <div>Data Analyst</div>
+                <h3 className="font-normal">Data Analyst</h3>
+                <div className="text-2xs flex justify-between">
+                  <div>Seoul, South Korea</div>
+                  <div className="flex items-center">
+                    <a
+                      href="http://www.agilesoda.com/"
+                      target="_blank"
+                      className="font-normal"
+                    >
+                      AgileSoDA
+                    </a>
+                    <span className="mr-2">,</span>
+                    <span className="mr-1">Apr 2017 - Apr 2019</span>
+                    <span className="font-light text-2xs text-zinc-500">
+                      (
                       <a
                         href="https://www.sook.dev/experience#da-agilesoda"
                         target="_blank"
+                        // className="underline"
                       >
-                        <ExternalLink className="w-3 h-3" />
+                        more info
                       </a>
-                    </div>
-                    <div className="text-xs">
-                      <div className="flex items-center gap-1">
-                        <span>AgileSoDA</span>
-                        <a
-                          href="http://www.agilesoda.com/"
-                          target="_blank"
-                          className="flex items-center"
-                        >
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      </div>
-                    </div>
+                      )
+                    </span>
                   </div>
-                  <div className="text-2xs flex justify-between">
-                    <div>Seoul, South Korea</div>
-                    <div>Apr 2017 - Apr 2019</div>
-                  </div>
-                </h3>
-              </li>
-              <li>
-                <h3>
-                  <div className="font-normal flex justify-between">
-                    <div className="flex items-center gap-1">
-                      <div>Data Analyst</div>
+                </div>
+                <div className="text-2xs flex justify-between">
+                  <div>Seoul, South Korea</div>
+                  <div className="flex items-center">
+                    <a
+                      href="http://www.mobigen.com/eng/index.php"
+                      target="_blank"
+                      className="font-normal"
+                    >
+                      Mobigen
+                    </a>
+                    <span className="mr-2">,</span>
+                    <span className="mr-1">Sep 2016 - Apr 2017</span>
+                    <span className="font-light text-2xs text-zinc-500">
+                      (
                       <a
                         href="https://www.sook.dev/experience#da-mobigen"
                         target="_blank"
+                        // className="underline"
                       >
-                        <ExternalLink className="w-3 h-3" />
+                        more info
                       </a>
-                    </div>
-                    <div className="text-xs">
-                      <div className="flex items-center gap-1">
-                        <span>Mobigen</span>
-                        <a
-                          href="http://www.mobigen.com/eng/index.php"
-                          target="_blank"
-                          className="flex items-center"
-                        >
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      </div>
-                    </div>
+                      )
+                    </span>
                   </div>
-                  <div className="text-2xs flex justify-between">
-                    <div>Seoul, South Korea</div>
-                    <div>Sep 2016 - Apr 2017</div>
-                  </div>
-                </h3>
-              </li>
-              <li>
-                <h3>
-                  <div className="font-normal flex justify-between">
-                    <div className="flex items-center gap-1">
-                      <div>Data Analyst</div>
+                </div>
+                <div className="text-2xs flex justify-between">
+                  <div>Seoul, South Korea</div>
+                  <div className="flex items-center">
+                    <span className="font-normal">NowDream</span>
+                    <span className="mr-2">,</span>
+                    <span className="mr-1">Jul 2015 - Aug 2016</span>
+                    <span className="font-light text-2xs text-zinc-500">
+                      (
                       <a
                         href="https://www.sook.dev/experience#da-nowdream"
                         target="_blank"
+                        // className="underline"
                       >
-                        <ExternalLink className="w-3 h-3" />
+                        more info
                       </a>
-                    </div>
-                    <div className="text-xs">
-                      <div className="flex items-center gap-1">
-                        <span>NowDream</span>
-                      </div>
-                    </div>
+                      )
+                    </span>
                   </div>
-                  <div className="text-2xs flex justify-between">
-                    <div>Seoul, South Korea</div>
-                    <div>Jul 2015 - Aug 2016</div>
-                  </div>
-                </h3>
+                </div>
               </li>
             </ul>
           </section>
