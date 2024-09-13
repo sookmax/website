@@ -26,6 +26,33 @@ export default function Layout({ children }) {
   );
 }
 
+<Event from="2024-07" to={new Date()}>
+<h2 id="interview-prep-job-search-loop" className="scroll-mt-24">
+  <span className="not-prose">
+    <a
+      href="#interview-prep-job-search-loop"
+      className="relative before:content-['#'] before:invisible before:hover:visible before:absolute before:right-full before:mr-1 before:opacity-50"
+    >
+      {"Interview prep & job search loop"}
+    </a>
+  </span>
+</h2>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={generateImageUrls(["/interview-prep-job-search-loop.png"])}
+    loading="eager"
+  />
+</div>
+
+Though I've pretty much given up the idea of applying for FAANG companies (or any US tech company, really) after realizing there's practically zero chance of me getting interviews as a non US citizen who's currently not even living in the state, I thought it'd still be a good idea to do some FAANG style interview prep while searching for a job in the local market.
+
+I find studying system design particularly useful not only for the interview prep but also for understanding modern software architectures in a more holistic way. I think knowing what kind of technologies are out there and popular, when they are useful, and what are the tradeoffs and consequences of choosing one over the other, even at a shallow level is beneficial for any software engineer. No wonder why there's such heavy emphasis on system design rounds in the interview process. As for the resources, I've found this great website called [hello interview](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction), and of course, revisiting [DDIA](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) turns out to be incredibly helpful as well.
+
+Having one dedicated Leetcode day in the week helps me maintain algorithmic coding skills that probably would come in handy in my current job search endeavor, and to not forget my identity as a frontend developer of course, I have two days assigned to doing frontend-related stuff&mdash;I'm currently going over the 3-month study plan from [GreatFrontEnd](https://www.greatfrontend.com/), but there are some frameworks and libraries I want to checkout as soon as that's done (Remix, TanStack Start, TanStack Query, Jotai and Zustand to name a few)
+
+</Event>
+
 <Event date="2024-06">
 <h2 id="reading-ddia" className="scroll-mt-24">
   <span className="not-prose">
@@ -41,7 +68,6 @@ export default function Layout({ children }) {
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
     imageUrls={generateImageUrls(["/ddia-1.png", "/ddia-2.png"])}
-    loading="eager"
   />
 </div>
 
