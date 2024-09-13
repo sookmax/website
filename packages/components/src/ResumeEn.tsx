@@ -12,7 +12,7 @@ import { generateImageUrl } from "./generateImageUrls";
 
 export function ResumeEn() {
   return (
-    <main className="flex flex-col w-full h-full">
+    <main className="flex flex-col w-full h-full text-black">
       <header className="bg-zinc-800 text-zinc-100 p-6 grid grid-cols-3">
         <div className="w-full h-full flex justify-center items-center">
           <AvatarSlot className="w-24 h-24 border border-zinc-100">
