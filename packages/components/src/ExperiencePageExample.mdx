@@ -1,5 +1,5 @@
 import { WithRuler } from "./WithRuler";
-import { Event } from "./Event";
+import { Event, StickyEventHeader } from "./Event";
 import * as Picture from "./Picture";
 import { ImageGalleryInline } from "./ImageGalleryInline";
 import { ExternalLink } from "lucide-react";
@@ -23,7 +23,7 @@ export default function Layout({ children }) {
 
 <Event from="2021-06" to="2022-10">
 
-<h2 id="fe-3i" className="flex flex-col scroll-mt-24">
+<StickyEventHeader id="fe-3i" className="flex justify-between scroll-mt-24">
   <span className="not-prose">
     <a
       href="#fe-3i"
@@ -32,16 +32,13 @@ export default function Layout({ children }) {
       {"Frontent Developer"}
     </a>
   </span>
-  <span className="flex space-x-1 font-normal text-lg">
+  <span className="flex items-center space-x-1 font-normal text-sm md:text-lg">
     <span>3i</span>
     <a href="https://www.3i.ai/" target="_blank" className="flex items-center">
-      <ExternalLink className="w-5 h-5" />
+      <ExternalLink className="w-5 h-5 mb-[2px]" />
     </a>
   </span>
-  <span className="font-normal text-base text-zinc-600 dark:text-zinc-400">
-    {"Seoul, South Korea"}
-  </span>
-</h2>
+</StickyEventHeader>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
@@ -78,7 +75,7 @@ It's weird because I can't really articulate why, but while using Vue&mdash;even
 
 <Event from="2020-12" to="2021-06">
 
-<h2 id="fe-dawin" className="flex flex-col scroll-mt-24">
+<StickyEventHeader id="fe-dawin" className="flex justify-between scroll-mt-24">
   <span className="not-prose">
     <a
       href="#fe-dawin"
@@ -87,16 +84,13 @@ It's weird because I can't really articulate why, but while using Vue&mdash;even
       {"Frontent Developer"}
     </a>
   </span>
-  <span className="flex space-x-1 font-normal text-lg">
+  <span className="flex items-center space-x-1 font-normal text-sm md:text-lg">
     <span>Dawinproperty</span>
     <a href="https://dawin.xyz/" target="_blank" className="flex items-center">
-      <ExternalLink className="w-5 h-5" />
+      <ExternalLink className="w-5 h-5 mb-[2px]" />
     </a>
   </span>
-  <span className="font-normal text-base text-zinc-600 dark:text-zinc-400">
-    {"Seoul, South Korea"}
-  </span>
-</h2>
+</StickyEventHeader>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
@@ -129,7 +123,10 @@ Back to the frontend app, I want to mention that this React app was also sufferi
 
 <Event from="2019-04" to="2020-12">
 
-<h2 id="swe-agilesoda" className="flex flex-col scroll-mt-24">
+<StickyEventHeader
+  id="swe-agilesoda"
+  className="flex justify-between scroll-mt-24"
+>
   <span className="not-prose">
     <a
       href="#swe-agilesoda"
@@ -138,20 +135,17 @@ Back to the frontend app, I want to mention that this React app was also sufferi
       {"Software Engineer"}
     </a>
   </span>
-  <span className="flex space-x-1 font-normal text-lg">
+  <span className="flex items-center space-x-1 font-normal text-sm md:text-lg">
     <span>AgileSoDA</span>
     <a
       href="http://www.agilesoda.com/"
       target="_blank"
       className="flex items-center"
     >
-      <ExternalLink className="w-5 h-5" />
+      <ExternalLink className="w-5 h-5 mb-[2px]" />
     </a>
   </span>
-  <span className="font-normal text-base text-zinc-600 dark:text-zinc-400">
-    {"Seoul, South Korea"}
-  </span>
-</h2>
+</StickyEventHeader>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
@@ -220,7 +214,10 @@ Despite my initial excitement for React hooks however, I noticed some of my [use
 
 <Event from="2017-04" to="2019-04">
 
-<h2 id="da-agilesoda" className="flex flex-col scroll-mt-24">
+<StickyEventHeader
+  id="da-agilesoda"
+  className="flex justify-between scroll-mt-24"
+>
   <span className="not-prose">
     <a
       href="#da-agilesoda"
@@ -229,20 +226,17 @@ Despite my initial excitement for React hooks however, I noticed some of my [use
       {"Data Analyst"}
     </a>
   </span>
-  <span className="flex space-x-1 font-normal text-lg">
+  <span className="flex items-center space-x-1 font-normal text-sm md:text-lg">
     <span>AgileSoDA</span>
     <a
       href="http://www.agilesoda.com/"
       target="_blank"
       className="flex items-center"
     >
-      <ExternalLink className="w-5 h-5" />
+      <ExternalLink className="w-5 h-5 mb-[2px]" />
     </a>
   </span>
-  <span className="font-normal text-base text-zinc-600 dark:text-zinc-400">
-    {"Seoul, South Korea"}
-  </span>
-</h2>
+</StickyEventHeader>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
@@ -314,7 +308,10 @@ I could've just spun up multiple virtual machines on my laptop to provision and 
 
 <Event from="2016-09" to="2017-04">
 
-<h2 id="da-mobigen" className="flex flex-col scroll-mt-24">
+<StickyEventHeader
+  id="da-mobigen"
+  className="flex justify-between scroll-mt-24"
+>
   <span className="not-prose">
     <a
       href="#da-mobigen"
@@ -323,20 +320,17 @@ I could've just spun up multiple virtual machines on my laptop to provision and 
       {"Data Analyst"}
     </a>
   </span>
-  <span className="flex space-x-1 font-normal text-lg">
+  <span className="flex items-center space-x-1 font-normal text-sm md:text-lg">
     <span>Mobigen</span>
     <a
       href="http://www.mobigen.com/eng/index.php"
       target="_blank"
       className="flex items-center"
     >
-      <ExternalLink className="w-5 h-5" />
+      <ExternalLink className="w-5 h-5 mb-[2px]" />
     </a>
   </span>
-  <span className="font-normal text-base text-zinc-600 dark:text-zinc-400">
-    {"Seoul, South Korea"}
-  </span>
-</h2>
+</StickyEventHeader>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
@@ -376,7 +370,10 @@ To me, 2016 and 2017 were when my interest towards machine learning had peaked. 
 
 <Event from="2015-07" to="2016-08">
 
-<h2 id="da-nowdream" className="flex flex-col scroll-mt-24">
+<StickyEventHeader
+  id="da-nowdream"
+  className="flex justify-between scroll-mt-24"
+>
   <span className="not-prose">
     <a
       href="#da-nowdream"
@@ -385,16 +382,13 @@ To me, 2016 and 2017 were when my interest towards machine learning had peaked. 
       {"Data Analyst"}
     </a>
   </span>
-  <span className="flex space-x-1 font-normal text-lg">
+  <span className="flex items-center space-x-1 font-normal text-sm md:text-lg">
     <span>NowDream</span>
     <span className="flex items-center text-zinc-300 dark:text-zinc-600">
-      <ExternalLink className="w-5 h-5" />
+      <ExternalLink className="w-5 h-5 mb-[2px]" />
     </span>
   </span>
-  <span className="font-normal text-base text-zinc-600 dark:text-zinc-400">
-    {"Seoul, South Korea"}
-  </span>
-</h2>
+</StickyEventHeader>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
@@ -419,7 +413,7 @@ It was also the period where big data hype was at its peak, and I had a chance t
 
 <Event date="2015-06">
 
-<h2 id="college" className="flex flex-col scroll-mt-24">
+<StickyEventHeader id="college" className="flex justify-between scroll-mt-24">
   <span className="not-prose">
     <a
       href="#college"
@@ -428,11 +422,8 @@ It was also the period where big data hype was at its peak, and I had a chance t
       {"UCLA"}
     </a>
   </span>
-  <span className="font-normal text-lg">Statistics, B.S.</span>
-  <span className="font-normal text-base text-zinc-600 dark:text-zinc-400">
-    {"Los Angeles, CA"}
-  </span>
-</h2>
+  <span className="font-normal text-sm md:text-lg">Statistics, B.S.</span>
+</StickyEventHeader>
 
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline

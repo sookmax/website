@@ -49,7 +49,7 @@ function EventHeader({ children }: { children: React.ReactNode }) {
     // the top value depends on the header's height.
     <header
       className={trim(`
-    sticky top-14 z-40 -mx-4 sm:-mx-8 px-4 sm:px-8 bg-white/70 dark:bg-zinc-900/70 backdrop-blur
+    sticky top-14 z-50 -mx-4 sm:-mx-8 px-2 sm:px-8 bg-white/70 dark:bg-zinc-900/70 backdrop-blur
     `)}
     >
       <div className="flex items-center space-x-1">
@@ -75,5 +75,20 @@ function FormattedDate({
     <time dateTime={date.toISOString()} {...props}>
       {format(date, "MMM. yyyy")}
     </time>
+  );
+}
+
+export function StickyEventHeader({
+  className,
+  ...rest
+}: React.ComponentPropsWithoutRef<"h2">) {
+  return (
+    <h2
+      className={cn(
+        "sticky top-[88px] sm:top-[92px] z-40 -mx-4 sm:-mx-12 md:-mx-16 lg:-mx-20 px-2 sm:px-8 md:px-8 lg:px-2 py-1 bg-white/90 dark:bg-zinc-900/90 backdrop-blur border-b border-gray-400/30 dark:border-white/20",
+        className,
+      )}
+      {...rest}
+    ></h2>
   );
 }

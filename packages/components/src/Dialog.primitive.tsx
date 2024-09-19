@@ -17,7 +17,7 @@ export const DialogContent = React.forwardRef<
     <DialogPrimitive.Portal>
       <DialogPrimitive.Overlay
         className={cn(`
-            fixed inset-0 z-50 
+            fixed inset-0 z-[60]
             backdrop-blur-sm 
             bg-zinc-800/40
             dark:bg-black/80
