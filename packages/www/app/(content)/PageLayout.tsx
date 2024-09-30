@@ -6,7 +6,7 @@ export function PageLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      <main className="py-8 md:py-16">{children}</main>
+      <main className="py-8 md:py-16 flex-grow">{children}</main>
       <FooterExample />
     </>
   );

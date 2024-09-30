@@ -4,10 +4,11 @@ import { Mail } from "lucide-react";
 export function FooterExample() {
   return (
     // https://css-tricks.com/negative-margins/
-    <footer className="mt-8 sm:-mx-8">
+    // <footer className="mt-8 sm:-mx-8 flex-shrink">
+    <footer className="flex-shrink">
       <div
         className={trim(`
-      border-t border-zinc-100 pb-10 md:pb-16 pt-10 dark:border-zinc-700/40 
+      border-t border-zinc-100 py-10 dark:border-zinc-700/40 
       text-sm text-zinc-400 dark:text-zinc-500
       `)}
       >
