@@ -27,16 +27,18 @@ export function AboutPageExample() {
         </div>
         <div className="mt-8 space-y-7 lg:pr-8 text-base text-zinc-600 dark:text-zinc-400">
           <p>
-            Well in fact, I started out not as a web developer but as a data
-            analyst after finishing college back in 2015; I worked as a data
-            analyst until early 2019. In hindsight, I think I had always enjoyed
-            data visualization (charts and tables) more than any other aspects
-            of data analysis, which had probably been the strongest motivator
-            for me to want to become a web dev.
+            Well in fact, I rather started out as a data analyst after finishing
+            college back in 2015 and worked as one until early 2019.
+          </p>
+          <p>
+            In hindsight, I think I had always enjoyed data
+            visualization&mdash;charts and tables, for example&mdash;more than
+            any other aspects of data analysis, which had probably been the
+            strongest motivator for me to want to become a web developer.
           </p>
           <p>
             While web technology is becoming more and more capable, allowing us
-            to build amazing stuff on the web, I think web development can also
+            to build amazing stuff on the web, I think web development can still
             be fairly hard and frustrating. A part of it might be because there
             are so many&mdash;often completely different&mdash;ways to achieve
             similar end results (JS frameworks, for example). Another part of it
@@ -45,7 +47,7 @@ export function AboutPageExample() {
           </p>
           <p>
             Or, the fact that it's almost too easy to introduce visual
-            regressions and break things with the slightest change in codebase
+            regressions and break UIs with the slightest change in codebase,
             could also be part of web development being quite tricky. I've
             observed all these challenges being amplified even further when
             there are more than one developer involved, working on a project at
