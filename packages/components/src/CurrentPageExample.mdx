@@ -26,7 +26,40 @@ export default function Layout({ children }) {
   );
 }
 
-<Event from="2024-07" to={new Date()}>
+<Event from="2024-10" to={new Date()}>
+<StickyEventHeader id="joining-medisola">
+  <span className="not-prose">
+    <a
+      href="#joining-medisola"
+      className="relative after:content-['#'] after:invisible after:hover:visible after:absolute after:left-full after:ml-1 after:opacity-50"
+    >
+      {"Joining Medisola"}
+    </a>
+  </span>
+</StickyEventHeader>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={generateImageUrls(["/medisola-1.png", "/medisola-2.png"])}
+    loading="eager"
+  >
+    <a
+      href="https://www.medisola.co.kr/"
+      target="_blank"
+      className="text-primary-dark"
+    >
+      {"https://www.medisola.co.kr/"}
+    </a>
+  </ImageGalleryInline>
+</div>
+
+I'm joining [Medisola](https://www.medisola.co.kr/) as a frontend developer.
+
+Health, nutritions, and diet are something that I've been very much interested in, and Medisola is a company that provides high-quality, nutrient-dense packaged meals for people with medical conditions and those who care about their diet and nutritions. So I'm very excited to see how I, as a web developer, can help the company build software products and grow its business (starting with building internal tools, it seems)
+
+</Event>
+
+<Event from="2024-07" to="2024-10">
 <StickyEventHeader id="interview-prep-job-search-loop">
   <span className="not-prose">
     <a
@@ -41,7 +74,6 @@ export default function Layout({ children }) {
 <div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
   <ImageGalleryInline
     imageUrls={generateImageUrls(["/interview-prep-job-search-loop.png"])}
-    loading="eager"
   />
 </div>
 
