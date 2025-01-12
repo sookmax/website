@@ -7,7 +7,7 @@ export function FooterExample() {
   const [dynamicDate, setDynamicDate] = useState(new Date());
 
   useEffect(() => {
-    setDynamicDate(new Date("1988-11-21"));
+    setDynamicDate(new Date());
   }, []);
 
   return (
