@@ -1,7 +1,15 @@
+"use client";
 import { trim } from "@website/utils";
 import { Mail } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export function FooterExample() {
+  const [dynamicDate, setDynamicDate] = useState(new Date());
+
+  useEffect(() => {
+    setDynamicDate(new Date("1988-11-21"));
+  }, []);
+
   return (
     // https://css-tricks.com/negative-margins/
     // <footer className="mt-8 sm:-mx-8 flex-shrink">
@@ -20,7 +28,8 @@ export function FooterExample() {
             <span>sukkyu.chung@gmail.com</span>
           </p>
           <p className="p-2">
-            &copy; {new Date().getFullYear()} Sukkyu Chung. All rights reserved.
+            &copy; {dynamicDate.getFullYear()} Sukkyu Chung. All rights
+            reserved.
           </p>
         </div>
       </div>

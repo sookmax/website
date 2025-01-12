@@ -1,6 +1,7 @@
+"use client";
 import { cn, trim } from "@website/utils";
 import { format } from "date-fns";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export function Event({
   date,
@@ -11,7 +12,7 @@ export function Event({
 }: React.ComponentPropsWithoutRef<"article"> & {
   date?: Date | string;
   from?: Date | string;
-  to?: Date | string;
+  to?: Date | string | "present";
 }) {
   return (
     <article {...rest}>
@@ -68,12 +69,26 @@ function EventHeader({ children }: { children: React.ReactNode }) {
 function FormattedDate({
   date,
   ...props
-}: React.ComponentPropsWithoutRef<"time"> & { date: Date | string }) {
-  date = typeof date === "string" ? new Date(date) : date;
+}: React.ComponentPropsWithoutRef<"time"> & {
+  date: Date | string | "present";
+}) {
+  const [dynamicDate, setDynamicDate] = useState(
+    typeof date === "string"
+      ? date !== "present"
+        ? new Date(date)
+        : new Date()
+      : date,
+  );
+
+  useEffect(() => {
+    if (typeof date === "string" && date === "present") {
+      setDynamicDate(new Date());
+    }
+  }, [date]);
 
   return (
-    <time dateTime={date.toISOString()} {...props}>
-      {format(date, "MMM. yyyy")}
+    <time dateTime={dynamicDate.toISOString()} {...props}>
+      {format(dynamicDate, "MMM. yyyy")}
     </time>
   );
 }
