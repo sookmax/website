@@ -55,7 +55,49 @@ export default function Layout({ children }) {
 
 I'm joining [Medisola](https://www.medisola.co.kr/) as a frontend developer.
 
-Health, nutritions, and diet are something that I've been very much interested in for quite a while now, and Medisola is a company that provides high-quality, nutrient-dense packaged meals for people with medical conditions and those who care about their diet and nutritions. So I'm very excited to see how I, as a web developer, can help the company build software products and grow its business (starting with building internal tools, it seems)
+Health, nutritions, and diet are something that I've been very much interested in for quite a while now, and Medisola is a company that provides high-quality, nutrient-dense packaged meals for people with medical conditions and those who care about their diet and nutritions. So I'm very excited to see how I, as a web developer, can help the company build software products and grow its business.
+
+<StickyEventHeader id="medisola-feb-2025-update">
+  <span className="not-prose">
+    <a
+      href="#medisola-feb-2025-update"
+      className="relative after:content-['#'] after:invisible after:hover:visible after:absolute after:left-full after:ml-1 after:opacity-50"
+    >
+      {"Medisola update: Feb. 2025"}
+    </a>
+  </span>
+</StickyEventHeader>
+
+<div className="shadow-md shadow-zinc-200/70 dark:shadow-zinc-950/50 not-prose">
+  <ImageGalleryInline
+    imageUrls={generateImageUrls([
+      "/medisola-rd-1.png",
+      "/medisola-rd-2.png",
+      "/medisola-rd-3.png",
+      "/medisola-rd-4.png",
+      "/medisola-rd-5.png",
+      "/medisola-rd-6.png",
+      "/medisola-rd-7.png",
+      "/medisola-rd-8.png",
+      "/medisola-rd-9.png",
+      "/medisola-rd-10.png",
+      "/medisola-rd-11.png",
+    ])}
+    loading="eager"
+  >
+    <a
+      href="https://rd.archenx.com/"
+      target="_blank"
+      className="text-primary-dark"
+    >
+      {"https://rd.archenx.com/"}
+    </a>
+  </ImageGalleryInline>
+</div>
+
+I've been working at Medisola for a couple of months now, and I'm actively building and maintaining an internal software tool called "Recipe Design" (in the form of a web app). This tool is mainly used by the company's products team to design and manage recipes for the meals (products) that Medisola provides.
+
+It's also been a great experience for me as a frontend developer, because I got to build a web app from scratch, using the tech stack that I wanted to use, some of which I had never used in production before&mdash;most notably, [TanStack Router](https://tanstack.com/router/latest), [TanStack Query](https://tanstack.com/query/latest), [TanStack Table](https://tanstack.com/table/latest), and [shadcn/ui](https://ui.shadcn.com/)&mdash;and they all turned out to be great choices for building a single page application (SPA). It was also the first time I got to work with a [Supabase](https://supabase.com/) backend (database & auth), and I loved how easy it was to query the database and manage user authentication with their JavaScript client, [supabase-js](https://supabase.com/docs/reference/javascript/introduction). I should also mention that this time, I finally decided to write and maintain end-to-end tests diligently for the web app using [Playwright](https://playwright.dev/), and they have been a great confidence booster every time I needed to fix bugs, add new features, or refactor the codebase, knowing that things that used to work wouldn't break unexpectedly (or at least less likely).
 
 </Event>
 

@@ -166,6 +166,85 @@ export function ResumeKr() {
                       <div className="font-light text-2xs text-zinc-500">
                         (
                         <a
+                          href="https://www.sook.dev/current#medisola-feb-2025-update"
+                          target="_blank"
+                          // className="underline"
+                        >
+                          more info
+                        </a>
+                        )
+                      </div>
+                    </div>
+                    <div className="text-2xs">
+                      <div>2024.10 - 현재</div>
+                    </div>
+                  </div>
+                  <div className="text-xs flex justify-between">
+                    <a
+                      href="https://www.medisola.co.kr/"
+                      target="_blank"
+                      className="flex items-center"
+                    >
+                      메디쏠라
+                    </a>
+                  </div>
+                </h3>
+                <ul className="text-xs font-light">
+                  <li className="flex">
+                    <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
+                    <p>
+                      <span className="font-medium text-zinc-700">
+                        TanStack Router
+                      </span>
+                      ,{" "}
+                      <span className="font-medium text-zinc-700">
+                        TanStack Query
+                      </span>
+                      ,{" "}
+                      <span className="font-medium text-zinc-700">
+                        TanStack Table
+                      </span>
+                      ,{" "}
+                      <span className="font-medium text-zinc-700">
+                        shadcn/ui
+                      </span>
+                      ,{" "}
+                      <span className="font-medium text-zinc-700">
+                        tailwindcss
+                      </span>
+                      등을 사용하여 식재료 검색 및 레시피 개발 및 관리용 웹
+                      애플리케이션 개발
+                    </p>
+                  </li>
+                  <li className="flex">
+                    <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
+                    <p>
+                      <span className="font-medium text-zinc-700">
+                        Supabase
+                      </span>{" "}
+                      의{" "}
+                      <span className="font-medium text-zinc-700">
+                        Database (PostgreSQL),
+                      </span>{" "}
+                      <span className="font-medium text-zinc-700">
+                        Authentication
+                      </span>{" "}
+                      및{" "}
+                      <span className="font-medium text-zinc-700">Storage</span>{" "}
+                      서비스를 이용하여, 위 웹 애플리케이션의 백엔드 구현
+                      (기여도 50%)
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h3>
+                  <div className="font-normal flex justify-between">
+                    <div className="flex items-center gap-1">
+                      <div>프론트엔드 개발자</div>
+                      <div className="font-light text-2xs text-zinc-500">
+                        (
+                        <a
                           href="https://www.sook.dev/experience#fe-3i"
                           target="_blank"
                           // className="underline"
@@ -185,7 +264,7 @@ export function ResumeKr() {
                       target="_blank"
                       className="flex items-center"
                     >
-                      (주)쓰리아이
+                      쓰리아이
                     </a>
                   </div>
                 </h3>
@@ -241,8 +320,7 @@ export function ResumeKr() {
                     <p>
                       <span className="font-medium text-zinc-700">Vue2</span> 와{" "}
                       <span className="font-medium text-zinc-700">Vue3</span>를
-                      이용하여 위 3D 애플리케이션을 감싸는 UI 구현 (디자인팀
-                      figma 디자인 기반)
+                      이용하여 위 3D 애플리케이션을 감싸는 UI 구현
                     </p>
                   </li>
                 </ul>
@@ -251,7 +329,7 @@ export function ResumeKr() {
                 <h3>
                   <div className="font-normal flex justify-between">
                     <div className="flex items-center gap-1">
-                      <div>개발팀 / 프론트엔드 개발자</div>
+                      <div>프론트엔드 개발자</div>
                       <div className="font-light text-2xs text-zinc-500">
                         (
                         <a
@@ -274,7 +352,7 @@ export function ResumeKr() {
                       target="_blank"
                       className="flex items-center"
                     >
-                      (주)다윈프로퍼티
+                      다윈프로퍼티
                     </a>
                   </div>
                 </h3>
@@ -284,8 +362,7 @@ export function ResumeKr() {
                     <p>
                       카카오맵 API를 이용하여 지도기반 웹 (
                       <span className="font-medium text-zinc-700">React</span>)
-                      애플리케이션의 부가기능 개발 (스카이뷰, 지젹편집도,
-                      거리재기 등)
+                      애플리케이션의 부가기능 개발
                     </p>
                   </li>
                   <li className="flex">
@@ -367,7 +444,7 @@ export function ResumeKr() {
                       target="_blank"
                       className="flex items-center"
                     >
-                      (주)애자일소다
+                      애자일소다
                     </a>
                   </div>
                 </h3>
@@ -375,7 +452,7 @@ export function ResumeKr() {
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      신규 자사 B2B SaaS 제품 UI 개발 (
+                      자사 B2B SaaS 제품 UI 개발 (
                       <span className="font-medium text-zinc-700">React</span>,{" "}
                       <span className="font-medium text-zinc-700">
                         styled-components
@@ -396,17 +473,8 @@ export function ResumeKr() {
                       <span className="font-medium text-zinc-700">
                         Blueprint.js
                       </span>
-                      )
-                    </p>
-                  </li>
-                  <li className="flex">
-                    <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
-                    <p>
-                      기존 자사 B2B SaaS 제품 UI 기능 추가, 스타일 개선, 버그
-                      수정 (
-                      <span className="font-medium text-zinc-700">React</span>,{" "}
-                      <span className="font-medium text-zinc-700">Redux</span>,{" "}
-                      <span className="font-medium text-zinc-700">Sass</span>,{" "}
+                      , <span className="font-medium text-zinc-700">Redux</span>
+                      , <span className="font-medium text-zinc-700">Sass</span>,{" "}
                       <span className="font-medium text-zinc-700">Webpack</span>
                       )
                     </p>
@@ -414,7 +482,7 @@ export function ResumeKr() {
                   <li className="flex">
                     <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
                     <p>
-                      기존 자사 B2B SaaS 제품 backend 기능 추가, 버그 수정 (
+                      자사 B2B SaaS 제품 backend/infrastructure 개발 지원 (
                       <span className="font-medium text-zinc-700">Java 8</span>,{" "}
                       <span className="font-medium text-zinc-700">
                         Eclipse Vert.x
@@ -423,20 +491,10 @@ export function ResumeKr() {
                       <span className="font-medium text-zinc-700">MariaDB</span>
                       ,{" "}
                       <span className="font-medium text-zinc-700">MongoDB</span>
-                      )
-                    </p>
-                  </li>
-                  <li className="flex">
-                    <Dot className="w-4 h-4 mt-1 flex-shrink-0" />
-                    <p>
-                      기존 자사 B2B SaaS 제품 infrastructure 개발 지원 (
+                      ,{" "}
                       <span className="font-medium text-zinc-700">Docker</span>,{" "}
                       <span className="font-medium text-zinc-700">
                         Kubernetes
-                      </span>
-                      ,{" "}
-                      <span className="font-medium text-zinc-700">
-                        Helm charts
                       </span>
                       )
                     </p>
@@ -453,7 +511,7 @@ export function ResumeKr() {
                       target="_blank"
                       className="font-normal"
                     >
-                      (주)애자일소다
+                      애자일소다
                     </a>
                   </div>
                   <div>
@@ -479,7 +537,7 @@ export function ResumeKr() {
                       target="_blank"
                       className="font-normal"
                     >
-                      (주)모비젠
+                      모비젠
                     </a>
                   </div>
                   <div>
@@ -500,7 +558,7 @@ export function ResumeKr() {
                 <div className="text-2xs flex justify-between">
                   <div className="space-x-1">
                     <span>R&D 전략기획실 / 사원,</span>
-                    <span className="font-normal">(주)나우드림</span>
+                    <span className="font-normal">나우드림</span>
                   </div>
                   <div>
                     <span className="mr-1">2015.07 - 2016.08</span>
